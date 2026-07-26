@@ -2785,3 +2785,453 @@ img {
     height: 2.6rem;
   }
 }
+
+/* Checkpoint 12: site-wide responsive hardening */
+html,
+body {
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+main,
+section,
+.site-container,
+.site-container > *,
+.service-row > *,
+.leader > *,
+.contact-grid > * {
+  min-width: 0;
+}
+
+.contact-details a,
+.leader a,
+.site-footer a,
+.service-row p,
+.project-card h2 {
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 1024px) {
+  .section {
+    padding-block: clamp(4.25rem, 8vw, 6.5rem);
+  }
+
+  .page-hero-grid,
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page-hero-grid {
+    min-height: auto;
+  }
+
+  .page-hero-copy {
+    max-width: 46rem;
+  }
+
+  .page-hero-visual {
+    width: min(100%, 44rem);
+  }
+
+  .footer-grid {
+    gap: 3rem;
+  }
+
+  .footer-grid > div:not(.footer-brand) {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-content: start;
+    column-gap: 1.5rem;
+  }
+
+  .footer-grid > div:not(.footer-brand) h3 {
+    grid-column: 1 / -1;
+  }
+
+  .footer-bottom {
+    margin-top: 3.5rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .industry-grid,
+  .project-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .industry-item,
+  .industry-item-1,
+  .industry-item-2,
+  .industry-item-3,
+  .industry-item-4,
+  .project-card,
+  .project-card-1,
+  .project-card-2,
+  .project-card-3,
+  .project-card-4 {
+    grid-column: auto;
+  }
+
+  .industry-item {
+    min-height: 21rem;
+  }
+
+  .project-image {
+    min-height: 19rem;
+  }
+
+  .services-editorial {
+    gap: 5rem;
+  }
+
+  .service-feature-image,
+  .service-hero-image {
+    min-height: 24rem;
+  }
+
+  .contact-grid {
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .site-container {
+    width: min(calc(100% - 1.5rem), var(--container));
+  }
+
+  .section {
+    padding-block: clamp(3.75rem, 15vw, 5.25rem);
+  }
+
+  .section-title {
+    max-width: 16ch;
+    font-size: clamp(2.35rem, 11vw, 3.75rem);
+    line-height: 0.98;
+  }
+
+  .body-large,
+  .page-hero-copy p {
+    font-size: 1rem;
+  }
+
+  .page-hero {
+    padding-block: 3.5rem;
+  }
+
+  .page-hero-copy h1 {
+    font-size: clamp(3rem, 14vw, 5rem);
+  }
+
+  .footer-grid > div:not(.footer-brand) {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid > div:not(.footer-brand) h3 {
+    grid-column: auto;
+  }
+
+  .footer-brand h2 {
+    font-size: clamp(2.5rem, 13vw, 4rem);
+  }
+
+  .footer-bottom {
+    align-items: flex-start;
+    margin-top: 2.75rem;
+  }
+
+  .service-row {
+    grid-template-columns: 2.75rem minmax(0, 1fr) auto;
+    gap: 0.75rem;
+    padding-block: 1.3rem;
+  }
+
+  .service-row h3 {
+    font-size: clamp(1.45rem, 7vw, 2rem);
+  }
+
+  .service-row p {
+    font-size: 0.92rem;
+    line-height: 1.5;
+  }
+
+  .service-row > a {
+    width: 2.75rem;
+    height: 2.75rem;
+  }
+
+  .services-editorial {
+    gap: 4rem;
+  }
+
+  .service-feature {
+    gap: 1.75rem;
+  }
+
+  .service-feature h2 {
+    font-size: clamp(2.4rem, 12vw, 3.7rem);
+  }
+
+  .service-feature-image,
+  .service-hero-image {
+    min-height: 19rem;
+  }
+
+  .process-step,
+  .direction-block,
+  .sustainability-item {
+    min-height: auto;
+  }
+
+  .direction-block {
+    padding: 2rem 1.25rem;
+  }
+
+  .direction-block h2 {
+    margin-top: 3rem;
+    font-size: clamp(2.6rem, 12vw, 3.4rem);
+  }
+
+  .values-grid,
+  .leadership-grid,
+  .service-index {
+    margin-top: 2.75rem;
+  }
+
+  .value-item h3 {
+    margin-top: 2.75rem;
+  }
+
+  .industry-grid,
+  .project-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .industry-item {
+    min-height: auto;
+    padding: 1.4rem;
+  }
+
+  .industry-item h2 {
+    margin-top: 3.5rem;
+  }
+
+  .project-image {
+    min-height: 17rem;
+  }
+
+  .project-card > div:last-child {
+    padding: 1.1rem;
+  }
+
+  .project-card h2 {
+    font-size: 1.7rem;
+  }
+
+  .project-filters {
+    margin-inline: -0.75rem;
+    padding-inline: 0.75rem;
+    scroll-padding-inline: 0.75rem;
+    scrollbar-width: none;
+  }
+
+  .project-filters::-webkit-scrollbar {
+    display: none;
+  }
+
+  .contact-details > div {
+    grid-template-columns: 2rem minmax(0, 1fr);
+  }
+
+  .contact-form {
+    border-radius: var(--radius-medium);
+    padding: 1.1rem;
+  }
+
+  .contact-form input,
+  .contact-form select,
+  .contact-form textarea {
+    min-height: 3rem;
+    font-size: 1rem;
+  }
+
+  .contact-form textarea {
+    min-height: 9rem;
+  }
+
+  .energy-track {
+    grid-template-columns: 1fr;
+  }
+
+  .energy-track::before {
+    top: 0;
+    bottom: 0;
+    left: 1.6rem;
+    width: 4px;
+    height: auto;
+  }
+
+  .energy-node {
+    min-height: 5rem;
+    grid-template-columns: 2.2rem 1fr;
+    justify-items: start;
+    padding: 1rem;
+  }
+
+  .project-rail {
+    gap: 0.75rem;
+  }
+
+  .project-photo {
+    width: min(82vw, 24rem);
+  }
+
+  .journey-stage h3,
+  .performance-step h3 {
+    margin-top: 2rem;
+    font-size: clamp(2.6rem, 12vw, 4rem);
+  }
+
+  .journey-stage,
+  .performance-step {
+    min-height: auto;
+    padding-block: 2.5rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .nav-shell {
+    gap: 0.65rem;
+  }
+
+  .brand {
+    gap: 0.5rem;
+  }
+
+  .brand strong {
+    font-size: 0.98rem;
+  }
+
+  .brand small {
+    font-size: 0.56rem;
+    letter-spacing: 0.055em;
+  }
+
+  .hero-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  .hero-actions .button {
+    width: 100%;
+  }
+
+  .home-hero-v2-copy .display,
+  .about-hero-copy-v2 .display,
+  .sustainability-hero-copy-v2 .display {
+    font-size: clamp(3rem, 15vw, 4.35rem);
+  }
+
+  .system-visual,
+  .about-system-visual,
+  .sustainability-system-visual {
+    min-height: 22rem;
+  }
+
+  .system-visual-caption,
+  .about-system-caption,
+  .sustainability-visual-key {
+    font-size: 0.78rem;
+  }
+
+  .proof-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .proof-grid > div:nth-child(3),
+  .proof-grid > p {
+    grid-column: auto;
+  }
+
+  .proof-grid > div,
+  .proof-grid > p {
+    min-height: auto;
+    border-right: 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .about-photo-pair,
+  .sustainability-photo-story {
+    min-height: 27rem;
+  }
+
+  .about-project-photo-main,
+  .photo-industrial {
+    inset: 0 0 31% 0;
+  }
+
+  .about-project-photo-small,
+  .photo-commercial {
+    right: 0;
+    bottom: 0;
+    width: 72%;
+  }
+
+  .leader {
+    grid-template-columns: 1fr;
+  }
+
+  .leader-mark {
+    width: 4.75rem;
+  }
+
+  .service-row {
+    grid-template-columns: 2.25rem minmax(0, 1fr);
+  }
+
+  .service-row > a {
+    grid-column: 2;
+    justify-self: start;
+  }
+
+  .industry-item dl {
+    gap: 0.35rem;
+  }
+
+  .airflow-visual {
+    min-height: 20rem;
+  }
+
+  .visual-caption {
+    right: 0.65rem;
+    bottom: 0.65rem;
+    min-width: 0;
+  }
+
+  .final-cta h2 {
+    font-size: clamp(2.8rem, 14vw, 4.5rem);
+  }
+}
+
+@media (max-width: 360px) {
+  .site-container {
+    width: min(calc(100% - 1rem), var(--container));
+  }
+
+  .brand small {
+    display: none;
+  }
+
+  .menu-button {
+    width: 2.6rem;
+    height: 2.6rem;
+  }
+
+  .mobile-nav {
+    padding-bottom: 1.25rem;
+  }
+
+  .contact-form {
+    padding: 0.85rem;
+  }
+}

@@ -157,3 +157,23 @@ Services website.
   optimization, lifecycle value and targeted modernization.
 - Added responsive layouts and reduced-motion alternatives.
 - Production build and lint checks completed successfully.
+
+## Checkpoint 12: Site-wide responsive hardening
+
+- Status: Complete
+- Audited Home, About, Services, service details, Industries, Projects,
+  Sustainability and Contact as one responsive system.
+- Added tablet-first collapse behavior for shared page heroes, footer content,
+  galleries, project grids and multi-column editorial sections.
+- Added phone layouts for service rows, filters, project cards, industry
+  details, contact fields, lifecycle tracks and calls to action.
+- Simplified overlapping project photography and technical hero illustrations
+  for narrow screens without removing their visual storytelling.
+- Added 520 px and 360 px safeguards for navigation branding, buttons,
+  typography, proof content, leadership cards and forms.
+- Added overflow protection, flexible grid children, long-link wrapping,
+  mobile-sized inputs and touch-friendly controls.
+- Verified every application route without horizontal overflow at the desktop
+  test viewport.
+- Vercel Next.js build, Sites Vinext build and lint checks completed
+  successfully.
