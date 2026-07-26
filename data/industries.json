@@ -1,0 +1,12 @@
+[
+  { "name": "Retail & Malls", "challenge": "Variable footfall and large mixed-use zones", "response": "Zoned comfort with efficient distribution" },
+  { "name": "Healthcare", "challenge": "Air quality, reliability and controlled environments", "response": "Careful ventilation and dependable system performance" },
+  { "name": "Manufacturing", "challenge": "Process loads and demanding operating cycles", "response": "Heavy-duty cooling and industrial ventilation" },
+  { "name": "Commercial Offices", "challenge": "Comfort, productivity and energy cost", "response": "Balanced systems designed around occupancy" },
+  { "name": "Residential Developments", "challenge": "Comfort, quiet operation and indoor air quality", "response": "Efficient systems tailored to living spaces" },
+  { "name": "Education & Government", "challenge": "Diverse rooms, schedules and public use", "response": "Maintainable systems with practical lifecycle planning" },
+  { "name": "Pharmaceutical Clean Rooms", "challenge": "Filtration, pressure and environmental control", "response": "Specialized clean-room HVAC engineering" },
+  { "name": "Data Centres", "challenge": "Continuous heat loads and uptime", "response": "Reliable cooling strategies and performance checks" },
+  { "name": "Hotels", "challenge": "Guest comfort across varied occupancy", "response": "Zoned, quiet and serviceable climate control" },
+  { "name": "Food Processing", "challenge": "Temperature, ventilation and process requirements", "response": "Purpose-built cooling and air-management solutions" }
+]

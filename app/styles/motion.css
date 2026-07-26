@@ -1,0 +1,22 @@
+:root {
+  --motion-fast: 160ms;
+  --motion-normal: 360ms;
+  --motion-slow: 720ms;
+  --motion-ambient: 12s;
+  --ease-standard: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-emphasized: cubic-bezier(0.16, 1, 0.3, 1);
+  --distance-small: 0.5rem;
+  --distance-medium: 1.5rem;
+  --distance-large: 3rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

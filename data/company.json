@@ -1,0 +1,20 @@
+{
+  "promise": "Reliable engineering, tailored comfort, improved air quality and sustainable system performance.",
+  "mission": "Deliver exceptional HVAC solutions that enhance comfort, improve air quality and optimize energy efficiency while exceeding customer expectations through innovation and service excellence.",
+  "vision": "Be India's most trusted HVAC service provider, recognized for technical expertise, customer-centric delivery and sustainable practices shaping climate-control technology.",
+  "values": [
+    { "title": "Quality", "description": "Uncompromising standards across design, installation and lifecycle service." },
+    { "title": "Sustainability", "description": "Energy-aware systems designed to reduce operating impact." },
+    { "title": "Innovation", "description": "New technologies and engineering methods applied with purpose." },
+    { "title": "Customer focus", "description": "Responsive delivery shaped around each operating environment." }
+  ],
+  "strengths": [
+    "Pan-India reach",
+    "Experienced technical team",
+    "Energy-efficient thinking",
+    "Responsive customer support",
+    "Timely delivery",
+    "Quality assurance",
+    "Transparent pricing"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "home": { "title": "Cawnpore Engineering Services | HVAC Solutions", "description": "Professional HVAC design, installation, maintenance, upgrades and specialized climate-control solutions across India." },
+  "about": { "title": "About | Cawnpore Engineering Services", "description": "Meet the Kanpur-based HVAC engineering team committed to comfort, air quality, energy efficiency and dependable delivery." },
+  "services": { "title": "HVAC Services | Cawnpore Engineering Services", "description": "Explore HVAC design, installation, commissioning, maintenance, repair, retrofitting and specialized solutions." },
+  "industries": { "title": "Industries Served | Cawnpore Engineering Services", "description": "HVAC solutions for retail, healthcare, manufacturing, offices, housing, clean rooms, data centres, hotels and food processing." },
+  "projects": { "title": "Projects & Clients | Cawnpore Engineering Services", "description": "Selected CES work across healthcare, retail, housing, manufacturing, aviation, beverage and entertainment environments." },
+  "sustainability": { "title": "Energy-Efficient HVAC | Cawnpore Engineering Services", "description": "Energy modelling, performance optimization, modernization and efficiency-focused HVAC engineering." },
+  "contact": { "title": "Contact | Cawnpore Engineering Services", "description": "Discuss an HVAC design, installation, maintenance, repair, upgrade or specialized climate-control requirement with CES." }
+}

@@ -1,0 +1,9 @@
+{
+  "title": "Efficiency is engineered into the system.",
+  "description": "CES brings energy thinking into design, modernization and lifecycle service so comfort and operating performance can improve together.",
+  "principles": [
+    { "title": "Model before building", "description": "Use load and energy modelling to make informed system decisions." },
+    { "title": "Optimize what exists", "description": "Assess performance gaps before recommending replacement or upgrades." },
+    { "title": "Plan for lifecycle value", "description": "Balance equipment, operation, maintainability and long-term performance." }
+  ]
+}

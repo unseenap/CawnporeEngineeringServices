@@ -1,0 +1,57 @@
+[
+  {
+    "id": "design-engineering",
+    "number": "01",
+    "title": "HVAC Design & Engineering",
+    "shortTitle": "Design & Engineering",
+    "summary": "Turn operating needs into a precise, buildable climate-control plan.",
+    "description": "Load calculations, system selection, energy modelling and detailed engineering drawings create the technical foundation for dependable performance.",
+    "deliverables": ["Load calculations", "System selection", "Energy modelling", "Engineering drawings"],
+    "process": ["Understand the space and operating need", "Model loads and system options", "Develop coordinated engineering", "Review performance and constructability"],
+    "image": "/images/source/sourceimage1.png"
+  },
+  {
+    "id": "installation-commissioning",
+    "number": "02",
+    "title": "Installation & Commissioning",
+    "shortTitle": "Installation & Commissioning",
+    "summary": "Build the designed system with disciplined site execution.",
+    "description": "Equipment installation, ductwork, piping, testing and balancing are coordinated to deliver a stable and verified HVAC system.",
+    "deliverables": ["Equipment installation", "Ductwork and piping", "System testing", "Testing and balancing"],
+    "process": ["Coordinate site readiness", "Install equipment and distribution", "Test system operation", "Balance and validate performance"],
+    "image": "/images/source/sourceimage2.png"
+  },
+  {
+    "id": "maintenance-repair",
+    "number": "03",
+    "title": "Maintenance & Repair",
+    "shortTitle": "Maintenance & Repair",
+    "summary": "Protect comfort, uptime and system life through responsive care.",
+    "description": "Preventive maintenance, repair and performance optimization help reduce disruption and keep climate-control assets operating as intended.",
+    "deliverables": ["Preventive maintenance", "System diagnostics", "Emergency repair", "Performance optimization"],
+    "process": ["Inspect operating condition", "Identify performance gaps", "Repair and tune the system", "Document next actions"],
+    "image": "/images/source/sourceimage3.png"
+  },
+  {
+    "id": "retrofitting-upgrades",
+    "number": "04",
+    "title": "Retrofitting & Upgrades",
+    "shortTitle": "Retrofitting & Upgrades",
+    "summary": "Modernize existing systems without losing sight of real operating constraints.",
+    "description": "System modernization, efficiency upgrades and refrigerant conversion extend capability and improve lifecycle value.",
+    "deliverables": ["Existing-system assessment", "Modernization plan", "Efficiency upgrades", "Refrigerant conversion"],
+    "process": ["Assess the installed system", "Prioritize upgrade opportunities", "Plan phased execution", "Verify post-upgrade performance"],
+    "image": "/images/source/sourceimage4.png"
+  },
+  {
+    "id": "specialized-hvac",
+    "number": "05",
+    "title": "Specialized HVAC",
+    "shortTitle": "Specialized HVAC",
+    "summary": "Engineer climate control for environments with uncommon demands.",
+    "description": "Industrial process cooling, clean rooms, ventilation and residential indoor-air-quality systems are tailored to the operating requirement.",
+    "deliverables": ["Process cooling", "Clean-room HVAC", "Industrial ventilation", "Residential indoor air quality"],
+    "process": ["Define environmental criteria", "Engineer the specialized system", "Coordinate critical interfaces", "Validate controlled conditions"],
+    "image": "/images/source/sourceimage1.png"
+  }
+]
