@@ -62,3 +62,14 @@ Services website.
 - Copy audit confirmed no em dash or en dash characters in site content.
 - Starter preview files and metadata removed.
 - Production publication will use this exact committed and pushed source state.
+
+## Checkpoint 6: Windows command compatibility
+
+- Status: Complete
+- Removed Unix-only inline environment-variable assignment from the `dev`,
+  `build` and `start` package scripts.
+- The standard `npm run dev`, `npm run build` and `npm start` commands are now
+  intended to work from PowerShell, Command Prompt and Unix-like shells.
+- `npm run build` completed successfully after the repair.
+- `npm run dev` and `npm start` were each started from PowerShell and returned
+  HTTP status 200.
