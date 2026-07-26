@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { EnvelopeSimple, MapPin, Phone } from "@phosphor-icons/react/dist/ssr";
 import { PageHero } from "@/components/PageHero";
 import { ContactForm } from "@/components/ContactForm";
@@ -21,7 +22,9 @@ export default function ContactPage() {
             <div><Phone size={28} weight="duotone" /><span><strong>Call</strong>{contact.phones.map((phone) => <a href={`tel:${phone.replace(/\s/g, "")}`} key={phone}>{phone}</a>)}</span></div>
             <div><EnvelopeSimple size={28} weight="duotone" /><span><strong>Email</strong>{contact.emails.map((email) => <a href={`mailto:${email}`} key={email}>{email}</a>)}</span></div>
           </div>
-          <ContactForm />
+          <Suspense fallback={<div className="contact-form" aria-label="Loading enquiry form" />}>
+            <ContactForm />
+          </Suspense>
         </div>
       </section>
     </>
