@@ -7,6 +7,7 @@ import { CaretDown, List, X } from "@phosphor-icons/react";
 import { useEffect, useState } from "react";
 import navigation from "@/data/navigation.json";
 import site from "@/data/site.json";
+import { ThemeSelector } from "./ThemeSelector";
 
 export function SiteHeader() {
   const pathname = usePathname();
@@ -65,9 +66,12 @@ export function SiteHeader() {
           )}
         </nav>
 
-        <Link className="button button-primary nav-cta" href={navigation.cta.href}>
-          {navigation.cta.label}
-        </Link>
+        <div className="nav-actions">
+          <ThemeSelector />
+          <Link className="button button-primary nav-cta" href={navigation.cta.href}>
+            {navigation.cta.label}
+          </Link>
+        </div>
 
         <button
           className="menu-button"
@@ -83,6 +87,7 @@ export function SiteHeader() {
       {menuOpen && (
         <div className="mobile-panel">
           <nav className="site-container mobile-nav" aria-label="Mobile navigation">
+            <ThemeSelector mobile />
             {navigation.primary.map((item) =>
               item.children ? (
                 <div key={item.href}>

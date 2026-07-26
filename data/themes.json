@@ -1,0 +1,26 @@
+[
+  {
+    "id": "turbine",
+    "name": "Turbine",
+    "description": "CES logo blue",
+    "swatches": ["#06428f", "#008bd2", "#e52635"]
+  },
+  {
+    "id": "deep",
+    "name": "Night Shift",
+    "description": "Low-light control room",
+    "swatches": ["#07182a", "#37b8f3", "#ff5260"]
+  },
+  {
+    "id": "blueprint",
+    "name": "Blueprint",
+    "description": "Technical drawing blue",
+    "swatches": ["#163f78", "#f0a12b", "#f5f8fc"]
+  },
+  {
+    "id": "eco",
+    "name": "Eco Flow",
+    "description": "Efficient systems green",
+    "swatches": ["#135d48", "#2a9473", "#e05d3f"]
+  }
+]

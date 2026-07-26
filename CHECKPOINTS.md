@@ -177,3 +177,10 @@ Services website.
   test viewport.
 - Vercel Next.js build, Sites Vinext build and lint checks completed
   successfully.
+## Checkpoint 13: Multi-theme navbar experience
+
+- Added four coordinated website finishes: Turbine, Night Shift, Blueprint, and Eco Flow.
+- Kept every palette in the dedicated theme stylesheet and moved theme labels/swatches into a separate JSON data file.
+- Added a creative animated “Site finish” control to the desktop navbar and a touch-friendly theme panel inside the mobile menu.
+- Added keyboard dismissal, outside-click dismissal, accessible pressed states, reduced-motion behavior, and device-local theme persistence.
+- Applied the saved theme before page paint to avoid a visible color flash between routes or reloads.

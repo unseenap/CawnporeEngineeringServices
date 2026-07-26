@@ -32,7 +32,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var t=localStorage.getItem("ces-theme");if(t&&t!=="turbine"){document.documentElement.setAttribute("data-theme",t)}document.documentElement.style.colorScheme=t==="deep"?"dark":"light"}catch(e){}})();`,
+          }}
+        />
+      </head>
       <body><SiteShell>{children}</SiteShell></body>
     </html>
   );

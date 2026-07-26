@@ -50,3 +50,67 @@
   --color-image-overlay: rgb(3 14 28 / 86%);
   --shadow-card: 0 24px 70px rgb(0 0 0 / 24%);
 }
+
+[data-theme="blueprint"] {
+  color-scheme: light;
+  --color-brand-primary: #163f78;
+  --color-brand-secondary: #326ea8;
+  --color-brand-accent: #e3931f;
+  --color-page: #e9f0f8;
+  --color-surface: #f8fafc;
+  --color-surface-strong: #d7e5f2;
+  --color-surface-dark: #102d52;
+  --color-text: #132f50;
+  --color-text-soft: #526b84;
+  --color-text-inverse: #f7fbff;
+  --color-border: #adc2d7;
+  --color-border-strong: #6486a7;
+  --color-dark-border: #335a80;
+  --color-dark-muted: #bfd0e0;
+  --color-focus: #bd6810;
+  --color-success: #23684f;
+  --color-warning: #8a5800;
+  --color-error: #b72e33;
+  --color-image-overlay: rgb(10 37 69 / 84%);
+  --gradient-airflow: linear-gradient(105deg, #163f78 0%, #326ea8 63%, #e3931f 100%);
+  --gradient-hero:
+    linear-gradient(rgb(22 63 120 / 5%) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(22 63 120 / 5%) 1px, transparent 1px),
+    radial-gradient(circle at 82% 18%, rgb(50 110 168 / 18%), transparent 36%),
+    linear-gradient(135deg, #f8fafc 0%, #e4edf7 100%);
+  --shadow-card: 0 24px 70px rgb(22 63 120 / 14%);
+}
+
+[data-theme="blueprint"] .home-hero,
+[data-theme="blueprint"] .page-hero {
+  background-size: 32px 32px, 32px 32px, auto, auto;
+}
+
+[data-theme="eco"] {
+  color-scheme: light;
+  --color-brand-primary: #135d48;
+  --color-brand-secondary: #2a9473;
+  --color-brand-accent: #d65237;
+  --color-page: #edf5f1;
+  --color-surface: #f8fbf9;
+  --color-surface-strong: #dcebe3;
+  --color-surface-dark: #10392f;
+  --color-text: #173c33;
+  --color-text-soft: #587268;
+  --color-text-inverse: #f5fbf8;
+  --color-border: #b9d1c6;
+  --color-border-strong: #6f9786;
+  --color-dark-border: #2f6556;
+  --color-dark-muted: #bdd5cb;
+  --color-focus: #bd3d28;
+  --color-success: #176b52;
+  --color-warning: #8d5a00;
+  --color-error: #bd3035;
+  --color-image-overlay: rgb(8 43 34 / 84%);
+  --gradient-airflow: linear-gradient(105deg, #135d48 0%, #2a9473 62%, #d65237 100%);
+  --gradient-hero:
+    radial-gradient(circle at 82% 18%, rgb(42 148 115 / 20%), transparent 36%),
+    radial-gradient(circle at 91% 72%, rgb(214 82 55 / 8%), transparent 24%),
+    linear-gradient(135deg, #f8fbf9 0%, #e1ede7 100%);
+  --shadow-card: 0 24px 70px rgb(19 93 72 / 13%);
+}
