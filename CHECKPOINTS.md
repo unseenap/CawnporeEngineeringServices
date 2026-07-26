@@ -139,3 +139,21 @@ Services website.
 - Added responsive layouts, touch-friendly mobile behavior and reduced-motion
   alternatives.
 - Production build and lint checks completed successfully.
+
+## Checkpoint 11: Performance-led Sustainability page redesign
+
+- Status: Complete
+- Reframed sustainability around measurable HVAC system performance instead of
+  generic environmental claims.
+- Generated and integrated an original efficient-building illustration showing
+  plant modernization, distribution, supply airflow and return-air paths.
+- Added React Bits blur-reveal behavior and a Magic UI animated technical grid
+  to the asymmetric Sustainability hero.
+- Added a scroll-linked four-stage performance chain covering demand, system
+  matching, commissioning and continuous improvement.
+- Added animated manufacturing and commercial project photography to connect
+  the energy narrative with real operating environments.
+- Refined principles, outcomes and calls to action around right-sizing,
+  optimization, lifecycle value and targeted modernization.
+- Added responsive layouts and reduced-motion alternatives.
+- Production build and lint checks completed successfully.

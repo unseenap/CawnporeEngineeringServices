@@ -1076,6 +1076,283 @@ img {
   color: var(--color-brand-secondary);
 }
 
+/* Sustainability v2: energy performance as an engineered system */
+.sustainability-hero-v2 {
+  overflow: hidden;
+  color: var(--color-text-inverse);
+  background: radial-gradient(circle at 16% 22%, rgb(0 139 210 / 17%), transparent 29%), linear-gradient(120deg, #06182b, #0b223b 62%, #0b2d4d);
+}
+
+.sustainability-hero-grid-v2 {
+  display: grid;
+  min-height: calc(100svh - 4.5rem);
+  grid-template-columns: minmax(20rem, 0.75fr) minmax(33rem, 1.25fr);
+  align-items: center;
+  gap: clamp(2rem, 4.5vw, 5rem);
+  padding-block: clamp(3rem, 6vw, 6rem);
+}
+
+.sustainability-hero-copy-v2 {
+  position: relative;
+  z-index: 3;
+}
+
+.sustainability-hero-copy-v2 .mono-label { color: #83d5fa; }
+.sustainability-hero-copy-v2 .display {
+  max-width: 9ch;
+  margin-block: 1.25rem 1.5rem;
+  font-size: clamp(3.4rem, 6.2vw, 6.65rem);
+}
+.sustainability-hero-copy-v2 > p {
+  max-width: 35rem;
+  margin: 0;
+  color: var(--color-dark-muted);
+  font-size: clamp(1.05rem, 1.35vw, 1.2rem);
+  line-height: 1.65;
+}
+.sustainability-hero-v2 .button-secondary {
+  border-color: rgb(184 202 219 / 45%);
+  background: rgb(255 255 255 / 6%);
+  color: white;
+}
+
+.sustainability-system-visual {
+  position: relative;
+  min-height: clamp(31rem, 53vw, 44rem);
+  overflow: hidden;
+  border: 1px solid rgb(142 201 255 / 22%);
+  background: #06182b;
+  box-shadow: 0 34px 100px rgb(0 0 0 / 32%);
+}
+.sustainability-system-grid {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  color: var(--color-brand-secondary);
+  opacity: 0.12;
+}
+.sustainability-system-image { position: absolute; inset: 0; }
+.sustainability-system-image img { object-fit: cover; object-position: 58% center; }
+.sustainability-system-visual::after {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgb(4 17 31 / 12%), transparent 48%);
+  content: "";
+}
+.sustainability-visual-key {
+  position: absolute;
+  z-index: 2;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 0.6rem 1rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid rgb(255 255 255 / 18%);
+  background: rgb(4 17 31 / 82%);
+  backdrop-filter: blur(14px);
+}
+.sustainability-visual-key span {
+  position: relative;
+  padding-left: 1rem;
+  color: var(--color-dark-muted);
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.sustainability-visual-key span::before {
+  position: absolute;
+  top: 0.3em;
+  left: 0;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: var(--color-brand-secondary);
+  content: "";
+}
+.sustainability-visual-key .key-return::before { background: var(--color-brand-accent); }
+.sustainability-visual-key strong {
+  grid-column: 1 / -1;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+}
+
+.sustainability-intro-grid-v2,
+.sustainability-reality-heading,
+.sustainability-outcomes-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(18rem, 0.92fr);
+  align-items: end;
+  gap: clamp(3rem, 8vw, 8rem);
+}
+.sustainability-intro-grid-v2 p {
+  margin: 0;
+  color: var(--color-text-soft);
+  line-height: 1.75;
+}
+.sustainability-intro-grid-v2 .sustainability-lede {
+  margin-bottom: 1.2rem;
+  color: var(--color-text);
+  font-family: var(--font-display);
+  font-size: clamp(1.55rem, 2.4vw, 2.35rem);
+  letter-spacing: -0.03em;
+  line-height: 1.16;
+}
+
+.sustainability-principles-v2 {
+  background: var(--color-surface-strong);
+}
+.principles-heading-v2 { margin-bottom: clamp(3rem, 6vw, 6rem); }
+.principles-heading-v2 .section-title { margin-top: 1rem; }
+.sustainability-principles-v2 .sustainability-item {
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.performance-scroll {
+  background: var(--color-page);
+}
+.performance-scroll-grid {
+  display: grid;
+  grid-template-columns: minmax(20rem, 0.82fr) minmax(0, 1.18fr);
+  gap: clamp(4rem, 10vw, 10rem);
+}
+.performance-sticky {
+  position: sticky;
+  top: 8rem;
+  align-self: start;
+}
+.performance-sticky .section-title { margin-block: 1rem 1.5rem; }
+.performance-sticky > p {
+  max-width: 36rem;
+  color: var(--color-text-soft);
+  line-height: 1.7;
+}
+.performance-meter {
+  width: min(100%, 24rem);
+  height: 3px;
+  margin-top: 3rem;
+  background: var(--color-border);
+}
+.performance-meter span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform-origin: left;
+  background: var(--gradient-airflow);
+}
+.performance-steps { display: grid; }
+.performance-step {
+  min-height: 19rem;
+  padding: 3rem 0;
+  border-top: 1px solid var(--color-border-strong);
+}
+.performance-step:last-child { border-bottom: 1px solid var(--color-border-strong); }
+.performance-step > span {
+  color: var(--color-brand-secondary);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+}
+.performance-step h3 {
+  margin: 2.7rem 0 0.75rem;
+  font-family: var(--font-display);
+  font-size: clamp(2.7rem, 5vw, 5rem);
+  letter-spacing: -0.055em;
+  line-height: 0.95;
+}
+.performance-step p {
+  max-width: 42rem;
+  margin: 0;
+  color: var(--color-text-soft);
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+
+.sustainability-reality {
+  overflow: hidden;
+  background: var(--color-surface-dark);
+  color: var(--color-text-inverse);
+}
+.sustainability-reality-heading .mono-label { color: #83d5fa; }
+.sustainability-reality-heading .section-title { margin-top: 1rem; }
+.sustainability-reality-heading .body-large { margin: 0; color: var(--color-dark-muted); }
+.sustainability-photo-story {
+  position: relative;
+  min-height: clamp(35rem, 60vw, 49rem);
+  margin-top: clamp(3.5rem, 7vw, 6.5rem);
+}
+.sustainability-photo {
+  position: absolute;
+  overflow: hidden;
+  margin: 0;
+  background: #06182b;
+}
+.photo-industrial { inset: 0 20% 6% 0; }
+.photo-commercial {
+  right: 0;
+  bottom: 0;
+  width: 40%;
+  aspect-ratio: 4 / 3;
+  border: 0.55rem solid var(--color-surface-dark);
+}
+.sustainability-photo img { object-fit: cover; transition: transform 900ms var(--ease-standard); }
+.sustainability-photo:hover img { transform: scale(1.04); }
+.sustainability-photo::after {
+  position: absolute;
+  inset: 48% 0 0;
+  background: linear-gradient(transparent, rgb(3 16 30 / 90%));
+  content: "";
+}
+.sustainability-photo figcaption {
+  position: absolute;
+  z-index: 1;
+  right: 1.2rem;
+  bottom: 1.1rem;
+  left: 1.2rem;
+  display: grid;
+  gap: 0.25rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.2rem, 2vw, 1.8rem);
+  font-weight: 750;
+}
+.sustainability-photo figcaption span {
+  color: #83d5fa;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.sustainability-outcomes {
+  background: var(--color-surface-strong);
+}
+.sustainability-outcomes-grid svg {
+  margin-bottom: 1.5rem;
+  color: var(--color-brand-secondary);
+}
+.outcome-list { border-top: 1px solid var(--color-border-strong); }
+.outcome-item {
+  display: grid;
+  grid-template-columns: 3rem 1fr;
+  gap: 1rem;
+  align-items: center;
+  padding-block: 1.4rem;
+  border-bottom: 1px solid var(--color-border-strong);
+}
+.outcome-item span {
+  color: var(--color-brand-secondary);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+}
+.outcome-item strong {
+  font-family: var(--font-display);
+  font-size: clamp(1.35rem, 2.3vw, 2rem);
+  letter-spacing: -0.03em;
+}
+
 .story-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.15fr) minmax(18rem, 0.85fr);
@@ -1760,7 +2037,12 @@ img {
   .about-hero-grid-v2,
   .about-story-grid-v2,
   .about-journey-grid,
-  .leadership-heading-v2 {
+  .leadership-heading-v2,
+  .sustainability-hero-grid-v2,
+  .sustainability-intro-grid-v2,
+  .performance-scroll-grid,
+  .sustainability-reality-heading,
+  .sustainability-outcomes-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1789,6 +2071,19 @@ img {
 
   .journey-line {
     display: none;
+  }
+
+  .sustainability-hero-grid-v2 {
+    min-height: auto;
+  }
+
+  .sustainability-system-visual {
+    min-height: min(72vw, 40rem);
+  }
+
+  .performance-sticky {
+    position: relative;
+    top: auto;
   }
 
   .proof-grid {
@@ -1820,6 +2115,44 @@ img {
 }
 
 @media (max-width: 767px) {
+  .sustainability-hero-grid-v2 {
+    padding-block: 3rem;
+  }
+
+  .sustainability-hero-copy-v2 .display {
+    font-size: clamp(3rem, 14.5vw, 4.8rem);
+  }
+
+  .sustainability-system-visual {
+    min-height: 28rem;
+  }
+
+  .sustainability-system-image img {
+    object-position: 64% center;
+  }
+
+  .sustainability-visual-key {
+    right: 0.75rem;
+    bottom: 0.75rem;
+    left: 0.75rem;
+  }
+
+  .performance-step {
+    min-height: 15rem;
+  }
+
+  .sustainability-photo-story {
+    min-height: 31rem;
+  }
+
+  .photo-industrial {
+    inset: 0 8% 13% 0;
+  }
+
+  .photo-commercial {
+    width: 54%;
+  }
+
   .about-hero-grid-v2 {
     padding-block: 3rem;
   }
