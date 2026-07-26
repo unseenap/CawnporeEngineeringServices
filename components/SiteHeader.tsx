@@ -78,14 +78,16 @@ export function SiteHeader() {
           type="button"
           aria-label={menuOpen ? "Close menu" : "Open menu"}
           aria-expanded={menuOpen}
+          aria-controls="mobile-navigation-panel"
           onClick={() => setMenuOpen((value) => !value)}
         >
           {menuOpen ? <X size={24} /> : <List size={26} />}
+          <span>{menuOpen ? "Close" : "Menu"}</span>
         </button>
       </div>
 
       {menuOpen && (
-        <div className="mobile-panel">
+        <div className="mobile-panel" id="mobile-navigation-panel">
           <nav className="site-container mobile-nav" aria-label="Mobile navigation">
             <ThemeSelector mobile />
             {navigation.primary.map((item) =>

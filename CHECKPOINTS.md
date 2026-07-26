@@ -177,6 +177,14 @@ Services website.
   test viewport.
 - Vercel Next.js build, Sites Vinext build and lint checks completed
   successfully.
+## Checkpoint 14: Mobile navbar visibility fix
+
+- Replaced the icon-only mobile navigation trigger with a clearly labelled Menu/Close control.
+- Locked the mobile header to a stable full-width two-column layout so the logo and menu control remain visible.
+- Added an explicit relationship between the menu trigger and navigation panel for assistive technology.
+- Constrained the opened navigation panel to the available dynamic viewport below the sticky header.
+- Added clipping, visibility, and small-screen safeguards for narrow phones.
+
 ## Checkpoint 13: Multi-theme navbar experience
 
 - Added four coordinated website finishes: Turbine, Night Shift, Blueprint, and Eco Flow.

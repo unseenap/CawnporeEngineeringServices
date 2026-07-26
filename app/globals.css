@@ -2669,14 +2669,21 @@ img {
 
 .menu-button {
   display: none;
-  width: 2.8rem;
+  min-width: 2.8rem;
   height: 2.8rem;
   align-items: center;
   justify-content: center;
+  gap: 0.42rem;
   border: 1px solid var(--color-border-strong);
   border-radius: var(--radius-small);
+  padding-inline: 0.65rem;
   background: var(--color-surface);
   color: var(--color-text);
+  cursor: pointer;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
 .mobile-panel {
@@ -2958,11 +2965,38 @@ img {
   }
 
   .nav-shell {
+    width: min(calc(100% - 1.25rem), var(--container));
+    min-height: 4.5rem;
     grid-template-columns: 1fr auto;
+    gap: 0.75rem;
   }
 
   .menu-button {
-    display: inline-flex;
+    display: inline-flex !important;
+    visibility: visible;
+    opacity: 1;
+    justify-self: end;
+  }
+
+  .site-header {
+    display: block;
+    width: 100%;
+    min-height: 4.5rem;
+  }
+
+  .brand {
+    min-width: 0;
+    overflow: hidden;
+  }
+
+  .brand span {
+    min-width: 0;
+  }
+
+  .mobile-panel {
+    top: 4.5rem;
+    height: calc(100dvh - 4.5rem);
+    overscroll-behavior: contain;
   }
 
   .mobile-theme-picker {
@@ -3344,6 +3378,7 @@ section,
 
   .brand strong {
     font-size: 0.98rem;
+    white-space: nowrap;
   }
 
   .brand small {
@@ -3473,8 +3508,9 @@ section,
   }
 
   .menu-button {
-    width: 2.6rem;
+    min-width: 2.6rem;
     height: 2.6rem;
+    padding-inline: 0.5rem;
   }
 
   .mobile-nav {
