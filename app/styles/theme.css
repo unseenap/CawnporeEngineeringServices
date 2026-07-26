@@ -1,24 +1,31 @@
 :root {
   color-scheme: light;
-  --color-brand-primary: #0b3b49;
-  --color-brand-secondary: #0f6474;
-  --color-brand-accent: #e6b34b;
-  --color-page: #edf4f3;
-  --color-surface: #f8fbfa;
-  --color-surface-strong: #dcebea;
-  --color-surface-dark: #0a2932;
-  --color-text: #102f38;
-  --color-text-soft: #49666d;
-  --color-text-inverse: #f6fbfa;
-  --color-border: #bed2d1;
-  --color-border-strong: #769b9f;
-  --color-focus: #b47700;
+  /* Palette derived from the supplied CES turbine logo. */
+  --color-brand-primary: #06428f;
+  --color-brand-secondary: #008bd2;
+  --color-brand-accent: #e52635;
+  --color-page: #edf3f9;
+  --color-surface: #f8fafc;
+  --color-surface-strong: #dfeaf5;
+  --color-surface-dark: #0b223b;
+  --color-text: #102a43;
+  --color-text-soft: #526b82;
+  --color-text-inverse: #f5f9fd;
+  --color-border: #bdccdc;
+  --color-border-strong: #7894b0;
+  --color-dark-border: #294c70;
+  --color-dark-muted: #b8cadb;
+  --color-focus: #d61f2f;
   --color-success: #176b52;
-  --color-warning: #8a5b00;
-  --color-error: #a23333;
-  --gradient-airflow: linear-gradient(105deg, #0f6474 0%, #2ba5a4 48%, #e6b34b 100%);
-  --gradient-hero: radial-gradient(circle at 82% 18%, rgb(55 178 174 / 22%), transparent 35%), linear-gradient(135deg, #f8fbfa 0%, #e4efee 100%);
-  --shadow-card: 0 24px 70px rgb(11 59 73 / 10%);
+  --color-warning: #995f00;
+  --color-error: #c51f30;
+  --color-image-overlay: rgb(5 24 45 / 82%);
+  --gradient-airflow: linear-gradient(105deg, #06428f 0%, #008bd2 58%, #e52635 100%);
+  --gradient-hero:
+    radial-gradient(circle at 82% 18%, rgb(0 139 210 / 20%), transparent 35%),
+    radial-gradient(circle at 92% 72%, rgb(229 38 53 / 8%), transparent 24%),
+    linear-gradient(135deg, #f8fafc 0%, #e5eef7 100%);
+  --shadow-card: 0 24px 70px rgb(6 66 143 / 12%);
   --radius-small: 0.55rem;
   --radius-medium: 1rem;
   --radius-large: 1.5rem;
@@ -26,15 +33,20 @@
 }
 
 [data-theme="deep"] {
-  --color-brand-primary: #dff5f1;
-  --color-brand-secondary: #69cfca;
-  --color-page: #071f27;
-  --color-surface: #0b2c35;
-  --color-surface-strong: #123b43;
-  --color-surface-dark: #04171d;
-  --color-text: #eff9f7;
-  --color-text-soft: #b5ceca;
-  --color-border: #2e555b;
-  --color-border-strong: #72a1a3;
+  --color-brand-primary: #8ec9ff;
+  --color-brand-secondary: #37b8f3;
+  --color-brand-accent: #ff5260;
+  --color-page: #07182a;
+  --color-surface: #0c223b;
+  --color-surface-strong: #14304d;
+  --color-surface-dark: #04111f;
+  --color-text: #eef6fd;
+  --color-text-soft: #b8cadb;
+  --color-border: #294864;
+  --color-border-strong: #6384a2;
+  --color-dark-border: #294c70;
+  --color-dark-muted: #b8cadb;
+  --color-focus: #ff5260;
+  --color-image-overlay: rgb(3 14 28 / 86%);
   --shadow-card: 0 24px 70px rgb(0 0 0 / 24%);
 }

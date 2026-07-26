@@ -90,3 +90,18 @@ Services website.
 - Confirmed the Home page, logo and representative project image each return
   HTTP status 200 in local development.
 - Production build and lint checks completed successfully.
+
+## Checkpoint 8: Logo-derived brand theme
+
+- Status: Complete
+- Sampled the supplied logo and identified its dominant brand colours as deep
+  blue, electric cyan, vivid red and graphite.
+- Remapped all global semantic colour tokens in `app/styles/theme.css` to the
+  logo palette.
+- Assigned blue to structural brand surfaces, cyan to primary interaction and
+  airflow cues, and red to controlled emphasis, focus and error states.
+- Replaced remaining teal-specific hard-coded colours with semantic theme
+  variables so future palette changes remain centralized.
+- Verified WCAG contrast for primary buttons, body text, muted text, dark
+  surfaces and focus indicators.
+- Production build and lint checks completed successfully.
