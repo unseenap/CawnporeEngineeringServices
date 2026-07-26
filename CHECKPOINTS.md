@@ -122,3 +122,20 @@ Services website.
 - Added reduced-motion behavior, responsive layouts and direct image delivery
   for local Vinext compatibility.
 - Production build and lint checks completed successfully.
+
+## Checkpoint 10: Story-led About page redesign
+
+- Status: Complete
+- Reframed the About page around CES staying close to the work from engineering
+  decisions through site delivery and lifecycle care.
+- Generated and integrated an original illustration of an Indian HVAC
+  engineering team coordinating drawings and installed plant equipment.
+- Added React Bits blur-reveal behavior and a Magic UI animated technical grid
+  to the new asymmetric About hero.
+- Added animated real-project photography and a scroll-linked four-stage
+  Understand, Engineer, Deliver and Sustain lifecycle narrative.
+- Refined the company story, mission, vision, values and leadership content for
+  clearer credibility and accountability.
+- Added responsive layouts, touch-friendly mobile behavior and reduced-motion
+  alternatives.
+- Production build and lint checks completed successfully.
