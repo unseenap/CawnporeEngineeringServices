@@ -105,3 +105,20 @@ Services website.
 - Verified WCAG contrast for primary buttons, body text, muted text, dark
   surfaces and focus indicators.
 - Production build and lint checks completed successfully.
+
+## Checkpoint 9: Motion-led Home page redesign
+
+- Status: Complete
+- Reframed the Home page around a clearer promise: climate systems built to
+  perform across their full lifecycle.
+- Generated and integrated an original architectural HVAC cutaway illustration
+  using the CES blue, cyan, red and graphite palette.
+- Rebuilt the hero as an asymmetric technical composition with React Bits
+  blur-reveal behavior and a Magic UI animated grid treatment.
+- Added a scroll-linked project photography rail using real CES references,
+  viewport reveals and mobile touch scrolling.
+- Refined service, sector, efficiency and call-to-action content for project
+  decision-makers.
+- Added reduced-motion behavior, responsive layouts and direct image delivery
+  for local Vinext compatibility.
+- Production build and lint checks completed successfully.

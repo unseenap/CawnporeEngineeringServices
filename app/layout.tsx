@@ -13,6 +13,17 @@ export const metadata: Metadata = {
     icon: "/brand/logo.png",
     shortcut: "/brand/logo.png",
   },
+  openGraph: {
+    title: "Cawnpore Engineering Services | Climate Systems Built to Perform",
+    description: "HVAC design, installation and lifecycle service for commercial, residential and industrial environments across India.",
+    type: "website",
+    images: [{
+      url: "/images/illustrations/ces-hvac-cutaway.png",
+      width: 1693,
+      height: 945,
+      alt: "Engineered HVAC system serving a commercial building",
+    }],
+  },
 };
 
 export default function RootLayout({

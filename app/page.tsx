@@ -1,46 +1,44 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Buildings, Factory, HouseLine, Leaf } from "@phosphor-icons/react/dist/ssr";
-import { AirflowVisual } from "@/components/visuals/AirflowVisual";
+import { ArrowRight, Buildings, Factory, Gauge, HouseLine, Leaf, Wrench } from "@phosphor-icons/react/dist/ssr";
+import { HeroSystemVisual, ProjectPhotoRail } from "@/components/home/HomeMotion";
 import { BlurReveal } from "@/components/motion/BlurReveal";
 import { Reveal } from "@/components/motion/Reveal";
-import company from "@/data/company.json";
 import projects from "@/data/projects.json";
 import services from "@/data/services.json";
 import site from "@/data/site.json";
 
 export const metadata: Metadata = {
   title: "Cawnpore Engineering Services | HVAC Solutions",
-  description: "Professional HVAC design, installation, maintenance, upgrades and specialized climate-control solutions across India."
+  description: "HVAC design, installation and lifecycle service for commercial, residential and industrial environments across India."
 };
 
 const segments = [
-  { name: "Commercial", detail: "Offices, retail spaces, malls and institutions", icon: Buildings },
-  { name: "Residential", detail: "Homes and residential developments", icon: HouseLine },
-  { name: "Industrial", detail: "Manufacturing and production facilities", icon: Factory },
-  { name: "Sustainable", detail: "Energy-aware climate-control solutions", icon: Leaf }
+  { name: "Commercial", detail: "Offices, retail, healthcare and institutional spaces.", icon: Buildings },
+  { name: "Residential", detail: "Comfort-led systems for homes and developments.", icon: HouseLine },
+  { name: "Industrial", detail: "Reliable cooling and ventilation for critical operations.", icon: Factory },
+  { name: "Energy-aware", detail: "Performance upgrades that reduce avoidable consumption.", icon: Leaf }
 ];
 
 export default function Home() {
   return (
     <>
-      <section className="home-hero">
-        <div className="site-container home-hero-grid">
-          <div className="home-hero-copy">
-            <span className="mono-label">{site.headquarters} · {site.coverage} operations</span>
-            <h1 className="display">
-              <BlurReveal text="Climate, engineered." />
-            </h1>
-            <p>Professional HVAC solutions for commercial, residential and industrial environments.</p>
+      <section className="home-hero home-hero-v2">
+        <div className="site-container home-hero-v2-grid">
+          <div className="home-hero-v2-copy">
+            <span className="mono-label">{site.headquarters} · {site.coverage} HVAC delivery</span>
+            <h1 className="display"><BlurReveal text="Climate systems built to perform." /></h1>
+            <p>Design, installation and lifecycle service for commercial, residential and industrial environments.</p>
             <div className="hero-actions">
-              <Link className="button button-primary" href="/contact">Request consultation <ArrowRight size={18} /></Link>
+              <Link className="button button-primary" href="/contact">Discuss a project <ArrowRight size={18} /></Link>
               <Link className="button button-secondary" href="/services">Explore services</Link>
             </div>
+            <div className="hero-trust-line" aria-label="Core capabilities">
+              <span><Gauge size={18} />Performance-led design</span>
+              <span><Wrench size={18} />Lifecycle support</span>
+            </div>
           </div>
-          <Reveal className="home-hero-visual" delay={0.15}>
-            <AirflowVisual />
-          </Reveal>
+          <HeroSystemVisual />
         </div>
       </section>
 
@@ -48,16 +46,23 @@ export default function Home() {
         <div className="site-container proof-grid">
           <div><strong>{site.founded}</strong><span>Founded</span></div>
           <div><strong>{site.headquarters}</strong><span>Headquarters</span></div>
-          <div><strong>{site.coverage}</strong><span>Operations</span></div>
-          <p>{company.promise}</p>
+          <div><strong>{site.coverage}</strong><span>Project reach</span></div>
+          <p>One accountable engineering partner from system planning and execution to maintenance, modernization and specialized climate control.</p>
         </div>
       </section>
 
-      <section className="section">
-        <div className="site-container">
-          <Reveal>
-            <h2 className="section-title">One climate platform. Four operating worlds.</h2>
+      <section className="section home-intro">
+        <div className="site-container home-intro-grid">
+          <Reveal className="home-intro-title">
+            <span className="mono-label">Engineering the full lifecycle</span>
+            <h2 className="section-title">The right system is more than the right machine.</h2>
           </Reveal>
+          <Reveal className="home-intro-copy" delay={0.1}>
+            <p>It is the relationship between load, equipment, airflow, controls and the people who depend on the space.</p>
+            <p>CES coordinates those decisions into a system that can be built, commissioned, maintained and improved.</p>
+          </Reveal>
+        </div>
+        <div className="site-container">
           <div className="segment-grid">
             {segments.map((segment, index) => {
               const Icon = segment.icon;
@@ -73,66 +78,51 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section services-home">
-        <div className="site-container">
+      <section className="section services-home services-home-v2">
+        <div className="site-container services-heading">
           <Reveal>
-            <span className="mono-label">Complete lifecycle capability</span>
-            <h2 className="section-title">From the first calculation to long-term performance.</h2>
+            <span className="mono-label">One connected capability</span>
+            <h2 className="section-title">From first calculation to long-term performance.</h2>
           </Reveal>
+          <Reveal delay={0.1}>
+            <p className="body-large">Bring CES in for one defined need or retain a single technical partner across the system lifecycle.</p>
+          </Reveal>
+        </div>
+        <div className="site-container">
           <div className="service-index">
             {services.map((service) => (
               <Reveal className="service-row" key={service.id}>
                 <span>{service.number}</span>
-                <div>
-                  <h3>{service.shortTitle}</h3>
-                  <p>{service.summary}</p>
-                </div>
-                <Link href={`/services/${service.id}`} aria-label={`Explore ${service.title}`}>
-                  <ArrowRight size={24} />
-                </Link>
+                <div><h3>{service.shortTitle}</h3><p>{service.summary}</p></div>
+                <Link href={`/services/${service.id}`} aria-label={`Explore ${service.title}`}><ArrowRight size={24} /></Link>
               </Reveal>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="section project-feature">
-        <div className="site-container project-feature-grid">
-          <Reveal className="project-feature-copy">
-            <h2 className="section-title">Built across sectors. Proven in real environments.</h2>
-            <p className="body-large">Selected work spans healthcare, beverage, retail, housing, manufacturing, aviation and entertainment.</p>
-            <Link className="button button-secondary" href="/projects">View projects <ArrowRight size={18} /></Link>
-          </Reveal>
-          <div className="project-mosaic">
-            {projects.slice(0, 4).map((project, index) => (
-              <Reveal className={`mosaic-item mosaic-${index + 1}`} delay={index * 0.08} key={project.client}>
-                <Image src={project.image} alt={`${project.client} project reference`} fill unoptimized sizes="(max-width: 768px) 100vw, 28vw" />
-                <span>{project.client}</span>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
+      <ProjectPhotoRail projects={projects.slice(0, 6)} />
 
-      <section className="section efficiency-band">
+      <section className="section efficiency-band efficiency-band-v2">
         <div className="site-container efficiency-grid">
           <Reveal>
-            <Leaf size={48} weight="duotone" />
-            <h2>Comfort and efficiency can move together.</h2>
+            <span className="efficiency-icon"><Leaf size={32} weight="duotone" /></span>
+            <h2>Efficiency starts with engineering clarity.</h2>
           </Reveal>
           <Reveal delay={0.1}>
-            <p>Energy modelling, optimization, modernization and responsible system performance are designed into the CES approach.</p>
-            <Link href="/sustainability">Explore energy thinking <ArrowRight size={18} /></Link>
+            <p>Load calculation, equipment selection, control logic and commissioning all shape the energy a system will use for years.</p>
+            <Link href="/sustainability">See our energy approach <ArrowRight size={18} /></Link>
           </Reveal>
         </div>
       </section>
 
-      <section className="section final-cta">
+      <section className="section final-cta final-cta-v2">
         <div className="site-container">
           <Reveal>
-            <h2>What does your environment need?</h2>
-            <p>Share the service, city and operating challenge. We will help define the right next step.</p>
-            <Link className="button button-primary" href="/contact">Request consultation <ArrowRight size={18} /></Link>
+            <span className="mono-label">Start with the operating need</span>
+            <h2>Let us make the climate system make sense.</h2>
+            <p>Tell us the city, space and performance challenge. We will help define a practical next step.</p>
+            <Link className="button button-primary" href="/contact">Discuss your project <ArrowRight size={18} /></Link>
           </Reveal>
         </div>
       </section>
