@@ -73,3 +73,20 @@ Services website.
 - `npm run build` completed successfully after the repair.
 - `npm run dev` and `npm start` were each started from PowerShell and returned
   HTTP status 200.
+
+## Checkpoint 7: Local image runtime compatibility
+
+- Status: Complete
+- Diagnosed the development overlay as a missing Cloudflare `ASSETS` binding
+  inside Vinext's runtime image optimizer.
+- Configured Next images to serve local company assets directly instead of
+  invoking Cloudflare-only `ASSETS` and `IMAGES` bindings.
+- Removed duplicate Motion and Phosphor dependency declarations from
+  `package.json`.
+- Added an explicit direct-asset setting to every Next Image instance because
+  Vinext 0.0.50 does not apply the global setting consistently during local
+  rendering.
+- Confirmed the Home page no longer emits `/_vinext/image` URLs.
+- Confirmed the Home page, logo and representative project image each return
+  HTTP status 200 in local development.
+- Production build and lint checks completed successfully.

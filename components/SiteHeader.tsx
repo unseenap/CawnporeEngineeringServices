@@ -37,7 +37,7 @@ export function SiteHeader() {
     <header className="site-header">
       <div className="site-container nav-shell">
         <Link className="brand" href="/" aria-label={`${site.name} home`}>
-          <Image src={site.logo} alt="" width={58} height={58} priority />
+          <Image src={site.logo} alt="" width={58} height={58} priority unoptimized />
           <span>
             <strong>Cawnpore</strong>
             <small>Engineering Services</small>

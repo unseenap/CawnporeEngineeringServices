@@ -43,7 +43,7 @@ export function ProjectGallery() {
                 key={project.client}
               >
                 <div className="project-image">
-                  <Image src={project.image} alt={`${project.client} project reference`} fill sizes="(max-width: 768px) 100vw, 42vw" />
+                  <Image src={project.image} alt={`${project.client} project reference`} fill unoptimized sizes="(max-width: 768px) 100vw, 42vw" />
                 </div>
                 <div>
                   <span>{project.sector}</span>

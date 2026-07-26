@@ -21,7 +21,7 @@ export default function ServicesPage() {
           {services.map((service) => (
             <Reveal className="service-feature" key={service.id}>
               <div className="service-feature-image">
-                <Image src={service.image} alt="" fill sizes="(max-width: 768px) 100vw, 42vw" />
+                <Image src={service.image} alt="" fill unoptimized sizes="(max-width: 768px) 100vw, 42vw" />
               </div>
               <div>
                 <span className="service-number">{service.number}</span>

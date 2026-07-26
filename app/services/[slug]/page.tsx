@@ -33,7 +33,7 @@ export default async function ServiceDetailPage({ params }: Props) {
         label={`Service ${service.number}`}
         title={service.title}
         description={service.summary}
-        visual={<div className="service-hero-image"><Image src={service.image} alt="" fill priority sizes="(max-width: 768px) 100vw, 42vw" /></div>}
+        visual={<div className="service-hero-image"><Image src={service.image} alt="" fill priority unoptimized sizes="(max-width: 768px) 100vw, 42vw" /></div>}
       />
       <section className="section">
         <div className="site-container service-detail-grid">

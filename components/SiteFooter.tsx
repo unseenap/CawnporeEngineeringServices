@@ -8,7 +8,7 @@ export function SiteFooter() {
     <footer className="site-footer">
       <div className="site-container footer-grid">
         <div className="footer-brand">
-          <Image src={site.logo} alt="" width={72} height={72} />
+          <Image src={site.logo} alt="" width={72} height={72} unoptimized />
           <h2>Your climate.<br />Our commitment.</h2>
           <p>Professional HVAC engineering from Kanpur to operating environments across India.</p>
         </div>

@@ -106,7 +106,7 @@ export default function Home() {
           <div className="project-mosaic">
             {projects.slice(0, 4).map((project, index) => (
               <Reveal className={`mosaic-item mosaic-${index + 1}`} delay={index * 0.08} key={project.client}>
-                <Image src={project.image} alt={`${project.client} project reference`} fill sizes="(max-width: 768px) 100vw, 28vw" />
+                <Image src={project.image} alt={`${project.client} project reference`} fill unoptimized sizes="(max-width: 768px) 100vw, 28vw" />
                 <span>{project.client}</span>
               </Reveal>
             ))}
