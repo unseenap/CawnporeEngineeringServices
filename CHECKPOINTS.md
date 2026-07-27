@@ -177,6 +177,15 @@ Services website.
   test viewport.
 - Vercel Next.js build, Sites Vinext build and lint checks completed
   successfully.
+## Checkpoint 16: Industries page cinematic redesign
+
+- Rebuilt the Industries page around operating requirements instead of a generic card grid.
+- Added three original CES illustrations for commercial/healthcare, industrial/data-critical and residential/hospitality environments.
+- Added a theme-aware ReactBits-inspired Hyperspeed hero using CSS and Motion, with reduced-motion support.
+- Added scroll-linked image movement, staggered photo reveals and animated technical overlays.
+- Refined sector copy to explain how load, air quality, continuity, acoustics and lifecycle access change the engineering response.
+- Preserved complete coverage of all ten industries in a responsive technical matrix.
+
 ## Checkpoint 15: Shape-grid home hero and thermal loading experience
 
 - Reframed the hero around the company name, followed by a clear engineering slogan and refined service summary.
