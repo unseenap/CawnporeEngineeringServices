@@ -232,3 +232,13 @@ Services website.
 - Retained the existing filenames so all current project data and routes
   continue to resolve without code changes.
 - Optimized the final JPEG and PNG assets for responsive website delivery.
+
+## Checkpoint 19: Two-state animated theme control
+
+- Status: Complete
+- Reduced the site finish options to Turbine and Blueprint.
+- Replaced the multi-option popup with a compact animated two-state toggle.
+- Added a circular page-reveal transition with a reduced-motion fallback.
+- Added a full-width, touch-friendly version at the top of the mobile menu.
+- Tightened mobile header spacing, safe-area padding and navigation height.
+- Preserved device-local theme persistence and pre-paint theme restoration.

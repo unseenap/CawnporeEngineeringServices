@@ -36,7 +36,7 @@ export default function RootLayout({
       <head>
         <script
           dangerouslySetInnerHTML={{
-            __html: `(function(){try{var t=localStorage.getItem("ces-theme");if(t&&t!=="turbine"){document.documentElement.setAttribute("data-theme",t)}document.documentElement.style.colorScheme=t==="deep"?"dark":"light"}catch(e){}})();`,
+            __html: `(function(){try{var t=localStorage.getItem("ces-theme");if(t==="blueprint"){document.documentElement.setAttribute("data-theme","blueprint")}else{document.documentElement.removeAttribute("data-theme");if(t)localStorage.setItem("ces-theme","turbine")}document.documentElement.style.colorScheme="light"}catch(e){}})();`,
           }}
         />
       </head>
