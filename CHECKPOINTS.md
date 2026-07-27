@@ -177,6 +177,14 @@ Services website.
   test viewport.
 - Vercel Next.js build, Sites Vinext build and lint checks completed
   successfully.
+## Checkpoint 15: Shape-grid home hero and thermal loading experience
+
+- Reframed the hero around the company name, followed by a clear engineering slogan and refined service summary.
+- Added an animated geometric shape-grid background inspired by technical drawings, airflow paths and HVAC control interfaces.
+- Added a branded hot-to-cold loading sequence that runs once per browsing session and respects reduced-motion preferences.
+- Extended the existing ReactBits-inspired blur reveal with a thermal-gradient slogan reveal.
+- Kept all animations responsive, accessible and aligned with the active website color theme.
+
 ## Checkpoint 14: Mobile navbar visibility fix
 
 - Replaced the icon-only mobile navigation trigger with a clearly labelled Menu/Close control.

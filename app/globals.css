@@ -489,13 +489,27 @@ img {
 }
 
 /* Homepage v2: technical editorial composition */
+.home-page-shell {
+  position: relative;
+  isolation: isolate;
+  background:
+    linear-gradient(rgb(6 66 143 / 3%) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(6 66 143 / 3%) 1px, transparent 1px),
+    var(--color-page);
+  background-size: 5rem 5rem;
+}
+
 .home-hero-v2 {
   position: relative;
+  isolation: isolate;
+  overflow: hidden;
   color: var(--color-text-inverse);
   background: radial-gradient(circle at 15% 16%, rgb(0 139 210 / 18%), transparent 30%), linear-gradient(115deg, #06182b 0%, var(--color-surface-dark) 48%, #071b32 100%);
 }
 
 .home-hero-v2-grid {
+  position: relative;
+  z-index: 2;
   display: grid;
   min-height: calc(100svh - 4.5rem);
   grid-template-columns: minmax(20rem, 0.78fr) minmax(32rem, 1.22fr);
@@ -507,9 +521,9 @@ img {
 .home-hero-v2-copy { position: relative; z-index: 3; }
 .home-hero-v2-copy .mono-label { color: #86d6fb; }
 .home-hero-v2-copy .display {
-  max-width: 8.2ch;
+  max-width: 11ch;
   margin-block: 1.25rem 1.4rem;
-  font-size: clamp(3.7rem, 6.7vw, 7rem);
+  font-size: clamp(3.45rem, 5.8vw, 6.5rem);
 }
 .home-hero-v2-copy > p {
   max-width: 33rem;
@@ -517,6 +531,200 @@ img {
   color: var(--color-dark-muted);
   font-size: clamp(1.05rem, 1.3vw, 1.2rem);
   line-height: 1.65;
+}
+
+.home-hero-v2-copy .hero-slogan {
+  max-width: 27rem;
+  margin-bottom: 0.8rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.35rem, 2vw, 2rem);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 1.12;
+}
+
+.thermal-text {
+  display: inline-block;
+  color: transparent;
+  background: linear-gradient(90deg, #ff5d50 0%, #f4f8fb 45%, #42c3f2 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.home-hero-v2-copy .hero-summary {
+  max-width: 34rem;
+  color: var(--color-dark-muted);
+  font-size: clamp(0.98rem, 1.2vw, 1.12rem);
+}
+
+.shape-grid-pattern {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.shape-grid-lines {
+  position: absolute;
+  inset: -1px;
+  background:
+    linear-gradient(rgb(98 193 236 / 11%) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(98 193 236 / 11%) 1px, transparent 1px);
+  background-size: clamp(2.6rem, 5vw, 5rem) clamp(2.6rem, 5vw, 5rem);
+  mask-image: linear-gradient(90deg, black, rgb(0 0 0 / 28%) 72%, transparent);
+}
+
+.shape-grid-cell {
+  position: absolute;
+  width: clamp(2.2rem, 4vw, 4.5rem);
+  aspect-ratio: 1;
+  border: 1px solid color-mix(in srgb, var(--color-brand-secondary) 72%, white);
+  background: color-mix(in srgb, var(--color-brand-secondary) 12%, transparent);
+  box-shadow: inset 0 0 2rem rgb(0 139 210 / 8%);
+}
+
+.shape-circle {
+  border-radius: 50%;
+}
+
+.shape-diamond {
+  border-color: color-mix(in srgb, var(--color-brand-accent) 68%, white);
+  background: color-mix(in srgb, var(--color-brand-accent) 10%, transparent);
+  transform: rotate(45deg);
+}
+
+.shape-grid-scan {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 18%;
+  background: linear-gradient(90deg, transparent, rgb(97 211 255 / 9%), transparent);
+  filter: blur(4px);
+}
+
+.home-shape-grid {
+  z-index: 1;
+}
+
+/* Brand temperature loader: hot equipment state resolves into cooled supply air. */
+.site-loader {
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+  display: grid;
+  min-height: 100dvh;
+  place-items: center;
+  overflow: hidden;
+  background: #06182b;
+  color: #f5f9fd;
+  cursor: progress;
+}
+
+.loader-grid {
+  position: absolute;
+  inset: 0;
+  opacity: 0.38;
+  background:
+    linear-gradient(rgb(255 255 255 / 8%) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(255 255 255 / 8%) 1px, transparent 1px);
+  background-size: clamp(2.5rem, 6vw, 5rem) clamp(2.5rem, 6vw, 5rem);
+  mask-image: radial-gradient(circle at center, black 0%, transparent 72%);
+}
+
+.loader-thermal-field {
+  position: absolute;
+  inset: 0;
+  opacity: 0.74;
+  background:
+    radial-gradient(circle at 18% 50%, rgb(229 38 53 / 58%), transparent 32%),
+    radial-gradient(circle at 82% 50%, rgb(0 139 210 / 62%), transparent 34%);
+  background-position: 0% 50%;
+  background-size: 130% 130%;
+  filter: saturate(1.08);
+}
+
+.loader-content {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  width: min(34rem, calc(100% - 2rem));
+  justify-items: center;
+  gap: 1.35rem;
+  text-align: center;
+}
+
+.loader-logo {
+  display: grid;
+  width: 7rem;
+  height: 7rem;
+  place-items: center;
+  border: 1px solid rgb(255 255 255 / 22%);
+  background: rgb(5 24 45 / 72%);
+  box-shadow: 0 1.5rem 5rem rgb(0 0 0 / 30%);
+  backdrop-filter: blur(14px);
+}
+
+.loader-logo img {
+  width: 5.25rem;
+  height: 5.25rem;
+  object-fit: contain;
+}
+
+.loader-wordmark {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.loader-wordmark > span {
+  font-family: var(--font-display);
+  font-size: clamp(1.65rem, 4vw, 3rem);
+  font-weight: 850;
+  letter-spacing: -0.035em;
+  line-height: 1;
+}
+
+.loader-wordmark small {
+  color: #bdd0e2;
+  font-family: var(--font-mono);
+  font-size: 0.67rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.thermal-meter {
+  display: grid;
+  width: min(25rem, 100%);
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 0.7rem;
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.thermal-meter > span:first-child {
+  color: #ff776b;
+}
+
+.thermal-meter > span:last-child {
+  color: #69d4ff;
+}
+
+.thermal-meter > div {
+  height: 0.3rem;
+  overflow: hidden;
+  background: rgb(255 255 255 / 15%);
+}
+
+.thermal-meter i {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform-origin: left;
+  background: linear-gradient(90deg, #e52635, #f2f5f7 48%, #008bd2);
 }
 .home-hero-v2 .button-secondary {
   border-color: rgb(184 202 219 / 48%);

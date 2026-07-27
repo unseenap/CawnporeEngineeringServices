@@ -3,7 +3,9 @@ import Link from "next/link";
 import { ArrowRight, Buildings, Factory, Gauge, HouseLine, Leaf, Wrench } from "@phosphor-icons/react/dist/ssr";
 import { HeroSystemVisual, ProjectPhotoRail } from "@/components/home/HomeMotion";
 import { BlurReveal } from "@/components/motion/BlurReveal";
+import { ThermalText } from "@/components/motion/ThermalText";
 import { Reveal } from "@/components/motion/Reveal";
+import { ShapeGridPattern } from "@/components/ui/ShapeGridPattern";
 import projects from "@/data/projects.json";
 import services from "@/data/services.json";
 import site from "@/data/site.json";
@@ -22,13 +24,15 @@ const segments = [
 
 export default function Home() {
   return (
-    <>
+    <div className="home-page-shell">
       <section className="home-hero home-hero-v2">
+        <ShapeGridPattern className="home-shape-grid" />
         <div className="site-container home-hero-v2-grid">
           <div className="home-hero-v2-copy">
             <span className="mono-label">{site.headquarters} · {site.coverage} HVAC delivery</span>
-            <h1 className="display"><BlurReveal text="Climate systems built to perform." /></h1>
-            <p>Design, installation and lifecycle service for commercial, residential and industrial environments.</p>
+            <h1 className="display"><BlurReveal text="Cawnpore Engineering Services" /></h1>
+            <p className="hero-slogan"><ThermalText text="Engineering comfort. Sustaining performance." /></p>
+            <p className="hero-summary">Integrated HVAC design, installation and lifecycle service for commercial, residential and industrial environments across India.</p>
             <div className="hero-actions">
               <Link className="button button-primary" href="/contact">Discuss a project <ArrowRight size={18} /></Link>
               <Link className="button button-secondary" href="/services">Explore services</Link>
@@ -126,6 +130,6 @@ export default function Home() {
           </Reveal>
         </div>
       </section>
-    </>
+    </div>
   );
 }
