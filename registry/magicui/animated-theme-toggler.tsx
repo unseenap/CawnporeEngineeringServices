@@ -29,7 +29,7 @@ export function AnimatedThemeToggler({ mobile = false }: { mobile?: boolean }) {
   const toggleTheme = async (event: React.MouseEvent<HTMLButtonElement>) => {
     const nextTheme: ThemeId = theme === "turbine" ? "blueprint" : "turbine";
     const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const transition = document.startViewTransition;
+    const transition = document.startViewTransition?.bind(document);
 
     if (!transition || reduceMotion) {
       setTheme(nextTheme);
@@ -44,24 +44,29 @@ export function AnimatedThemeToggler({ mobile = false }: { mobile?: boolean }) {
       Math.max(y, window.innerHeight - y),
     );
 
-    await transition(() => {
+    try {
+      await transition(() => {
+        setTheme(nextTheme);
+        setDocumentTheme(nextTheme);
+      }).ready;
+
+      document.documentElement.animate(
+        {
+          clipPath: [
+            `circle(0px at ${x}px ${y}px)`,
+            `circle(${radius}px at ${x}px ${y}px)`,
+          ],
+        },
+        {
+          duration: 620,
+          easing: "cubic-bezier(.22, 1, .36, 1)",
+          pseudoElement: "::view-transition-new(root)",
+        },
+      );
+    } catch {
       setTheme(nextTheme);
       setDocumentTheme(nextTheme);
-    }).ready;
-
-    document.documentElement.animate(
-      {
-        clipPath: [
-          `circle(0px at ${x}px ${y}px)`,
-          `circle(${radius}px at ${x}px ${y}px)`,
-        ],
-      },
-      {
-        duration: 620,
-        easing: "cubic-bezier(.22, 1, .36, 1)",
-        pseudoElement: "::view-transition-new(root)",
-      },
-    );
+    }
   };
 
   const blueprint = theme === "blueprint";

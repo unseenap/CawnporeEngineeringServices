@@ -242,3 +242,5 @@ Services website.
 - Added a full-width, touch-friendly version at the top of the mobile menu.
 - Tightened mobile header spacing, safe-area padding and navigation height.
 - Preserved device-local theme persistence and pre-paint theme restoration.
+- Fixed the browser View Transition invocation context and added a safe
+  non-animated fallback if the transition API rejects.
