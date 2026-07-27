@@ -217,3 +217,18 @@ Services website.
 - Added a creative animated “Site finish” control to the desktop navbar and a touch-friendly theme panel inside the mobile menu.
 - Added keyboard dismissal, outside-click dismissal, accessible pressed states, reduced-motion behavior, and device-local theme persistence.
 - Applied the saved theme before page paint to avoid a visible color flash between routes or reloads.
+
+## Checkpoint 18: Standardized project gallery visuals
+
+- Status: Complete
+- Rebuilt all nine project visuals as a consistent 1600 × 1000 (16:10) gallery set.
+- Created sector-specific engineering scenes for healthcare, education,
+  manufacturing, residential, entertainment, beverage, aviation and retail
+  work.
+- Preserved the supplied client identity marks as exact image composites
+  instead of asking the image model to redraw them.
+- Applied the actual CES logo from the website brand assets to every project
+  visual with a consistent, legible badge treatment.
+- Retained the existing filenames so all current project data and routes
+  continue to resolve without code changes.
+- Optimized the final JPEG and PNG assets for responsive website delivery.
