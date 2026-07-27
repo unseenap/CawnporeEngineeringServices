@@ -177,6 +177,14 @@ Services website.
   test viewport.
 - Vercel Next.js build, Sites Vinext build and lint checks completed
   successfully.
+## Checkpoint 17: Three-second loader and Why Choose Us page
+
+- Extended the branded hot-to-cold loading experience to remain visible for at least three seconds on every full site load.
+- Added a dedicated Why Choose Us route and linked it throughout the responsive primary navigation and footer.
+- Added an original CES illustration showing survey, engineering, installation, commissioning and stable operation as one connected responsibility.
+- Built an evidence-led page around operating needs, coordinated delivery, verified performance and lifecycle support.
+- Added photo reveal, scroll-linked image motion, animated technical grids and staged process transitions with reduced-motion support.
+
 ## Checkpoint 16: Industries page cinematic redesign
 
 - Rebuilt the Industries page around operating requirements instead of a generic card grid.

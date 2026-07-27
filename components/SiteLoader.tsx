@@ -4,22 +4,14 @@ import Image from "next/image";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { useEffect, useState } from "react";
 
-const LOADER_KEY = "ces-loader-seen";
-
 export function SiteLoader() {
   const [visible, setVisible] = useState(true);
   const reduceMotion = useReducedMotion();
 
   useEffect(() => {
-    if (sessionStorage.getItem(LOADER_KEY)) {
-      const frame = requestAnimationFrame(() => setVisible(false));
-      return () => cancelAnimationFrame(frame);
-    }
-
-    sessionStorage.setItem(LOADER_KEY, "true");
-    const timeout = window.setTimeout(() => setVisible(false), reduceMotion ? 350 : 2450);
+    const timeout = window.setTimeout(() => setVisible(false), 3200);
     return () => window.clearTimeout(timeout);
-  }, [reduceMotion]);
+  }, []);
 
   useEffect(() => {
     if (!visible) return;

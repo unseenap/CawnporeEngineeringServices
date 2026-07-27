@@ -2,6 +2,7 @@
   "primary": [
     { "label": "Home", "href": "/" },
     { "label": "About", "href": "/about" },
+    { "label": "Why CES", "href": "/why-choose-us" },
     { "label": "Services", "href": "/services", "children": [
       { "label": "Design & Engineering", "href": "/services/design-engineering" },
       { "label": "Installation & Commissioning", "href": "/services/installation-commissioning" },
