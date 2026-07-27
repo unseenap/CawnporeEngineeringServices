@@ -5,6 +5,16 @@ import { useMemo, useState } from "react";
 import { motion, AnimatePresence, useReducedMotion } from "motion/react";
 import projects from "@/data/projects.json";
 
+const priorities: Record<string, string> = {
+  Healthcare: "Air quality, reliability and controlled clinical conditions",
+  "Beverage industry": "Process loads, production continuity and hygiene",
+  Entertainment: "High occupancy, comfort and responsive ventilation",
+  Retail: "Variable footfall, zoning and dependable public comfort",
+  Residential: "Quiet comfort, efficiency and maintainable distribution",
+  Manufacturing: "Process heat, ventilation and operational continuity",
+  Aviation: "Large-volume conditioning and fluctuating passenger demand",
+};
+
 export function ProjectGallery() {
   const categories = ["All", ...Array.from(new Set(projects.map((project) => project.sector)))];
   const [active, setActive] = useState("All");
@@ -15,8 +25,18 @@ export function ProjectGallery() {
   );
 
   return (
-    <section className="section project-gallery-section">
+    <section className="section project-gallery-section project-gallery-v2" id="project-index">
       <div className="site-container">
+        <div className="project-index-heading">
+          <div>
+            <p className="mono-label">Project index</p>
+            <h2>Selected environments, viewed through performance.</h2>
+          </div>
+          <p>
+            Filter the portfolio by sector. Each visual is a project presentation
+            asset; the operating priorities explain the engineering context.
+          </p>
+        </div>
         <div className="project-filters" aria-label="Filter projects by sector">
           {categories.map((category) => (
             <button
@@ -41,13 +61,23 @@ export function ProjectGallery() {
                 transition={{ duration: 0.35, delay: index * 0.035 }}
                 className={`project-card project-card-${(index % 4) + 1}`}
                 key={project.client}
+                whileHover={reduceMotion ? undefined : { y: -8 }}
               >
                 <div className="project-image">
                   <Image src={project.image} alt={`${project.client} project reference`} fill unoptimized sizes="(max-width: 768px) 100vw, 42vw" />
+                  <motion.span
+                    className="project-image-scan"
+                    aria-hidden="true"
+                    initial={false}
+                    animate={reduceMotion ? undefined : { y: ["-120%", "620%"] }}
+                    transition={{ duration: 5.5, repeat: Infinity, delay: index * 0.4, ease: "linear" }}
+                  />
                 </div>
-                <div>
-                  <span>{project.sector}</span>
+                <div className="project-card-copy">
+                  <span className="project-sector">{project.sector}</span>
                   <h2>{project.client}</h2>
+                  <p>{priorities[project.sector]}</p>
+                  <small>Project environment</small>
                 </div>
               </motion.article>
             ))}

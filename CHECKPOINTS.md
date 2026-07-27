@@ -244,3 +244,17 @@ Services website.
 - Preserved device-local theme persistence and pre-paint theme restoration.
 - Fixed the browser View Transition invocation context and added a safe
   non-animated fallback if the transition API rejects.
+
+## Checkpoint 20: Motion-led Projects page redesign
+
+- Status: Complete
+- Rebuilt the Projects page around a theme-aware retro engineering grid.
+- Added an original cross-sector HVAC illustration for the project narrative.
+- Added staggered headline reveals, illustration unveiling and scroll-linked
+  hero movement with reduced-motion alternatives.
+- Refined the page copy around operating requirements, coordination,
+  commissioning and lifecycle support.
+- Reworked the filterable project index with animated imagery, sector-specific
+  operating priorities and responsive editorial layouts.
+- Added a structured engineering approach and a focused project enquiry call
+  to action.
