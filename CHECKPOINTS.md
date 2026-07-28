@@ -283,3 +283,17 @@ Services website.
   contact data, leadership data and the SRS.
 - Removed the associated email address and telephone number from public contact
   information.
+
+## Checkpoint 23: Site-wide mobile responsive hardening
+
+- Status: Complete
+- Audited Home, About, Services, Industries, Projects, Sustainability,
+  Why Choose Us and Contact at phone widths.
+- Added 320 px–768 px safeguards for navigation, hero grids, illustrations,
+  project rails, filters, forms, calls to action and footer content.
+- Prevented decorative Ripple, Retro Grid and Hyperspeed layers from affecting
+  page width while preserving their animation inside clipped sections.
+- Added touch scrolling and snap behavior to project filters and horizontal
+  project media.
+- Tightened narrow-phone branding, menu controls, typography wrapping,
+  full-width form controls and button behavior.

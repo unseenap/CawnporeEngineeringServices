@@ -6001,3 +6001,209 @@ section,
     animation: none;
   }
 }
+
+/* Site-wide phone hardening: content remains inside the viewport while
+   decorative motion is clipped by its owning section. */
+html,
+body {
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+main,
+main > section,
+.site-container,
+.site-container > *,
+.section,
+.section > * {
+  min-width: 0;
+}
+
+img,
+video,
+canvas {
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  .site-header,
+  .mobile-panel {
+    max-width: 100vw;
+  }
+
+  .nav-shell {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+
+  .brand {
+    max-width: calc(100vw - 7.5rem);
+  }
+
+  .menu-button {
+    flex: 0 0 auto;
+    white-space: nowrap;
+  }
+
+  .mobile-nav,
+  .mobile-subnav,
+  .mobile-nav > div,
+  .mobile-nav a,
+  .mobile-nav button {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .mobile-subnav a {
+    overflow-wrap: anywhere;
+  }
+
+  .home-hero-grid,
+  .about-hero-grid-v2,
+  .sustainability-hero-grid-v2,
+  .industries-hero-grid-v2,
+  .projects-hero-grid,
+  .contact-hero-grid,
+  .why-hero-grid,
+  .contact-grid,
+  .footer-grid {
+    width: min(calc(100% - 1.5rem), var(--container));
+    max-width: 100%;
+  }
+
+  .system-visual,
+  .about-system-visual,
+  .sustainability-system-visual,
+  .industries-hero-visual,
+  .projects-hero-visual,
+  .contact-hero-visual,
+  .why-hero-visual,
+  .airflow-visual {
+    width: 100%;
+    max-width: 100%;
+    margin-inline: 0;
+  }
+
+  .about-project-photo-main,
+  .about-project-photo-small,
+  .photo-industrial,
+  .photo-commercial,
+  .why-proof-photo {
+    max-width: 100%;
+  }
+
+  .project-rail-viewport,
+  .project-filters,
+  .sector-matrix,
+  .service-list,
+  .contact-form {
+    max-width: 100%;
+  }
+
+  .project-rail-viewport {
+    overscroll-behavior-inline: contain;
+  }
+
+  .project-filters {
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x proximity;
+  }
+
+  .project-filters button {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+  }
+
+  .contact-form .field-row {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form input,
+  .contact-form select,
+  .contact-form textarea,
+  .contact-form button {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .contact-form textarea {
+    min-height: 9rem;
+  }
+
+  .projects-retro-grid,
+  .contact-ripple,
+  .hyperspeed {
+    contain: paint;
+  }
+
+  .display,
+  .projects-display,
+  .contact-display,
+  .why-display {
+    overflow-wrap: anywhere;
+    text-wrap: balance;
+  }
+}
+
+@media (max-width: 420px) {
+  .brand {
+    max-width: calc(100vw - 6.7rem);
+  }
+
+  .brand img {
+    flex: 0 0 auto;
+  }
+
+  .brand span {
+    overflow: hidden;
+  }
+
+  .brand strong,
+  .brand small {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .menu-button {
+    width: 4.85rem;
+    min-width: 4.85rem;
+    padding-inline: 0.45rem;
+  }
+
+  .section {
+    padding-block: clamp(3.5rem, 14vw, 5rem);
+  }
+
+  .button {
+    max-width: 100%;
+    white-space: normal;
+    text-align: center;
+  }
+
+  .project-card-copy::after {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+
+  .quote-start-grid h2,
+  .contact-heading h2,
+  .projects-approach h2,
+  .project-index-heading h2 {
+    font-size: clamp(2.45rem, 12vw, 3.6rem);
+  }
+}
+
+@media (max-width: 340px) {
+  .brand small {
+    display: none;
+  }
+
+  .brand strong {
+    font-size: 0.9rem;
+  }
+
+  .menu-button {
+    width: 4.5rem;
+    min-width: 4.5rem;
+    font-size: 0.65rem;
+  }
+}
