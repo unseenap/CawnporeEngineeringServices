@@ -297,11 +297,6 @@ Co-Founder and Marketing Head
 10+ years of HVAC industry experience, especially in Sales and Marketing, with
 a focus on service quality and customer satisfaction.
 
-**Sudhir Prajapati**  
-Co-Founder and Chief Technical Officer  
-10+ years of experience across Product Development, Design and Supply Chain
-Management, supporting strategic development and efficient operations.
-
 ### Illustration Direction
 
 - Kanpur-to-India operating coverage map.
@@ -1542,4 +1537,3 @@ Treat the following as mandatory implementation requirements:
 6. Reduced-motion support.
 7. Adapted React Bits and Magic UI components.
 8. No invented company, project or performance claims.
-

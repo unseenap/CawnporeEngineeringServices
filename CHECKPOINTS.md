@@ -275,3 +275,11 @@ Services website.
 - Refined the contact information and privacy explanation for greater trust.
 - Added explicit width and minimum-content safeguards after validating a
   partial hot-reload case that collapsed the hero and quote-step layouts.
+
+## Checkpoint 22: Personnel information removal
+
+- Status: Complete
+- Removed all requested former-personnel references from website content,
+  contact data, leadership data and the SRS.
+- Removed the associated email address and telephone number from public contact
+  information.
