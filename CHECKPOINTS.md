@@ -258,3 +258,18 @@ Services website.
   operating priorities and responsive editorial layouts.
 - Added a structured engineering approach and a focused project enquiry call
   to action.
+
+## Checkpoint 21: Guided Contact and quote-request experience
+
+- Status: Complete
+- Rebuilt the Contact hero with a theme-aware Magic UI-inspired ripple field.
+- Added an original HVAC consultation illustration with scroll-linked movement
+  and a staged image reveal.
+- Added staggered headline animation and reduced-motion alternatives.
+- Clarified how visitors begin a quote request using environment, requirement
+  and project-stage information.
+- Expanded the enquiry form with project type, delivery stage and preferred
+  timeline fields.
+- Explained the email handoff so visitors can attach drawings, BOQs and site
+  photographs before sending.
+- Refined the contact information and privacy explanation for greater trust.
