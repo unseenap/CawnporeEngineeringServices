@@ -273,3 +273,5 @@ Services website.
 - Explained the email handoff so visitors can attach drawings, BOQs and site
   photographs before sending.
 - Refined the contact information and privacy explanation for greater trust.
+- Added explicit width and minimum-content safeguards after validating a
+  partial hot-reload case that collapsed the hero and quote-step layouts.
