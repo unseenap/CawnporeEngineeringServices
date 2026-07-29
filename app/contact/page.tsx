@@ -14,20 +14,6 @@ export default function ContactPage() {
   return (
     <main className="contact-page-v2">
       <ContactHero />
-      <section className="section quote-start-section">
-        <div className="site-container quote-start-grid">
-          <div>
-            <p className="mono-label">How a quote request starts</p>
-            <h2>Give us enough context to ask better questions.</h2>
-          </div>
-          <ol>
-            <li><span>01</span><div><strong>Describe the environment</strong><small>Building use, city and approximate area or capacity.</small></div></li>
-            <li><span>02</span><div><strong>Choose the requirement</strong><small>Design, installation, maintenance, repair or upgrade.</small></div></li>
-            <li><span>03</span><div><strong>Share the current stage</strong><small>Planning, tendering, execution or an operating-site issue.</small></div></li>
-          </ol>
-        </div>
-      </section>
-
       <section className="section contact-section contact-section-v2" id="request-a-quote">
         <div className="site-container contact-heading">
           <div>

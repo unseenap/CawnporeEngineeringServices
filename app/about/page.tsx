@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import { ArrowRight, Binoculars, MapPin, Target } from "@phosphor-icons/react/dist/ssr";
-import { AboutHeroVisual, AboutPhotoPair, JourneyScroll } from "@/components/about/AboutMotion";
+import { Binoculars, MapPin, Target } from "@phosphor-icons/react/dist/ssr";
+import { AboutHeroVisual, AboutPhotoPair } from "@/components/about/AboutMotion";
 import { BlurReveal } from "@/components/motion/BlurReveal";
 import { Reveal } from "@/components/motion/Reveal";
-import company from "@/data/company.json";
 import leadership from "@/data/leadership.json";
 
 export const metadata: Metadata = {
@@ -46,8 +44,6 @@ export default function AboutPage() {
         <div className="site-container"><AboutPhotoPair /></div>
       </section>
 
-      <JourneyScroll />
-
       <section className="section direction-section about-direction-v2">
         <div className="site-container about-direction-intro">
           <span className="mono-label">What guides us</span>
@@ -66,24 +62,6 @@ export default function AboutPage() {
             <h2>Earn trust across the system lifecycle.</h2>
             <p>Become a trusted Indian HVAC partner known for technical clarity, accountable delivery and responsible climate-control decisions.</p>
           </Reveal>
-        </div>
-      </section>
-
-      <section className="section about-values-v2">
-        <div className="site-container">
-          <Reveal>
-            <span className="mono-label">Standards behind the work</span>
-            <h2 className="section-title">What clients should experience from CES.</h2>
-          </Reveal>
-          <div className="values-grid">
-            {company.values.map((value, index) => (
-              <Reveal className="value-item" delay={index * 0.07} key={value.title}>
-                <span>0{index + 1}</span>
-                <h3>{value.title}</h3>
-                <p>{value.description}</p>
-              </Reveal>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -113,16 +91,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="section final-cta final-cta-v2">
-        <div className="site-container">
-          <Reveal>
-            <span className="mono-label">Work with CES</span>
-            <h2>Bring the operating challenge. We will bring engineering clarity.</h2>
-            <p>Tell us about the space, location and performance need.</p>
-            <Link className="button button-primary" href="/contact">Start a conversation <ArrowRight size={18} /></Link>
-          </Reveal>
-        </div>
-      </section>
     </>
   );
 }

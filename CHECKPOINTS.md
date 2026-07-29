@@ -297,3 +297,18 @@ Services website.
   project media.
 - Tightened narrow-phone branding, menu controls, typography wrapping,
   full-width form controls and button behavior.
+
+## Checkpoint 24: Page-focused content cleanup
+
+- Status: Complete
+- Removed duplicated introductions, proof bands, process explanations,
+  outcome lists and repeated calls to action across the site.
+- Reduced Home to the company proposition, services, selected projects and one
+  clear enquiry action.
+- Kept About focused on company story, mission, vision and leadership.
+- Kept Industries focused on illustrated operating contexts and a clean sector
+  directory.
+- Kept Projects focused on the project gallery and enquiry action.
+- Kept Sustainability focused on principles, performance and energy review.
+- Kept Why Choose Us focused on four reasons and one next step.
+- Kept Contact focused on contact details and the quote-request form.
