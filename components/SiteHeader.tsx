@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { CaretDown, List, X } from "@phosphor-icons/react";
 import { useEffect, useState } from "react";
+import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import navigation from "@/data/navigation.json";
 import site from "@/data/site.json";
 import { ThemeSelector } from "./ThemeSelector";
@@ -13,6 +14,7 @@ export function SiteHeader() {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+  const reduceMotion = useReducedMotion();
 
   useEffect(() => {
     if (!menuOpen) return;
@@ -26,6 +28,11 @@ export function SiteHeader() {
       document.body.style.overflow = "";
     };
   }, [menuOpen]);
+
+  useEffect(() => {
+    setMenuOpen(false);
+    setServicesOpen(false);
+  }, [pathname]);
 
   const isActive = (href: string) =>
     href === "/" ? pathname === "/" : pathname.startsWith(href);
@@ -86,9 +93,30 @@ export function SiteHeader() {
         </button>
       </div>
 
-      {menuOpen && (
-        <div className="mobile-panel" id="mobile-navigation-panel">
-          <nav className="site-container mobile-nav" aria-label="Mobile navigation">
+      <AnimatePresence>
+        {menuOpen && (
+        <motion.div
+          className="mobile-panel"
+          id="mobile-navigation-panel"
+          initial={reduceMotion ? false : { opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: reduceMotion ? 0.01 : 0.22 }}
+        >
+          <button
+            className="mobile-panel-backdrop"
+            type="button"
+            aria-label="Close navigation menu"
+            onClick={closeMenu}
+          />
+          <motion.nav
+            className="mobile-nav"
+            aria-label="Mobile navigation"
+            initial={reduceMotion ? false : { x: "100%" }}
+            animate={{ x: 0 }}
+            exit={{ x: "100%" }}
+            transition={{ duration: reduceMotion ? 0.01 : 0.34, ease: [0.22, 1, 0.36, 1] }}
+          >
             <ThemeSelector mobile />
             {navigation.primary.map((item) =>
               item.children ? (
@@ -116,9 +144,10 @@ export function SiteHeader() {
             <Link className="button button-primary" href={navigation.cta.href} onClick={closeMenu}>
               {navigation.cta.label}
             </Link>
-          </nav>
-        </div>
-      )}
+          </motion.nav>
+        </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 }

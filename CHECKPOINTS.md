@@ -312,3 +312,14 @@ Services website.
 - Kept Sustainability focused on principles, performance and energy review.
 - Kept Why Choose Us focused on four reasons and one next step.
 - Kept Contact focused on contact details and the quote-request form.
+
+## Checkpoint 25: Off-canvas mobile navigation
+
+- Status: Complete
+- Kept all mobile navigation options absent from the initial page layout.
+- Added a right-side overlay drawer that opens only after the Menu control is
+  activated and sits above page content without shifting it.
+- Added a shaded backdrop with tap-to-close behavior.
+- Preserved Close, Escape, route-selection and submenu dismissal behavior.
+- Added responsive drawer widths and reduced-motion and reduced-transparency
+  fallbacks.
