@@ -323,3 +323,5 @@ Services website.
 - Preserved Close, Escape, route-selection and submenu dismissal behavior.
 - Added responsive drawer widths and reduced-motion and reduced-transparency
   fallbacks.
+- Moved the drawer outside the sticky header into a viewport-level portal so
+  it opens at the current scroll position without jumping or disappearing.
