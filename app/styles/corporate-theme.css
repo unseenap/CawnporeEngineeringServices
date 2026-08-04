@@ -1,0 +1,470 @@
+/* Styling-only corporate HVAC theme. Layout, spacing, component structure,
+   breakpoints, motion and behavior remain owned by the existing styles. */
+
+html {
+  scrollbar-color: var(--color-brand-primary) var(--color-page);
+}
+
+::-webkit-scrollbar {
+  width: 0.72rem;
+  height: 0.72rem;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-page);
+}
+
+::-webkit-scrollbar-thumb {
+  border: 0.18rem solid var(--color-page);
+  border-radius: 999px;
+  background: var(--color-brand-primary);
+}
+
+body {
+  background: var(--color-page);
+  color: var(--color-text);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.display,
+.section-title {
+  color: var(--color-text);
+  font-weight: 700;
+}
+
+p,
+.body-large,
+.prose-copy {
+  color: var(--color-text-soft);
+  line-height: 1.7;
+}
+
+a:not(.button):not(.brand) {
+  transition: color 300ms ease;
+}
+
+a:not(.button):not(.brand):hover {
+  color: var(--color-brand-primary-hover);
+}
+
+::selection {
+  background: var(--color-brand-primary);
+  color: #ffffff;
+}
+
+:focus-visible {
+  outline-color: var(--color-focus);
+}
+
+.section:nth-of-type(odd) {
+  background-color: var(--color-surface);
+}
+
+.section:nth-of-type(even) {
+  background-color: var(--color-page);
+}
+
+.button {
+  border-radius: 0.875rem;
+  transition:
+    transform 300ms ease,
+    background-color 300ms ease,
+    color 300ms ease,
+    border-color 300ms ease,
+    box-shadow 300ms ease;
+}
+
+.button-primary {
+  border-color: var(--color-brand-primary);
+  background: var(--color-brand-primary);
+  color: #ffffff;
+  box-shadow: var(--shadow-button);
+}
+
+.button-primary:hover {
+  border-color: var(--color-brand-primary-hover);
+  background: var(--color-brand-primary-hover);
+  color: #ffffff;
+}
+
+.button-secondary {
+  border-color: var(--color-brand-accent);
+  background: var(--color-brand-accent);
+  color: #ffffff;
+  box-shadow: 0 10px 25px rgb(37 211 102 / 16%);
+}
+
+.button-secondary:hover {
+  border-color: var(--color-brand-accent-hover);
+  background: var(--color-brand-accent-hover);
+  color: #ffffff;
+}
+
+.site-header {
+  border-bottom-color: var(--color-border);
+  background: rgb(255 255 255 / 96%);
+  box-shadow: 0 8px 28px rgb(15 23 42 / 5%);
+  transition: background-color 300ms ease, box-shadow 300ms ease;
+}
+
+.brand,
+.desktop-nav > a,
+.nav-dropdown > a,
+.menu-button {
+  color: var(--color-text);
+}
+
+.brand small {
+  color: var(--color-text-soft);
+}
+
+.desktop-nav a:hover,
+.desktop-nav a.active {
+  color: var(--color-brand-primary);
+  border-bottom-color: var(--color-brand-primary);
+}
+
+.dropdown-panel,
+.mobile-nav,
+.theme-panel {
+  border-color: var(--color-border);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-dropdown);
+}
+
+.dropdown-panel a:hover,
+.mobile-nav a:hover,
+.mobile-nav button:hover {
+  background: var(--color-hover);
+  color: var(--color-brand-primary);
+}
+
+.menu-button {
+  border-color: var(--color-border);
+  background: var(--color-surface);
+}
+
+.mobile-panel {
+  background: rgb(27 39 66 / 30%);
+}
+
+.theme-toggle-track,
+.theme-trigger {
+  border-color: var(--color-border);
+  background: var(--color-surface);
+  box-shadow: 0 8px 24px rgb(15 23 42 / 5%);
+}
+
+.theme-toggle-thumb,
+.theme-trigger-orbit {
+  background: var(--color-brand-primary);
+  box-shadow: var(--shadow-button);
+}
+
+.theme-option:hover,
+.theme-option.active {
+  border-color: var(--color-brand-primary);
+  background: var(--color-hover);
+}
+
+.home-hero,
+.page-hero,
+.about-hero-v2,
+.sustainability-hero-v2,
+.industries-hero-v2,
+.projects-hero-v2,
+.contact-hero-v2,
+.why-hero {
+  background-color: var(--color-page);
+  background-image: var(--gradient-hero);
+  color: var(--color-text);
+}
+
+.home-hero p,
+.page-hero p,
+.about-hero-v2 p,
+.sustainability-hero-v2 p,
+.industries-hero-v2 p,
+.projects-hero-v2 p,
+.contact-hero-v2 p,
+.why-hero p {
+  color: var(--color-text-soft);
+}
+
+.home-hero h1,
+.page-hero h1,
+.about-hero-v2 h1,
+.sustainability-hero-v2 h1,
+.industries-hero-v2 h1,
+.projects-hero-v2 h1,
+.contact-hero-v2 h1,
+.why-hero h1 {
+  color: var(--color-text);
+}
+
+.mono-label,
+.project-sector,
+.projects-kicker,
+.contact-hero-copy > .mono-label,
+.projects-cta .mono-label {
+  color: var(--color-brand-primary);
+}
+
+.home-hero-v2-copy .mono-label,
+.about-direction-intro .mono-label,
+.about-direction-v2 .direction-block .mono-label,
+.sustainability-hero-copy-v2 .mono-label,
+.sustainability-reality-heading .mono-label,
+.about-system-caption span,
+.about-project-photo figcaption span,
+.sustainability-photo figcaption span,
+.project-photo-copy span {
+  color: var(--color-brand-primary);
+}
+
+.thermal-text {
+  background-image: linear-gradient(90deg, var(--color-brand-primary-hover), var(--color-brand-primary) 58%, var(--color-brand-accent));
+}
+
+.thermal-meter > span:first-child,
+.thermal-meter > span:last-child,
+.hero-trust-line svg,
+.efficiency-icon,
+.system-visual svg {
+  color: var(--color-brand-primary);
+}
+
+.system-visual,
+.sustainability-system-visual,
+.why-hero-visual,
+.industry-story-image {
+  border-color: var(--color-border);
+  background: var(--color-surface-dark);
+  box-shadow: var(--shadow-card);
+}
+
+.projects-display span:nth-last-child(-n + 2),
+.contact-display span:nth-last-child(-n + 3) {
+  color: var(--color-brand-primary);
+}
+
+.home-shape-grid,
+.projects-retro-grid,
+.contact-ripple,
+.hyperspeed {
+  color: var(--color-brand-primary);
+}
+
+.projects-retro-grid,
+.contact-ripple,
+.hyperspeed {
+  opacity: 0.26;
+}
+
+.services-home-v2,
+.about-story-v2,
+.direction-section,
+.leadership-section,
+.industries-stories,
+.sector-directory,
+.project-gallery-v2,
+.sustainability-principles-v2,
+.why-reasons,
+.contact-section-v2 {
+  background-color: var(--color-page);
+}
+
+.sustainability-item:nth-child(2) {
+  border-color: var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-text);
+}
+
+.process-section {
+  background: var(--color-page);
+  color: var(--color-text);
+}
+
+.process-step,
+.service-detail-card,
+.service-detail-aside {
+  border: 1px solid var(--color-border);
+  border-radius: 1.5rem;
+  background: var(--color-surface);
+  color: var(--color-text);
+  box-shadow: var(--shadow-card);
+}
+
+.services-home-v2 .service-row:hover,
+.sector-row:hover,
+.outcome-item:hover {
+  background: var(--color-hover);
+}
+
+.service-feature,
+.segment-item,
+.direction-block,
+.value-item,
+.leader,
+.industry-story,
+.project-gallery-v2 .project-card,
+.sustainability-item,
+.why-reason,
+.contact-section-v2 .contact-details,
+.contact-section-v2 .contact-form {
+  border-color: var(--color-border);
+  border-radius: 1.5rem;
+  background: var(--color-surface);
+  box-shadow: var(--shadow-card);
+  transition:
+    transform 300ms ease,
+    border-color 300ms ease,
+    box-shadow 300ms ease,
+    background-color 300ms ease;
+}
+
+.service-feature:hover,
+.segment-item:hover,
+.direction-block:hover,
+.value-item:hover,
+.leader:hover,
+.industry-story:hover,
+.project-gallery-v2 .project-card:hover,
+.sustainability-item:hover,
+.why-reason:hover {
+  transform: translateY(-4px);
+  border-color: color-mix(in srgb, var(--color-brand-primary) 28%, var(--color-border));
+  box-shadow: var(--shadow-card-hover);
+}
+
+.deliverable-cloud span,
+.theme-option.active,
+.project-sector,
+.mono-label {
+  border-color: transparent;
+  background: var(--color-hover);
+  color: var(--color-brand-primary);
+}
+
+.consent,
+.contact-privacy,
+.success-badge {
+  color: var(--color-success);
+}
+
+.contact-privacy,
+.success-badge {
+  background: #eafbf1;
+}
+
+.contact-details svg,
+.service-feature svg,
+.sustainability-item svg,
+.why-reason svg,
+.direction-block svg,
+.project-card svg {
+  color: var(--color-brand-primary);
+}
+
+.contact-privacy svg,
+.consent svg,
+.success-icon {
+  color: var(--color-success);
+}
+
+input,
+select,
+textarea,
+.contact-section-v2 .contact-form input,
+.contact-section-v2 .contact-form select,
+.contact-section-v2 .contact-form textarea {
+  border-color: var(--color-border);
+  border-radius: 1rem;
+  background: var(--color-surface);
+  color: var(--color-text);
+  transition: border-color 300ms ease, box-shadow 300ms ease, background-color 300ms ease;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--color-text-light);
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+.contact-section-v2 .contact-form input:focus,
+.contact-section-v2 .contact-form select:focus,
+.contact-section-v2 .contact-form textarea:focus {
+  border-color: var(--color-brand-primary);
+  outline: 0;
+  box-shadow: 0 0 0 4px rgb(22 165 229 / 12%);
+}
+
+.project-filters,
+.project-gallery-v2 .project-filters {
+  border-color: var(--color-border);
+  background: rgb(255 255 255 / 94%);
+  box-shadow: 0 10px 28px rgb(15 23 42 / 5%);
+}
+
+.project-filters button {
+  color: var(--color-text-soft);
+  transition: color 300ms ease, background-color 300ms ease, border-color 300ms ease;
+}
+
+.project-filters button:hover,
+.project-filters button.active {
+  border-color: var(--color-brand-primary);
+  background: var(--color-hover);
+  color: var(--color-brand-primary);
+}
+
+.site-footer,
+.final-cta,
+.projects-cta,
+.why-cta {
+  background: var(--color-surface-dark);
+  color: #ffffff;
+}
+
+.site-footer h2,
+.site-footer h3,
+.final-cta h2,
+.projects-cta h2,
+.why-cta h2 {
+  color: #ffffff;
+}
+
+.site-footer p,
+.final-cta p,
+.projects-cta p,
+.why-cta p {
+  color: var(--color-text-light);
+}
+
+.site-loader {
+  background: var(--color-surface-dark);
+}
+
+.loader-thermal-field {
+  background-image: linear-gradient(90deg, #25d366 0%, #16a5e5 55%, #0e91d4 100%);
+}
+
+.thermal-meter > div,
+.thermal-meter i {
+  background: var(--gradient-airflow);
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  .site-header,
+  .project-filters,
+  .project-gallery-v2 .project-filters {
+    background: var(--color-surface);
+  }
+}

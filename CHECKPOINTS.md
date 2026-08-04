@@ -325,3 +325,18 @@ Services website.
   fallbacks.
 - Moved the drawer outside the sticky header into a viewport-level portal so
   it opens at the current scroll position without jumping or disappearing.
+
+## Checkpoint 26: Corporate HVAC visual system
+
+- Status: Complete
+- Replaced the legacy turbine, blueprint, red and orange interface palettes
+  with one centralized blue, green, navy and neutral corporate token system.
+- Preserved all existing layouts, spacing, components, animations,
+  functionality and responsive breakpoints.
+- Standardized navigation, headings, body text, links, buttons, cards, forms,
+  badges, icons, dropdowns, section surfaces and scrollbars.
+- Applied the requested 14 px button radius, 16–24 px surface radii, subtle
+  card shadows, blue focus treatment and 300 ms styling transitions.
+- Normalized page heroes and content sections to clean white and light-gray
+  surfaces while retaining navy contrast for the footer and final calls to
+  action.
