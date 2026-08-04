@@ -340,3 +340,16 @@ Services website.
 - Normalized page heroes and content sections to clean white and light-gray
   surfaces while retaining navy contrast for the footer and final calls to
   action.
+
+## Checkpoint 27: Corporate palette image refresh
+
+- Status: Complete
+- Restyled all active custom page illustrations and service visuals around
+  the new white, cyan-blue, navy and green corporate HVAC palette.
+- Replaced legacy dark, gold, red and orange image treatments with bright
+  daylight surfaces, cyan airflow cues and restrained efficiency-green
+  accents.
+- Preserved every existing image path, filename, display size, aspect ratio,
+  page placement and animation behavior.
+- Kept the official CES logo and project/client branding unchanged so marks
+  remain accurate rather than AI-redrawn.
