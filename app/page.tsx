@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, CheckCircle, ClipboardText, Gear, Headset, Ruler } from "@phosphor-icons/react/dist/ssr";
+import { ArrowRight, CheckCircle, ClipboardText, Gear, Headset, Ruler, WhatsappLogo } from "@phosphor-icons/react/dist/ssr";
 import { Reveal } from "@/components/motion/Reveal";
 import { EnquiryBand } from "@/components/corporate/EnquiryBand";
+import { CorporateHeroSlider } from "@/components/home/CorporateHeroSlider";
 import projects from "@/data/projects.json";
 import services from "@/data/services.json";
 
@@ -18,16 +19,9 @@ const steps = [
 
 export default function Home() {
   return <main className="corp-site">
-    <section className="corp-home-hero">
-      <Image src="/images/illustrations/ces-hvac-cutaway.png" alt="Commercial HVAC system cutaway" fill priority unoptimized sizes="100vw" />
-      <div className="corp-home-overlay" />
-      <div className="site-container corp-home-copy">
-        <span className="corp-kicker">Turnkey HVAC solutions across India</span>
-        <h1>Engineering dependable environments.</h1>
-        <p>Design, installation, commissioning and lifecycle care for commercial, industrial and residential climate systems.</p>
-        <div><Link className="button button-primary" href="/contact#request-a-quote">Discuss your project <ArrowRight size={18} /></Link><Link className="corp-text-link" href="/services">Explore services</Link></div>
-      </div>
-    </section>
+    <CorporateHeroSlider />
+
+    <a className="whatsapp-float" href={`https://wa.me/918318554343`} aria-label="Contact CES on WhatsApp"><WhatsappLogo size={31} weight="fill" /></a>
 
     <section className="corp-proof-strip"><div className="site-container">
       <span><strong>Pan-India</strong> project support</span><span><strong>Turnkey</strong> delivery</span><span><strong>5</strong> core capabilities</span><span><strong>Lifecycle</strong> accountability</span>

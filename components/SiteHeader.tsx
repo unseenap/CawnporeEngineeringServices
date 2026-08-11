@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { CaretDown, List, X } from "@phosphor-icons/react";
+import { CaretDown, EnvelopeSimple, FacebookLogo, InstagramLogo, LinkedinLogo, List, Phone, X, YoutubeLogo } from "@phosphor-icons/react";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { createPortal } from "react-dom";
@@ -96,7 +96,7 @@ export function SiteHeader() {
 
   return (
     <>
-    <div className="top-contact-bar"><div className="site-container"><a href={`tel:${site.phone.replace(/\s/g, "")}`}>{site.phone}</a><a href={`mailto:${site.email}`}>{site.email}</a><span>{site.headquarters} | {site.coverage}</span></div></div>
+    <div className="top-contact-bar"><div className="site-container top-contact-inner"><div className="top-contact-details"><a href={`tel:${site.phone.replace(/\s/g, "")}`}><Phone size={20} weight="fill" />{site.phone}</a><a href={`mailto:${site.email}`}><EnvelopeSimple size={22} weight="fill" />{site.email}</a></div><div className="top-socials"><a href="https://www.linkedin.com" aria-label="LinkedIn"><LinkedinLogo size={17} weight="fill" /></a><a href="https://www.facebook.com" aria-label="Facebook"><FacebookLogo size={17} weight="fill" /></a><a href="https://www.youtube.com" aria-label="YouTube"><YoutubeLogo size={18} weight="fill" /></a><a href="https://www.instagram.com" aria-label="Instagram"><InstagramLogo size={17} weight="bold" /></a><Link href="/about" className="profile-link">Company Profile</Link></div></div></div>
     <header className="site-header">
       <div className="site-container nav-shell">
         <Link className="brand" href="/" aria-label={`${site.name} home`}>

@@ -369,3 +369,15 @@ Services website.
   light corporate visual system.
 - Added responsive layouts for desktop, tablet and mobile plus reduced-motion
   fallbacks for image interactions.
+
+## Checkpoint 29: Reference-style home masthead
+
+- Status: Complete
+- Reworked the homepage header and hero to closely follow the supplied HVAC
+  reference while preserving CES branding and original content.
+- Added a blue contact and social bar, expanded white navigation, company
+  profile action and stronger active-navigation treatment.
+- Added a functional three-slide HVAC hero with centered messaging, image
+  overlays, service calls to action, manual controls and automatic rotation.
+- Added a persistent WhatsApp contact action and responsive behavior for the
+  masthead, carousel and mobile navigation.
