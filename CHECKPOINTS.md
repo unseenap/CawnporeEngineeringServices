@@ -353,3 +353,19 @@ Services website.
   page placement and animation behavior.
 - Kept the official CES logo and project/client branding unchanged so marks
   remain accurate rather than AI-redrawn.
+
+## Checkpoint 28: MGCS-inspired corporate website rebuild
+
+- Status: Complete
+- Rebuilt the public website around a simple HVAC corporate structure inspired
+  by MGCS while retaining original CES branding, copy, services and imagery.
+- Added a compact contact bar, simplified navigation, image-led page heroes,
+  service catalogue, project proof, work process and consistent enquiry bands.
+- Reworked Home, About, Services and Contact and added dedicated Gallery and
+  HVAC Insights pages.
+- Preserved all five existing service-detail routes and kept the remaining CES
+  routes available for direct access.
+- Removed the public theme selector and locked the redesign to one consistent
+  light corporate visual system.
+- Added responsive layouts for desktop, tablet and mobile plus reduced-motion
+  fallbacks for image interactions.

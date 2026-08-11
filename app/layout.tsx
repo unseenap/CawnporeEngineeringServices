@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import "./styles/corporate-theme.css";
+import "./styles/mgcs-layout.css";
 import { SiteShell } from "@/components/SiteShell";
 
 export const metadata: Metadata = {

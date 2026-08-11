@@ -2,7 +2,6 @@
   "primary": [
     { "label": "Home", "href": "/" },
     { "label": "About", "href": "/about" },
-    { "label": "Why CES", "href": "/why-choose-us" },
     { "label": "Services", "href": "/services", "children": [
       { "label": "Design & Engineering", "href": "/services/design-engineering" },
       { "label": "Installation & Commissioning", "href": "/services/installation-commissioning" },
@@ -11,9 +10,9 @@
       { "label": "Specialized HVAC", "href": "/services/specialized-hvac" }
     ] },
     { "label": "Industries", "href": "/industries" },
-    { "label": "Projects", "href": "/projects" },
-    { "label": "Sustainability", "href": "/sustainability" },
+    { "label": "Gallery", "href": "/gallery" },
+    { "label": "Insights", "href": "/blogs" },
     { "label": "Contact", "href": "/contact" }
   ],
-  "cta": { "label": "Request consultation", "href": "/contact" }
+  "cta": { "label": "Get a quote", "href": "/contact#request-a-quote" }
 }

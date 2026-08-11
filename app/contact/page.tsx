@@ -1,47 +1,8 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
-import { Buildings, CheckCircle, EnvelopeSimple, MapPin, Phone } from "@phosphor-icons/react/dist/ssr";
+import { EnvelopeSimple, MapPin, Phone } from "@phosphor-icons/react/dist/ssr";
 import { ContactForm } from "@/components/ContactForm";
-import { ContactHero } from "@/components/contact/ContactHero";
+import { CorporateHero } from "@/components/corporate/CorporateHero";
 import contact from "@/data/contact.json";
-
-export const metadata: Metadata = {
-  title: "Contact",
-  description: "Discuss an HVAC design, installation, maintenance, repair, upgrade or specialized climate-control requirement with CES."
-};
-
-export default function ContactPage() {
-  return (
-    <main className="contact-page-v2">
-      <ContactHero />
-      <section className="section contact-section contact-section-v2" id="request-a-quote">
-        <div className="site-container contact-heading">
-          <div>
-            <p className="mono-label">Request a quote</p>
-            <h2>Start the technical conversation.</h2>
-          </div>
-          <p>
-            Complete the form below. It prepares a structured email in your
-            email application so you can review the details and attach drawings,
-            BOQs or site photographs before sending.
-          </p>
-        </div>
-        <div className="site-container contact-grid">
-          <div className="contact-details">
-            <div className="contact-details-intro">
-              <Buildings size={30} weight="duotone" />
-              <span><strong>Useful information</strong>Drawings, approximate area, preferred timeline and existing system details help us understand the request.</span>
-            </div>
-            <div><MapPin size={28} weight="duotone" /><span><strong>Headquarters</strong>{contact.headquarters}<br />{contact.coverage}</span></div>
-            <div><Phone size={28} weight="duotone" /><span><strong>Call</strong>{contact.phones.map((phone) => <a href={`tel:${phone.replace(/\s/g, "")}`} key={phone}>{phone}</a>)}</span></div>
-            <div><EnvelopeSimple size={28} weight="duotone" /><span><strong>Email</strong>{contact.emails.map((email) => <a href={`mailto:${email}`} key={email}>{email}</a>)}</span></div>
-            <p className="contact-privacy"><CheckCircle size={18} weight="duotone" /> Your enquiry is prepared locally and is not stored by this website.</p>
-          </div>
-          <Suspense fallback={<div className="contact-form" aria-label="Loading enquiry form" />}>
-            <ContactForm />
-          </Suspense>
-        </div>
-      </section>
-    </main>
-  );
-}
+export const metadata:Metadata={title:"Contact Us",description:"Contact CES for an HVAC project, service requirement or technical consultation."};
+export default function ContactPage(){return <main className="corp-site"><CorporateHero label="Contact us" title="Start the technical conversation." description="Tell us what the building needs and where the project stands." image="/images/illustrations/ces-contact-consultation.png"/><section className="section" id="request-a-quote"><div className="site-container corp-contact-layout"><div className="corp-contact-info"><span className="corp-kicker">Get in touch</span><h2>We are ready to understand your requirement.</h2><p>Share drawings, approximate area, timeline and existing system details when available.</p><div><MapPin size={26}/><span><strong>Office</strong>{contact.headquarters}<br/>{contact.coverage}</span></div><div><Phone size={26}/><span><strong>Phone</strong>{contact.phones.map(p=><a href={`tel:${p.replace(/\s/g,"")}`} key={p}>{p}</a>)}</span></div><div><EnvelopeSimple size={26}/><span><strong>Email</strong>{contact.emails.map(e=><a href={`mailto:${e}`} key={e}>{e}</a>)}</span></div></div><div className="corp-form-wrap"><h2>Submit your enquiry</h2><p>Complete the form and review the prepared email before sending.</p><Suspense fallback={<div className="contact-form"/>}><ContactForm/></Suspense></div></div></section></main>}

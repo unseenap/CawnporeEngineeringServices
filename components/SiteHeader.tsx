@@ -9,7 +9,6 @@ import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { createPortal } from "react-dom";
 import navigation from "@/data/navigation.json";
 import site from "@/data/site.json";
-import { ThemeSelector } from "./ThemeSelector";
 
 export function SiteHeader() {
   const pathname = usePathname();
@@ -29,11 +28,6 @@ export function SiteHeader() {
       document.body.style.overflow = "";
     };
   }, [menuOpen]);
-
-  useEffect(() => {
-    setMenuOpen(false);
-    setServicesOpen(false);
-  }, [pathname]);
 
   const isActive = (href: string) =>
     href === "/" ? pathname === "/" : pathname.startsWith(href);
@@ -67,7 +61,7 @@ export function SiteHeader() {
             exit={{ x: "100%" }}
             transition={{ duration: reduceMotion ? 0.01 : 0.34, ease: [0.22, 1, 0.36, 1] }}
           >
-            <ThemeSelector mobile />
+            <div className="mobile-nav-title">Explore CES</div>
             {navigation.primary.map((item) =>
               item.children ? (
                 <div key={item.href}>
@@ -102,6 +96,7 @@ export function SiteHeader() {
 
   return (
     <>
+    <div className="top-contact-bar"><div className="site-container"><a href={`tel:${site.phone.replace(/\s/g, "")}`}>{site.phone}</a><a href={`mailto:${site.email}`}>{site.email}</a><span>{site.headquarters} | {site.coverage}</span></div></div>
     <header className="site-header">
       <div className="site-container nav-shell">
         <Link className="brand" href="/" aria-label={`${site.name} home`}>
@@ -134,7 +129,6 @@ export function SiteHeader() {
         </nav>
 
         <div className="nav-actions">
-          <ThemeSelector />
           <Link className="button button-primary nav-cta" href={navigation.cta.href}>
             {navigation.cta.label}
           </Link>

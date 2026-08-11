@@ -1,0 +1,8 @@
+[
+  {"title":"How to plan HVAC for a commercial building","category":"Design & Engineering","summary":"The essential inputs that shape capacity, zoning, equipment selection and long-term operating cost.","image":"/images/source/sourceimage4.png"},
+  {"title":"Preventive maintenance that protects system uptime","category":"Maintenance","summary":"A practical look at inspections, cleaning, testing and timely corrective action for operating facilities.","image":"/images/source/sourceimage3.png"},
+  {"title":"When an existing HVAC system needs an upgrade","category":"Retrofit","summary":"Common signs that controls, equipment or distribution need modernization rather than repeated repair.","image":"/images/source/sourceimage1.png"},
+  {"title":"Improving indoor air quality through better ventilation","category":"Air Quality","summary":"Why filtration, fresh-air delivery and balanced airflow should be considered as one connected system.","image":"/images/illustrations/ces-industries-commercial-healthcare.webp"},
+  {"title":"HVAC considerations for industrial environments","category":"Industrial HVAC","summary":"How heat loads, contaminants, process needs and uptime expectations influence an industrial solution.","image":"/images/illustrations/ces-industries-industrial-data.webp"},
+  {"title":"Energy-aware climate control for modern buildings","category":"Efficiency","summary":"Design and operating choices that can improve comfort while reducing unnecessary energy demand.","image":"/images/illustrations/ces-sustainable-hvac-system.png"}
+]

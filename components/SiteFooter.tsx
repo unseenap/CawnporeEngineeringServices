@@ -1,34 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import navigation from "@/data/navigation.json";
+import services from "@/data/services.json";
 import site from "@/data/site.json";
-
-export function SiteFooter() {
-  return (
-    <footer className="site-footer">
-      <div className="site-container footer-grid">
-        <div className="footer-brand">
-          <Image src={site.logo} alt="" width={72} height={72} unoptimized />
-          <h2>Your climate.<br />Our commitment.</h2>
-          <p>Professional HVAC engineering from Kanpur to operating environments across India.</p>
-        </div>
-        <div>
-          <h3>Navigate</h3>
-          {navigation.primary.map((item) => (
-            <Link href={item.href} key={item.href}>{item.label}</Link>
-          ))}
-        </div>
-        <div>
-          <h3>Contact</h3>
-          <a href={`tel:${site.phone.replace(/\s/g, "")}`}>{site.phone}</a>
-          <a href={`mailto:${site.email}`}>{site.email}</a>
-          <p>{site.headquarters}<br />{site.coverage} operations</p>
-        </div>
-      </div>
-      <div className="site-container footer-bottom">
-        <span>© {new Date().getFullYear()} Cawnpore Engineering Services</span>
-        <span>HVAC design, delivery and lifecycle service</span>
-      </div>
-    </footer>
-  );
-}
+export function SiteFooter(){return <footer className="site-footer"><div className="site-container footer-grid"><div className="footer-brand"><div><Image src={site.logo} alt="" width={64} height={64} unoptimized/><strong>Cawnpore<br/>Engineering Services</strong></div><p>Turnkey HVAC design, execution and lifecycle support for commercial, industrial and residential environments across India.</p></div><div><h3>Company</h3>{navigation.primary.map(i=><Link href={i.href} key={i.href}>{i.label}</Link>)}</div><div><h3>Services</h3>{services.map(s=><Link href={`/services/${s.id}`} key={s.id}>{s.shortTitle}</Link>)}</div><div><h3>Contact</h3><p>{site.headquarters}<br/>{site.coverage} operations</p><a href={`tel:${site.phone.replace(/\s/g,"")}`}>{site.phone}</a><a href={`mailto:${site.email}`}>{site.email}</a><Link className="footer-cta" href="/contact#request-a-quote">Request a quote</Link></div></div><div className="site-container footer-bottom"><span>© {new Date().getFullYear()} Cawnpore Engineering Services</span><span>HVAC engineering and lifecycle service</span></div></footer>}
