@@ -17,53 +17,37 @@ export function SiteLoader() {
     if (!visible) return;
     const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
-    return () => {
-      document.body.style.overflow = previousOverflow;
-    };
+    return () => { document.body.style.overflow = previousOverflow; };
   }, [visible]);
 
   return (
     <AnimatePresence>
       {visible && (
         <motion.div
-          className="site-loader"
+          className="site-loader loader-redesign"
           role="status"
+          aria-live="polite"
           aria-label="Preparing Cawnpore Engineering Services"
           initial={{ opacity: 1 }}
-          exit={{ opacity: 0, y: "-5%" }}
-          transition={{ duration: reduceMotion ? 0.1 : 0.55, ease: [0.76, 0, 0.24, 1] }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: reduceMotion ? 0.1 : 0.45 }}
         >
-          <div className="loader-grid" aria-hidden="true" />
+          <div className="loader-blueprint" aria-hidden="true" />
           <motion.div
-            className="loader-thermal-field"
-            animate={reduceMotion ? undefined : { backgroundPosition: ["0% 50%", "100% 50%"] }}
-            transition={{ duration: 2.1, ease: [0.65, 0, 0.35, 1] }}
-          />
-          <div className="loader-content">
-            <motion.div
-              className="loader-logo"
-              initial={reduceMotion ? false : { opacity: 0, scale: 0.8, rotate: -12 }}
-              animate={{ opacity: 1, scale: 1, rotate: 0 }}
-              transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
-            >
-              <Image src="/brand/logo.png" alt="" width={88} height={88} priority unoptimized />
-            </motion.div>
-            <div className="loader-wordmark">
-              <motion.span
-                initial={reduceMotion ? false : { opacity: 0, y: 18 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.35, duration: 0.55 }}
-              >
-                Cawnpore Engineering Services
-              </motion.span>
-              <small>Thermal systems initializing</small>
+            className="loader-panel"
+            initial={reduceMotion ? false : { opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: reduceMotion ? 0 : 0.45, ease: [0.22, 1, 0.36, 1] }}
+          >
+            <div className="loader-brand-lockup">
+              <div className="loader-mark"><Image src="/brand/logo.png" alt="" width={72} height={72} priority unoptimized /></div>
+              <div><strong>Cawnpore</strong><span>Engineering Services</span></div>
             </div>
-            <div className="thermal-meter" aria-hidden="true">
-              <span>HOT</span>
-              <div><motion.i initial={{ scaleX: 0 }} animate={{ scaleX: 1 }} transition={{ duration: 1.8, delay: 0.25 }} /></div>
-              <span>COLD</span>
-            </div>
-          </div>
+            <p>Preparing your climate-control experience</p>
+            <div className="loader-progress" aria-hidden="true"><motion.span initial={{ scaleX: 0 }} animate={{ scaleX: 1 }} transition={{ duration: reduceMotion ? 0 : 2.35, delay: 0.25, ease: [0.4, 0, 0.2, 1] }} /></div>
+            <div className="loader-status"><span>HVAC systems</span><span>Ready</span></div>
+          </motion.div>
+          <div className="loader-airline" aria-hidden="true"><motion.i animate={reduceMotion ? undefined : { x: ["-120%", "420%"] }} transition={{ duration: 2.6, repeat: Infinity, ease: "linear" }} /></div>
         </motion.div>
       )}
     </AnimatePresence>

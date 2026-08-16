@@ -394,3 +394,14 @@ Services website.
 - Updated supporting About and Sustainability project references to use the
   matching official logos.
 - Verified every project data path and completed lint and production builds.
+
+## Checkpoint 31: Restrained corporate loading screen
+
+- Status: Complete
+- Replaced the previous dark thermal loader with a clean, light HVAC startup
+  screen that matches the current corporate website.
+- Added the official CES brand lockup, subtle blueprint grid, progress line,
+  system-ready status and one understated airflow animation.
+- Preserved the three-second minimum presentation and body-scroll lock while
+  adding responsive and reduced-motion behavior.
+- Completed lint and production-build verification.
