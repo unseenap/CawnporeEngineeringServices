@@ -99,7 +99,7 @@ export function SustainabilityPhotoStory() {
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.75 }}
       >
-        <Image src="/images/projects/Ester_Industries_ltd.jpeg" alt="Ester Industries manufacturing project" fill unoptimized sizes="(max-width: 767px) 94vw, 54vw" />
+        <Image src="/images/projects/logos/ester-industries.svg" alt="Ester Industries official logo" fill unoptimized sizes="(max-width: 767px) 94vw, 54vw" />
         <figcaption><span>Manufacturing</span>Performance where operating continuity matters</figcaption>
       </motion.figure>
       <motion.figure
@@ -109,7 +109,7 @@ export function SustainabilityPhotoStory() {
         viewport={{ once: true, amount: 0.4 }}
         transition={{ duration: 0.75, delay: 0.12 }}
       >
-        <Image src="/images/projects/Z_Square_Mall.jpeg" alt="Z Square Mall commercial project" fill unoptimized sizes="(max-width: 767px) 70vw, 31vw" />
+        <Image src="/images/projects/logos/z-square-mall.svg" alt="Z Square Mall official logo" fill unoptimized sizes="(max-width: 767px) 70vw, 31vw" />
         <figcaption><span>Commercial</span>Comfort across changing demand</figcaption>
       </motion.figure>
     </div>

@@ -381,3 +381,16 @@ Services website.
   overlays, service calls to action, manual controls and automatic rotation.
 - Added a persistent WhatsApp contact action and responsive behavior for the
   masthead, carousel and mobile navigation.
+
+## Checkpoint 30: Official project logo portfolio
+
+- Status: Complete
+- Added all 15 supplied official client and project SVG logos to
+  `public/images/projects/logos` using consistent web-safe filenames.
+- Replaced the project-image dataset with official logo assets and expanded it
+  to include every supplied organization.
+- Standardized Home, Gallery and Projects displays into equal square logo
+  frames without cropping, stretching or modifying the original vector art.
+- Updated supporting About and Sustainability project references to use the
+  matching official logos.
+- Verified every project data path and completed lint and production builds.

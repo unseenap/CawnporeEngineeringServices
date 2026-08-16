@@ -7,12 +7,15 @@ import projects from "@/data/projects.json";
 
 const priorities: Record<string, string> = {
   Healthcare: "Air quality, reliability and controlled clinical conditions",
-  "Beverage industry": "Process loads, production continuity and hygiene",
+  "Beverage Industry": "Process loads, production continuity and hygiene",
   Entertainment: "High occupancy, comfort and responsive ventilation",
   Retail: "Variable footfall, zoning and dependable public comfort",
   Residential: "Quiet comfort, efficiency and maintainable distribution",
   Manufacturing: "Process heat, ventilation and operational continuity",
   Aviation: "Large-volume conditioning and fluctuating passenger demand",
+  Education: "Comfort, indoor air quality and variable occupancy",
+  Hospitality: "Guest comfort, quiet operation and dependable service",
+  "Cold Chain": "Temperature stability, uptime and product protection",
 };
 
 export function ProjectGallery() {
@@ -76,8 +79,8 @@ export function ProjectGallery() {
                 <div className="project-card-copy">
                   <span className="project-sector">{project.sector}</span>
                   <h2>{project.client}</h2>
-                  <p>{priorities[project.sector]}</p>
-                  <small>Project environment</small>
+                  <p>{priorities[project.sector] ?? "Reliable comfort, ventilation and operating performance"}</p>
+                  <small>CES project client</small>
                 </div>
               </motion.article>
             ))}

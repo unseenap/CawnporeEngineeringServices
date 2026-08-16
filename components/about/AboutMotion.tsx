@@ -98,7 +98,7 @@ export function AboutPhotoPair() {
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.75 }}
       >
-        <Image src="/images/projects/RajkotInternational Airport.jpeg" alt="Rajkot International Airport project reference" fill unoptimized sizes="(max-width: 767px) 90vw, 48vw" />
+        <Image src="/images/projects/logos/rajkot-international-airport.svg" alt="Rajkot International Airport official logo" fill unoptimized sizes="(max-width: 767px) 90vw, 48vw" />
         <figcaption><span>Aviation</span>Rajkot International Airport</figcaption>
       </motion.figure>
       <motion.figure
@@ -108,7 +108,7 @@ export function AboutPhotoPair() {
         viewport={{ once: true, amount: 0.4 }}
         transition={{ duration: 0.75, delay: 0.12 }}
       >
-        <Image src="/images/projects/Varun_Beverages_ltd.jpeg" alt="Varun Beverages project reference" fill unoptimized sizes="(max-width: 767px) 66vw, 28vw" />
+        <Image src="/images/projects/logos/varun-beverages.svg" alt="Varun Beverages official logo" fill unoptimized sizes="(max-width: 767px) 66vw, 28vw" />
         <figcaption><span>Industry</span>Varun Beverages</figcaption>
       </motion.figure>
     </div>

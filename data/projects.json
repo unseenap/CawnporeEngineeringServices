@@ -1,10 +1,17 @@
 [
-  { "client": "MES Hospital, Udhampur", "sector": "Healthcare", "image": "/images/projects/Milatry_Engineering_services.jpeg" },
-  { "client": "Varun Beverages", "sector": "Beverage industry", "image": "/images/projects/Varun_Beverages_ltd.jpeg" },
-  { "client": "Bhavani Pharmaceuticals", "sector": "Healthcare", "image": "/images/projects/Bhanavi.jpeg" },
-  { "client": "Mogambo Game Zone", "sector": "Entertainment", "image": "/images/projects/Mogambo_the_Adventure_Plsy_Zone.jpeg" },
-  { "client": "Z Square Mall", "sector": "Retail", "image": "/images/projects/Z_Square_Mall.jpeg" },
-  { "client": "Emaar Housing / Gomti Greens", "sector": "Residential", "image": "/images/projects/Gomati_Greens.jpeg" },
-  { "client": "Ester Industries, Uttarakhand", "sector": "Manufacturing", "image": "/images/projects/Ester_Industries_ltd.jpeg" },
-  { "client": "Rajkot International Airport", "sector": "Aviation", "image": "/images/projects/RajkotInternational Airport.jpeg" }
+  { "client": "MES Udhampur", "sector": "Healthcare", "image": "/images/projects/logos/mes-udhampur.svg" },
+  { "client": "Varun Beverages", "sector": "Beverage Industry", "image": "/images/projects/logos/varun-beverages.svg" },
+  { "client": "Chandigarh University", "sector": "Education", "image": "/images/projects/logos/chandigarh-university.svg" },
+  { "client": "Z Square Mall", "sector": "Retail", "image": "/images/projects/logos/z-square-mall.svg" },
+  { "client": "Emaar", "sector": "Residential", "image": "/images/projects/logos/emaar.svg" },
+  { "client": "Ester Industries", "sector": "Manufacturing", "image": "/images/projects/logos/ester-industries.svg" },
+  { "client": "Rajkot International Airport", "sector": "Aviation", "image": "/images/projects/logos/rajkot-international-airport.svg" },
+  { "client": "Mogambo Play Zone", "sector": "Entertainment", "image": "/images/projects/logos/mogambo-play-zone.svg" },
+  { "client": "ITC Fortune Lucknow", "sector": "Hospitality", "image": "/images/projects/logos/itc-fortune-lucknow.svg" },
+  { "client": "WSP Mall", "sector": "Retail", "image": "/images/projects/logos/wsp-mall.svg" },
+  { "client": "Hero", "sector": "Manufacturing", "image": "/images/projects/logos/hero.svg" },
+  { "client": "Trident Residences", "sector": "Residential", "image": "/images/projects/logos/trident-residences.svg" },
+  { "client": "Xero Degree", "sector": "Cold Chain", "image": "/images/projects/logos/xero-degree.svg" },
+  { "client": "Mohanlal & Sons", "sector": "Retail", "image": "/images/projects/logos/mohanlal-and-sons.svg" },
+  { "client": "Indian Silk", "sector": "Retail", "image": "/images/projects/logos/indian-silk.svg" }
 ]
