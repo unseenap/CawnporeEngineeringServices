@@ -568,3 +568,12 @@ Services website.
 - Added a prominent Request a quote panel directly below the drawer heading so it is visible without scrolling.
 - Improved drawer contact rows, small-screen typography, spacing, touch targets and 390px-wide device handling.
 - Completed ESLint, TypeScript and Next.js production-build verification.
+## Checkpoint 45: Simplified project-enquiry Contact page redesign
+
+- Status: Complete
+- Rebuilt the Contact page to match the simplified Home and About page visual system.
+- Replaced decorative illustration and ripple presentation with authentic rooftop HVAC service imagery.
+- Organized the page around verified direct contact details, useful preparation guidance, the existing functional quote form and a three-step response process.
+- Preserved the form's service-prefill and prepared-email functionality while improving labels, focus states, consent presentation and submission feedback.
+- Added responsive single-column form fields, full-width mobile CTA, compact contact rows and consistent navy, blue and green theme treatment.
+- Completed ESLint, TypeScript and Next.js production-build verification.
