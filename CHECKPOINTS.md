@@ -533,3 +533,11 @@ Services website.
 - Retained the familiar WhatsApp green independently and avoided adding green
   to large surfaces or body copy, keeping the interface balanced.
 - Completed ESLint and Next.js production-build verification.
+## Checkpoint 41: Service-scope image mapping
+
+- Status: Complete
+- Matched car-parking ventilation, centralized air conditioning, ducting, and fan installation with their corresponding supplied CES project photographs.
+- Added authentic imagery inside every expandable service-scope row, with the first item visible by default and responsive mobile stacking.
+- Expanded the Ventilation & Air Conditioning solution gallery to show all four matching work-site images.
+- Added safe solution-image fallbacks for scope rows on the remaining seven service pages.
+- Completed ESLint and Next.js production-build verification.

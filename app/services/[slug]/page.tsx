@@ -27,6 +27,15 @@ export default async function ServiceDetailPage({ params }: Props) {
   const service = services.find((item) => item.id === slug);
   if (!service) notFound();
   const benefitItems = [...service.benefits, ...service.performance];
+  const ventilationImages = [
+    "/images/services/basement-ventilation/parking-ventilation-context.jpeg",
+    "/images/services/consultancy/rooftop-hvac-plant.png",
+    "/images/services/basement-ventilation/completed-ductwork-wide.jpeg",
+    "/images/services/basement-ventilation/four-fan-ventilation-bank.jpeg",
+  ];
+  const scopeImages = service.id === "ventilation-air-conditioning"
+    ? ventilationImages
+    : service.subservices.map((_, index) => service.solutionImages[index % service.solutionImages.length]);
 
   return (
     <main className="service-page-v4">
@@ -62,9 +71,12 @@ export default async function ServiceDetailPage({ params }: Props) {
           </div>
           <div className="service-accordion-v4">
             {service.subservices.map((item, index) => (
-              <details key={item}>
+              <details open={index === 0} key={item}>
                 <summary>{item}<CaretDown size={21} /></summary>
-                <p>{service.performance[index % service.performance.length]}. CES coordinates this requirement with the complete system, site constraints and intended operating condition.</p>
+                <div className="service-accordion-content-v4">
+                  <p>{service.performance[index % service.performance.length]}. CES coordinates this requirement with the complete system, site constraints and intended operating condition.</p>
+                  <figure><Image src={scopeImages[index]} alt={`${item} work by Cawnpore Engineering Services`} fill unoptimized sizes="(max-width: 760px) 100vw, 360px" /></figure>
+                </div>
               </details>
             ))}
           </div>
