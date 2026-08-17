@@ -505,3 +505,18 @@ Services website.
   clean rooms, cold rooms, ductable and packaged AC, VRV/VRF and interiors.
 - Verified all image references and removed all active links to retired service
   routes; completed ESLint, Next.js and Vinext production builds.
+
+## Checkpoint 39: Reference-led service detail layout
+
+- Status: Complete
+- Redesigned the shared template used by all eight service pages around the
+  supplied long-form reference while retaining CES branding and content.
+- Added a compact photographic title banner, spacious text-and-image opening,
+  expandable dark overview rows and a centered expertise narrative.
+- Expanded the benefits presentation to eight responsive cards per service and
+  retained the authentic two-image solution gallery and detailed conclusion.
+- Added the official-client marquee, portfolio and contact actions, and the
+  standard CES enquiry band at the end of every service page.
+- Optimized the editorial layout for tablet and mobile without changing the
+  shared data architecture or generated service routes.
+- Completed ESLint, Next.js and Vinext production-build verification.
