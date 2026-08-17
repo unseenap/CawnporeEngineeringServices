@@ -541,3 +541,12 @@ Services website.
 - Expanded the Ventilation & Air Conditioning solution gallery to show all four matching work-site images.
 - Added safe solution-image fallbacks for scope rows on the remaining seven service pages.
 - Completed ESLint and Next.js production-build verification.
+## Checkpoint 42: Simplified authentic-image homepage redesign
+
+- Status: Complete
+- Replaced the rotating hero with one focused, real CES basement-ventilation project image and clearer service positioning.
+- Simplified the homepage hierarchy into company introduction, four core image-led capabilities, one client marquee, delivery process and enquiry call-to-action.
+- Used authentic supplied images for HVAC consultancy, centralized air conditioning, ducting, car-parking ventilation and fan installation.
+- Corrected the visual theme with navy and blue as the engineering foundation and controlled green accents for positive actions and delivery cues.
+- Added responsive stacking, reduced-motion support, descriptive image text and mobile-focused hero treatment.
+- Completed ESLint, TypeScript and Next.js production-build verification.

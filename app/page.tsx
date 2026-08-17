@@ -2,50 +2,65 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, CheckCircle, ClipboardText, Gear, Headset, Ruler, WhatsappLogo } from "@phosphor-icons/react/dist/ssr";
-import { Reveal } from "@/components/motion/Reveal";
 import { EnquiryBand } from "@/components/corporate/EnquiryBand";
 import { CorporateHeroSlider } from "@/components/home/CorporateHeroSlider";
-import { BrandScroller, BrandScrollerReverse } from "@/components/ui/brand-scoller";
+import { Reveal } from "@/components/motion/Reveal";
+import { BrandScroller } from "@/components/ui/brand-scoller";
 import projects from "@/data/projects.json";
-import services from "@/data/services.json";
 
 export const metadata: Metadata = { title: "Cawnpore Engineering Services | HVAC Solutions", description: "Turnkey HVAC engineering, execution and lifecycle support across India." };
 
-const steps = [
-  [ClipboardText, "Send your requirement", "Tell us about the site, system and expected outcome."],
-  [Ruler, "Survey and design", "We assess the need and prepare a coordinated technical solution."],
-  [Gear, "Execute and commission", "Our team installs, tests and validates system performance."],
-  [Headset, "Support the lifecycle", "Planned maintenance keeps comfort and efficiency on track."]
+const featuredServices = [
+  { eyebrow: "Plan", title: "HVAC consultancy & design", body: "Load assessment, airflow planning, coordinated layouts and equipment selection developed around the actual building requirement.", image: "/images/services/consultancy/hvac-design-consultation.png", href: "/services/hvac-consultancy-design" },
+  { eyebrow: "Cool", title: "Centralized air conditioning", body: "Dependable centralized cooling solutions coordinated for capacity, energy use, service access and long-term operation.", image: "/images/services/consultancy/rooftop-hvac-plant.png", href: "/services/ventilation-air-conditioning" },
+  { eyebrow: "Distribute", title: "Ducting & air distribution", body: "Purpose-planned duct routes, fittings and air terminals that support balanced delivery while respecting site constraints.", image: "/images/services/basement-ventilation/completed-ductwork-wide.jpeg", href: "/services/ventilation-air-conditioning" },
+  { eyebrow: "Ventilate", title: "Car-parking ventilation & fan installation", body: "Basement exhaust, jet-fan and mechanical ventilation installations designed for effective air movement and maintainable operation.", image: "/images/services/basement-ventilation/four-fan-ventilation-bank.jpeg", href: "/services/ventilation-air-conditioning" },
 ];
 
+const steps = [
+  [ClipboardText, "Requirement", "Share the site, system and expected result."],
+  [Ruler, "Engineering", "We survey, calculate and coordinate the solution."],
+  [Gear, "Execution", "Our team installs, tests and commissions the system."],
+  [Headset, "Support", "Lifecycle service protects ongoing performance."],
+] as const;
+
 export default function Home() {
-  return <main className="corp-site">
-    <CorporateHeroSlider />
+  return (
+    <main className="corp-site home-page-v5">
+      <CorporateHeroSlider />
+      <a className="whatsapp-float" href="https://wa.me/918318554343" aria-label="Contact CES on WhatsApp"><WhatsappLogo size={31} weight="fill" /></a>
 
-    <a className="whatsapp-float" href={`https://wa.me/918318554343`} aria-label="Contact CES on WhatsApp"><WhatsappLogo size={31} weight="fill" /></a>
+      <section className="home-proof-v5" aria-label="CES delivery strengths"><div className="site-container">
+        <span><strong>Pan-India</strong> project capability</span><span><strong>Turnkey</strong> HVAC delivery</span><span><strong>One team</strong> from design to support</span>
+      </div></section>
 
-    <section className="corp-proof-strip"><div className="site-container">
-      <span><strong>Pan-India</strong> project support</span><span><strong>Turnkey</strong> delivery</span><span><strong>5</strong> core capabilities</span><span><strong>Lifecycle</strong> accountability</span>
-    </div></section>
+      <section className="section home-intro-v5"><div className="site-container home-intro-grid-v5">
+        <Reveal><span className="corp-kicker">Engineering with accountability</span><h2>One practical partner for the complete HVAC lifecycle.</h2></Reveal>
+        <Reveal delay={0.08}><p>Cawnpore Engineering Services combines technical planning, coordinated execution and responsive support. Every system is shaped around building use, performance needs and maintainability—not a standard catalogue answer.</p>
+          <div className="home-intro-points-v5"><span><CheckCircle weight="fill" /> Buildable engineering</span><span><CheckCircle weight="fill" /> Site-led coordination</span><span><CheckCircle weight="fill" /> Reliable commissioning</span></div>
+          <Link className="corp-text-link" href="/about">Learn about CES <ArrowRight size={16} /></Link>
+        </Reveal>
+      </div></section>
 
-    <section className="section corp-intro"><div className="site-container corp-two-col">
-      <Reveal><span className="corp-kicker">About CES</span><h2>One engineering partner from first calculation to stable operation.</h2></Reveal>
-      <Reveal delay={0.1}><p>Cawnpore Engineering Services combines technical design, disciplined site execution and responsive after-sales support. We build solutions around the actual operating environment rather than applying one standard answer everywhere.</p><ul className="corp-checks"><li><CheckCircle /> Clear technical recommendations</li><li><CheckCircle /> Coordinated project execution</li><li><CheckCircle /> Energy-aware system choices</li><li><CheckCircle /> Dependable service support</li></ul><Link className="corp-text-link" href="/about">Know more about CES <ArrowRight size={16} /></Link></Reveal>
-    </div></section>
+      <section className="section home-services-v5"><div className="site-container">
+        <div className="home-section-heading-v5"><div><span className="corp-kicker">Core capabilities</span><h2>Solutions grounded in real site work.</h2></div><p>Focused support for airflow, cooling and environmental control—from the first calculation to final commissioning.</p></div>
+        <div className="home-service-list-v5">{featuredServices.map((service, index) => <Reveal className="home-service-item-v5" delay={index * 0.06} key={service.title}>
+          <div className="home-service-image-v5"><Image src={service.image} alt={`${service.title} work by Cawnpore Engineering Services`} fill unoptimized sizes="(max-width: 760px) 100vw, 50vw" /></div>
+          <div className="home-service-copy-v5"><span>{String(index + 1).padStart(2, "0")} / {service.eyebrow}</span><h3>{service.title}</h3><p>{service.body}</p><Link href={service.href}>View capability <ArrowRight size={17} /></Link></div>
+        </Reveal>)}</div>
+        <div className="corp-center"><Link className="button button-primary" href="/services">View all services</Link></div>
+      </div></section>
 
-    <section className="section corp-services-section"><div className="site-container">
-      <div className="corp-section-head"><span className="corp-kicker">Our services</span><h2>Complete HVAC capabilities</h2><p>Specialist support for new projects, operating buildings and system upgrades.</p></div>
-      <div className="corp-service-grid">{services.map((service, i) => <Reveal className="corp-service-card" delay={i * .05} key={service.id}><div className="corp-card-image"><Image src={service.image} alt="" fill unoptimized sizes="(max-width: 700px) 100vw, 33vw" /></div><span>{service.number}</span><h3>{service.shortTitle}</h3><p>{service.summary}</p><Link href={`/services/${service.id}`}>View service <ArrowRight size={16} /></Link></Reveal>)}</div>
-      <div className="corp-center"><Link className="button button-primary" href="/services">View all services</Link></div>
-    </div></section>
+      <section className="section home-clients-v5"><div className="site-container">
+        <div className="home-section-heading-v5 home-section-heading-compact-v5"><div><span className="corp-kicker">Project experience</span><h2>Trusted across diverse environments.</h2></div><Link className="corp-text-link" href="/gallery">View project gallery <ArrowRight size={16} /></Link></div>
+        <BrandScroller brands={projects} />
+      </div></section>
 
-    <section className="section corp-project-preview"><div className="site-container">
-      <div className="corp-section-head"><span className="corp-kicker">Selected work</span><h2>Experience across demanding environments</h2></div>
-      <div className="ces-brand-showcase"><BrandScroller brands={projects} /><BrandScrollerReverse brands={projects} duration={52} /></div>
-      <div className="corp-center"><Link className="corp-text-link" href="/gallery">Explore the project gallery <ArrowRight size={16} /></Link></div>
-    </div></section>
-
-    <section className="section corp-process"><div className="site-container"><div className="corp-section-head"><span className="corp-kicker">How we work</span><h2>A careful process at every stage</h2></div><div className="corp-process-grid">{steps.map(([Icon,title,body], i) => <Reveal className="corp-step" delay={i*.07} key={String(title)}><b>0{i+1}</b><Icon size={32} /><h3>{String(title)}</h3><p>{String(body)}</p></Reveal>)}</div></div></section>
-    <EnquiryBand />
-  </main>;
+      <section className="section home-process-v5"><div className="site-container">
+        <div className="home-section-heading-v5 home-section-heading-compact-v5"><div><span className="corp-kicker">Delivery process</span><h2>Clear steps. One accountable team.</h2></div></div>
+        <div className="home-process-grid-v5">{steps.map(([Icon, title, body], index) => <Reveal className="home-process-step-v5" delay={index * 0.06} key={title}><span>0{index + 1}</span><Icon size={28} /><h3>{title}</h3><p>{body}</p></Reveal>)}</div>
+      </div></section>
+      <EnquiryBand />
+    </main>
+  );
 }
