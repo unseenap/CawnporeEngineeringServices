@@ -27,7 +27,7 @@ export default function SustainabilityPage() {
             <p>CES supports accurate design, commissioning, optimization and targeted modernization.</p>
             <div className="hero-actions">
               <Link className="button button-primary" href="/contact">Request an energy review <ArrowRight size={18} /></Link>
-              <Link className="button button-secondary" href="/services/retrofitting-upgrades">Explore upgrades</Link>
+              <Link className="button button-secondary" href="/services/hvac-consultancy-design">Explore design services</Link>
             </div>
           </div>
           <SustainabilityHeroVisual />

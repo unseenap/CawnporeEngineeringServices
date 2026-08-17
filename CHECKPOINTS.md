@@ -488,3 +488,20 @@ Services website.
 - Unified navigation, cards, forms, CTA bands, footer and preloader surfaces
   without changing component behavior or animation logic.
 - Completed ESLint and Next.js production-build verification.
+
+## Checkpoint 38: Eight-service architecture rebuild
+
+- Status: Complete
+- Replaced the previous five-service model with the eight requested service
+  categories and their supplied sub-service scope.
+- Rebuilt the Our Services page as a responsive icon-card directory with short
+  descriptions, scope previews and dedicated Read More routes.
+- Created eight generated service pages using one maintainable shared template
+  with service explanation, performance key points, system scope, benefit
+  cards, solution imagery, complete-solution guidance and client marquee.
+- Updated desktop and mobile navigation, footer links, Home service cards,
+  contact-form options and the Sustainability cross-link to the new routes.
+- Added unique, page-specific content for consultancy, ventilation, chillers,
+  clean rooms, cold rooms, ductable and packaged AC, VRV/VRF and interiors.
+- Verified all image references and removed all active links to retired service
+  routes; completed ESLint, Next.js and Vinext production builds.

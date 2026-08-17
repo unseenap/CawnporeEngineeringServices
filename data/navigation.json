@@ -3,11 +3,14 @@
     { "label": "Home", "href": "/" },
     { "label": "About", "href": "/about" },
     { "label": "Services", "href": "/services", "children": [
-      { "label": "Design & Engineering", "href": "/services/design-engineering" },
-      { "label": "Installation & Commissioning", "href": "/services/installation-commissioning" },
-      { "label": "Maintenance & Repair", "href": "/services/maintenance-repair" },
-      { "label": "Retrofitting & Upgrades", "href": "/services/retrofitting-upgrades" },
-      { "label": "Specialized HVAC", "href": "/services/specialized-hvac" }
+      { "label": "HVAC Consultancy & Design", "href": "/services/hvac-consultancy-design" },
+      { "label": "Ventilation & Air Conditioning", "href": "/services/ventilation-air-conditioning" },
+      { "label": "Chiller Plants", "href": "/services/chiller-plants" },
+      { "label": "Clean Room Services", "href": "/services/clean-room-services" },
+      { "label": "Cold Room Services", "href": "/services/cold-room-services" },
+      { "label": "Ductable & Packaged AC", "href": "/services/ductable-packaged-ac" },
+      { "label": "VRV / VRF", "href": "/services/vrv-vrf" },
+      { "label": "Interiors & Architecture", "href": "/services/interiors-architecture" }
     ] },
     { "label": "Industries", "href": "/industries" },
     { "label": "Gallery", "href": "/gallery" },
