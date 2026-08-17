@@ -473,3 +473,18 @@ Services website.
 - Restored sticky primary navigation and optimized the tablet and mobile header
   heights while preserving the existing shadcn Drawer behavior.
 - Completed ESLint and Next.js production-build verification.
+
+## Checkpoint 37: Site-wide colour and surface correction
+
+- Status: Complete
+- Consolidated the interface into a calmer navy, medium-blue, white and pale
+  blue-gray system with improved text and border contrast.
+- Reserved green for WhatsApp and success feedback, removing it from general
+  secondary actions to reduce competing visual signals.
+- Softened gradients, image overlays, shadows, card elevation and focus rings
+  across the active site while retaining clear interaction feedback.
+- Reduced oversized radii and section height for a simpler, more professional
+  content rhythm across desktop and mobile layouts.
+- Unified navigation, cards, forms, CTA bands, footer and preloader surfaces
+  without changing component behavior or animation logic.
+- Completed ESLint and Next.js production-build verification.
