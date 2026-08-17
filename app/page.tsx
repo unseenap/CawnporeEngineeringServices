@@ -5,6 +5,7 @@ import { ArrowRight, CheckCircle, ClipboardText, Gear, Headset, Ruler, WhatsappL
 import { Reveal } from "@/components/motion/Reveal";
 import { EnquiryBand } from "@/components/corporate/EnquiryBand";
 import { CorporateHeroSlider } from "@/components/home/CorporateHeroSlider";
+import { BrandScroller, BrandScrollerReverse } from "@/components/ui/brand-scoller";
 import projects from "@/data/projects.json";
 import services from "@/data/services.json";
 
@@ -40,7 +41,7 @@ export default function Home() {
 
     <section className="section corp-project-preview"><div className="site-container">
       <div className="corp-section-head"><span className="corp-kicker">Selected work</span><h2>Experience across demanding environments</h2></div>
-      <div className="corp-project-grid">{projects.slice(0, 6).map((project, i) => <Reveal className="corp-client-card" delay={i * .04} key={project.client}><div className="corp-client-logo"><Image src={project.image} alt={`${project.client} official logo`} fill unoptimized sizes="(max-width:700px) 100vw, 33vw" /></div><div><span>{project.sector}</span><h3>{project.client}</h3></div></Reveal>)}</div>
+      <div className="ces-brand-showcase"><BrandScroller brands={projects} /><BrandScrollerReverse brands={projects} duration={52} /></div>
       <div className="corp-center"><Link className="corp-text-link" href="/gallery">Explore the project gallery <ArrowRight size={16} /></Link></div>
     </div></section>
 

@@ -418,3 +418,16 @@ Services website.
   existing CES blue, navy, white and light-gray design system.
 - Removed unnecessary generated font and icon dependencies and verified lint,
   Next.js production build and Vinext production build.
+
+## Checkpoint 33: Official client BrandScroller
+
+- Status: Complete
+- Added the requested `components/ui/brand-scoller.tsx` component and its demo
+  within the configured shadcn UI directory.
+- Installed `react-icons` as requested while adapting the production component
+  to use only the 15 supplied official project-company SVG logos.
+- Replaced the static Home project grid with two seamless forward and reverse
+  logo rows driven by the central projects JSON data.
+- Added pause-on-hover and focus, responsive card sizing, soft edge masking and
+  a non-animated horizontal-scroll fallback for reduced-motion users.
+- Completed lint and Next.js production-build verification.
