@@ -520,3 +520,16 @@ Services website.
 - Optimized the editorial layout for tablet and mobile without changing the
   shared data architecture or generated service routes.
 - Completed ESLint, Next.js and Vinext production-build verification.
+
+## Checkpoint 40: Green secondary accent integration
+
+- Status: Complete
+- Added a restrained engineering green and matching soft tint to the central
+  theme system while preserving blue as the primary information colour.
+- Applied green to conversion-focused quote, profile, enquiry, portfolio and
+  footer actions with darker accessible hover states.
+- Extended the accent to service icons, checklist states, card bullets, benefit
+  icons, selected chips and preloader completion feedback.
+- Retained the familiar WhatsApp green independently and avoided adding green
+  to large surfaces or body copy, keeping the interface balanced.
+- Completed ESLint and Next.js production-build verification.

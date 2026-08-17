@@ -6,8 +6,8 @@
   --color-brand-primary: #0d86c6;
   --color-brand-primary-hover: #096fa8;
   --color-brand-secondary: #0d86c6;
-  --color-brand-accent: #25d366;
-  --color-brand-accent-hover: #1ebe5d;
+  --color-brand-accent: #0aa66a;
+  --color-brand-accent-hover: #078653;
 
   --color-page: #f6f9fc;
   --color-surface: #ffffff;
@@ -25,7 +25,7 @@
   --color-dark-border: #e8edf3;
   --color-dark-muted: #94a3b8;
   --color-focus: #0d86c6;
-  --color-success: #25d366;
+  --color-success: #0aa66a;
   --color-warning: #0d86c6;
   --color-error: #18324b;
   --color-image-overlay: rgb(15 38 58 / 56%);
