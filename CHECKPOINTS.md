@@ -550,3 +550,12 @@ Services website.
 - Corrected the visual theme with navy and blue as the engineering foundation and controlled green accents for positive actions and delivery cues.
 - Added responsive stacking, reduced-motion support, descriptive image text and mobile-focused hero treatment.
 - Completed ESLint, TypeScript and Next.js production-build verification.
+## Checkpoint 43: Simplified authentic-image About page redesign
+
+- Status: Complete
+- Rebuilt the About page as a concise, trust-led company profile consistent with the redesigned homepage.
+- Added real CES-relevant engineering, basement-ventilation and centralized-plant imagery instead of illustration-led presentation.
+- Consolidated the content into company story, project evidence, mission and vision, working approach, operating principles and enquiry CTA.
+- Applied the corrected navy-and-blue HVAC theme with controlled green delivery and success accents.
+- Added responsive image stacking, readable mobile typography, descriptive alternative text and restrained reveal animation.
+- Completed ESLint, TypeScript and Next.js production-build verification.
