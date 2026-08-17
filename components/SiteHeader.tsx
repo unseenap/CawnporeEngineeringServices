@@ -4,9 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { CaretDown, EnvelopeSimple, FacebookLogo, InstagramLogo, LinkedinLogo, List, Phone, X, YoutubeLogo } from "@phosphor-icons/react";
-import { useEffect, useState } from "react";
-import { AnimatePresence, motion, useReducedMotion } from "motion/react";
-import { createPortal } from "react-dom";
+import { useState } from "react";
+import { Drawer, DrawerContent, DrawerDescription, DrawerTitle } from "@/components/ui/drawer";
 import navigation from "@/data/navigation.json";
 import site from "@/data/site.json";
 
@@ -14,20 +13,6 @@ export function SiteHeader() {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
-  const reduceMotion = useReducedMotion();
-
-  useEffect(() => {
-    if (!menuOpen) return;
-    const onKey = (event: KeyboardEvent) => {
-      if (event.key === "Escape") setMenuOpen(false);
-    };
-    document.addEventListener("keydown", onKey);
-    document.body.style.overflow = "hidden";
-    return () => {
-      document.removeEventListener("keydown", onKey);
-      document.body.style.overflow = "";
-    };
-  }, [menuOpen]);
 
   const isActive = (href: string) =>
     href === "/" ? pathname === "/" : pathname.startsWith(href);
@@ -37,34 +22,16 @@ export function SiteHeader() {
   };
 
   const mobileMenu = (
-    <AnimatePresence>
-      {menuOpen && (
-        <motion.div
-          className="mobile-panel"
-          id="mobile-navigation-panel"
-          initial={reduceMotion ? false : { opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: reduceMotion ? 0.01 : 0.22 }}
-        >
-          <button
-            className="mobile-panel-backdrop"
-            type="button"
-            aria-label="Close navigation menu"
-            onClick={closeMenu}
-          />
-          <motion.nav
-            className="mobile-nav"
-            aria-label="Mobile navigation"
-            initial={reduceMotion ? false : { x: "100%" }}
-            animate={{ x: 0 }}
-            exit={{ x: "100%" }}
-            transition={{ duration: reduceMotion ? 0.01 : 0.34, ease: [0.22, 1, 0.36, 1] }}
-          >
-            <div className="mobile-nav-title">Explore CES</div>
+    <Drawer open={menuOpen} onOpenChange={setMenuOpen} swipeDirection="right">
+      <DrawerContent className="ces-nav-drawer" id="mobile-navigation-panel">
+        <div className="ces-drawer-header">
+          <div><DrawerTitle>Explore CES</DrawerTitle><DrawerDescription>HVAC engineering and project support</DrawerDescription></div>
+          <button type="button" aria-label="Close navigation menu" onClick={closeMenu}><X size={23} /></button>
+        </div>
+        <nav className="ces-drawer-nav" aria-label="Mobile navigation">
             {navigation.primary.map((item) =>
               item.children ? (
-                <div key={item.href}>
+                <div className="ces-drawer-group" key={item.href}>
                   <button
                     type="button"
                     aria-expanded={servicesOpen}
@@ -73,7 +40,7 @@ export function SiteHeader() {
                     {item.label} <CaretDown size={18} />
                   </button>
                   {servicesOpen && (
-                    <div className="mobile-subnav">
+                    <div className="ces-drawer-subnav">
                       <Link href={item.href} onClick={closeMenu}>Services overview</Link>
                       {item.children.map((child) => (
                         <Link href={child.href} onClick={closeMenu} key={child.href}>{child.label}</Link>
@@ -88,10 +55,10 @@ export function SiteHeader() {
             <Link className="button button-primary" href={navigation.cta.href} onClick={closeMenu}>
               {navigation.cta.label}
             </Link>
-          </motion.nav>
-        </motion.div>
-      )}
-    </AnimatePresence>
+        </nav>
+        <div className="ces-drawer-contact"><a href={`tel:${site.phone.replace(/\s/g, "")}`}>{site.phone}</a><a href={`mailto:${site.email}`}>{site.email}</a></div>
+      </DrawerContent>
+    </Drawer>
   );
 
   return (
@@ -142,13 +109,13 @@ export function SiteHeader() {
           aria-controls="mobile-navigation-panel"
           onClick={() => setMenuOpen((value) => !value)}
         >
-          {menuOpen ? <X size={24} /> : <List size={26} />}
-          <span>{menuOpen ? "Close" : "Menu"}</span>
+          <List size={26} />
+          <span>Menu</span>
         </button>
       </div>
 
     </header>
-    {typeof document !== "undefined" && createPortal(mobileMenu, document.body)}
+    {mobileMenu}
     </>
   );
 }

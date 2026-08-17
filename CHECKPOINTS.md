@@ -405,3 +405,16 @@ Services website.
 - Preserved the three-second minimum presentation and body-scroll lock while
   adding responsive and reduced-motion behavior.
 - Completed lint and production-build verification.
+
+## Checkpoint 32: Shadcn navigation Drawer
+
+- Status: Complete
+- Initialized shadcn and added its Drawer primitive as requested.
+- Replaced the custom mobile navigation portal with a controlled right-side
+  Drawer that supports swipe dismissal, backdrop closing and Escape handling.
+- Preserved the expandable service navigation, route-close behavior, quote CTA
+  and CES contact details inside the drawer.
+- Adapted all drawer surfaces, borders, typography and interactive states to the
+  existing CES blue, navy, white and light-gray design system.
+- Removed unnecessary generated font and icon dependencies and verified lint,
+  Next.js production build and Vinext production build.
