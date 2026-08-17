@@ -1,12 +1,12 @@
 import type { ReactNode } from "react";
 import { SiteFooter } from "./SiteFooter";
 import { SiteHeader } from "./SiteHeader";
-import { SiteLoader } from "./SiteLoader";
+import Preloader from "@/components/ui/preloader";
 
 export function SiteShell({ children }: { children: ReactNode }) {
   return (
     <>
-      <SiteLoader />
+      <Preloader />
       <a className="skip-link" href="#main-content">Skip to content</a>
       <SiteHeader />
       <main id="main-content">{children}</main>

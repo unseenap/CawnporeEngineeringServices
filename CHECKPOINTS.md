@@ -431,3 +431,17 @@ Services website.
 - Added pause-on-hover and focus, responsive card sizing, soft edge masking and
   a non-animated horizontal-scroll fallback for reduced-motion users.
 - Completed lint and Next.js production-build verification.
+
+## Checkpoint 34: GSAP corporate preloader
+
+- Status: Complete
+- Added the requested `components/ui/preloader.tsx` client component and a
+  matching demo inside the configured shadcn UI directory.
+- Installed GSAP and integrated the preloader once at the root site shell so it
+  consistently covers every route without page-level duplication.
+- Adapted the supplied concept to the CES identity with the official logo,
+  restrained blueprint grid, corporate status copy and responsive styling.
+- Preserved a minimum three-second presentation, document-readiness check and
+  body-scroll lock, then used GSAP for the curved slide-away transition.
+- Added reduced-motion support and completed lint, Next.js production-build
+  and Vinext production-build verification.
