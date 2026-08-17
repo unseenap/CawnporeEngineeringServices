@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { CaretDown, EnvelopeSimple, FacebookLogo, InstagramLogo, LinkedinLogo, List, Phone, X, YoutubeLogo } from "@phosphor-icons/react";
+import { ArrowRight, CaretDown, EnvelopeSimple, FacebookLogo, InstagramLogo, LinkedinLogo, List, Phone, X, YoutubeLogo } from "@phosphor-icons/react";
 import { useState } from "react";
 import { Drawer, DrawerContent, DrawerDescription, DrawerTitle } from "@/components/ui/drawer";
 import navigation from "@/data/navigation.json";
@@ -28,6 +28,9 @@ export function SiteHeader() {
           <div><DrawerTitle>Explore CES</DrawerTitle><DrawerDescription>HVAC engineering and project support</DrawerDescription></div>
           <button type="button" aria-label="Close navigation menu" onClick={closeMenu}><X size={23} /></button>
         </div>
+        <Link className="ces-drawer-quote" href={navigation.cta.href} onClick={closeMenu}>
+          <span><small>Start a conversation</small>{navigation.cta.label}</span><ArrowRight size={20} weight="bold" />
+        </Link>
         <nav className="ces-drawer-nav" aria-label="Mobile navigation">
             {navigation.primary.map((item) =>
               item.children ? (
@@ -52,18 +55,15 @@ export function SiteHeader() {
                 <Link href={item.href} onClick={closeMenu} key={item.href}>{item.label}</Link>
               )
             )}
-            <Link className="button button-primary" href={navigation.cta.href} onClick={closeMenu}>
-              {navigation.cta.label}
-            </Link>
         </nav>
-        <div className="ces-drawer-contact"><a href={`tel:${site.phone.replace(/\s/g, "")}`}>{site.phone}</a><a href={`mailto:${site.email}`}>{site.email}</a></div>
+        <div className="ces-drawer-contact"><a href={`tel:${site.phone.replace(/\s/g, "")}`}><Phone size={17} weight="fill" />{site.phone}</a><a href={`mailto:${site.email}`}><EnvelopeSimple size={17} weight="fill" />{site.email}</a></div>
       </DrawerContent>
     </Drawer>
   );
 
   return (
     <>
-    <div className="top-contact-bar"><div className="site-container top-contact-inner"><div className="top-contact-details"><a href={`tel:${site.phone.replace(/\s/g, "")}`}><Phone size={20} weight="fill" />{site.phone}</a><a href={`mailto:${site.email}`}><EnvelopeSimple size={22} weight="fill" />{site.email}</a></div><div className="top-socials"><a href="https://www.linkedin.com" aria-label="LinkedIn"><LinkedinLogo size={17} weight="fill" /></a><a href="https://www.facebook.com" aria-label="Facebook"><FacebookLogo size={17} weight="fill" /></a><a href="https://www.youtube.com" aria-label="YouTube"><YoutubeLogo size={18} weight="fill" /></a><a href="https://www.instagram.com" aria-label="Instagram"><InstagramLogo size={17} weight="bold" /></a><Link href="/about" className="profile-link">Company Profile</Link></div></div></div>
+    <div className="top-contact-bar"><div className="site-container top-contact-inner"><div className="top-contact-details"><a href={`tel:${site.phone.replace(/\s/g, "")}`}><Phone size={20} weight="fill" />{site.phone}</a><a href={`mailto:${site.email}`}><EnvelopeSimple size={22} weight="fill" />{site.email}</a></div><div className="top-socials"><a href="https://www.linkedin.com" aria-label="LinkedIn"><LinkedinLogo size={17} weight="fill" /></a><a href="https://www.facebook.com" aria-label="Facebook"><FacebookLogo size={17} weight="fill" /></a><a href="https://www.youtube.com" aria-label="YouTube"><YoutubeLogo size={18} weight="fill" /></a><a href="https://www.instagram.com" aria-label="Instagram"><InstagramLogo size={17} weight="bold" /></a><Link href="/about" className="profile-link">Company Profile</Link></div><Link className="mobile-top-quote" href={navigation.cta.href}>Get a quote <ArrowRight size={14} weight="bold" /></Link></div></div>
     <header className="site-header">
       <div className="site-container nav-shell">
         <Link className="brand" href="/" aria-label={`${site.name} home`}>

@@ -559,3 +559,12 @@ Services website.
 - Applied the corrected navy-and-blue HVAC theme with controlled green delivery and success accents.
 - Added responsive image stacking, readable mobile typography, descriptive alternative text and restrained reveal animation.
 - Completed ESLint, TypeScript and Next.js production-build verification.
+## Checkpoint 44: Mobile contact bar and drawer conflict resolution
+
+- Status: Complete
+- Removed the mobile collision between phone, email, social links, navigation and drawer controls.
+- Simplified the phone contact bar to show the company phone number and a compact Get a quote action on small screens.
+- Raised the drawer above the sticky header and page, made it full-height and confined scrolling to the navigation content.
+- Added a prominent Request a quote panel directly below the drawer heading so it is visible without scrolling.
+- Improved drawer contact rows, small-screen typography, spacing, touch targets and 390px-wide device handling.
+- Completed ESLint, TypeScript and Next.js production-build verification.
