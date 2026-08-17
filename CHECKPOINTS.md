@@ -460,3 +460,16 @@ Services website.
   system testing, rooftop plant, ductwork and basement ventilation work.
 - Verified every referenced asset path, ESLint, the Next.js production build
   and the Vinext production build.
+
+## Checkpoint 36: Compact navigation UI/UX redesign
+
+- Status: Complete
+- Reduced the combined desktop header footprint from 174px to 110px by making
+  the utility bar and primary navigation substantially more compact.
+- Refined logo sizing, navigation spacing, typography, contact details, social
+  controls and the quote CTA for a cleaner corporate hierarchy.
+- Replaced the heavy rectangular active menu treatment with a subtle blue pill
+  and added restrained hover, focus, dropdown and shadow states.
+- Restored sticky primary navigation and optimized the tablet and mobile header
+  heights while preserving the existing shadcn Drawer behavior.
+- Completed ESLint and Next.js production-build verification.
