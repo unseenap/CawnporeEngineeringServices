@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     description: "HVAC design, installation and lifecycle service for commercial, residential and industrial environments across India.",
     type: "website",
     images: [{
-      url: "/images/illustrations/ces-hvac-cutaway.png",
+      url: "/images/services/basement-ventilation/parking-ventilation-hero.jpeg",
       width: 1693,
       height: 945,
       alt: "Engineered HVAC system serving a commercial building",

@@ -17,8 +17,8 @@ const stories = [
     eyebrow: "Commercial, education and healthcare",
     title: "Comfort, ventilation and air quality for occupied spaces.",
     description: "CES plans zoning, ventilation, filtration and controls around occupancy and the way each area is used.",
-    image: "/images/illustrations/ces-industries-commercial-healthcare.webp",
-    alt: "Commercial and healthcare HVAC systems with supply, return and filtration paths",
+    image: "/images/services/basement-ventilation/duct-and-fan-bank.jpeg",
+    alt: "Installed commercial basement ventilation fan bank and ductwork",
     priorities: ["Zoned load response", "Fresh-air and filtration", "Maintainable distribution"]
   },
   {
@@ -26,8 +26,8 @@ const stories = [
     eyebrow: "Manufacturing and critical facilities",
     title: "Cooling and ventilation designed around process continuity.",
     description: "We coordinate heat rejection, redundancy, pressure relationships and ventilation with the operating duty of the facility.",
-    image: "/images/illustrations/ces-industries-industrial-data.webp",
-    alt: "Manufacturing ventilation, chilled-water plant and precision cooling",
+    image: "/images/services/consultancy/rooftop-hvac-plant.png",
+    alt: "Rooftop chilled-water HVAC plant and connected piping",
     priorities: ["Process heat removal", "Duty and standby planning", "Performance checks"]
   },
   {
@@ -35,8 +35,8 @@ const stories = [
     eyebrow: "Residential and hospitality",
     title: "Quiet, controllable comfort with practical service access.",
     description: "CES balances room-level control, acoustics, indoor air quality and maintainability for consistent daily comfort.",
-    image: "/images/illustrations/ces-industries-residential-hospitality.webp",
-    alt: "Residential and hospitality building with zoned HVAC airflow",
+    image: "/images/services/rooftop-maintenance/technician-commissioning-check.png",
+    alt: "HVAC technician commissioning rooftop air-conditioning equipment",
     priorities: ["Low-noise selection", "Room-level zoning", "Lifecycle access"]
   }
 ];

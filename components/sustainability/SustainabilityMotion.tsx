@@ -29,8 +29,8 @@ export function SustainabilityHeroVisual() {
         transition={{ duration: 9, repeat: Infinity, ease: "easeInOut" }}
       >
         <Image
-          src="/images/illustrations/ces-sustainable-hvac-system.png"
-          alt="Efficient HVAC building system showing plant modernization, distribution and occupied spaces"
+          src="/images/services/consultancy/rooftop-hvac-plant.png"
+          alt="Efficient rooftop HVAC plant, piping and pumping equipment"
           fill
           priority
           unoptimized

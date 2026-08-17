@@ -445,3 +445,18 @@ Services website.
   body-scroll lock, then used GSAP for the curved slide-away transition.
 - Added reduced-motion support and completed lint, Next.js production-build
   and Vinext production-build verification.
+
+## Checkpoint 35: Authentic service and work-site photography
+
+- Status: Complete
+- Preserved all 30 supplied CES service and work-site images under structured
+  consultancy, rooftop-maintenance and basement-ventilation asset folders.
+- Renamed every asset with consistent, descriptive web-safe filenames while
+  retaining the original image quality and aspect ratio.
+- Replaced AI and stock-style imagery on active Home, Services, About,
+  Industries, Projects, Gallery, Sustainability, Blogs and Contact views with
+  a restrained selection of authentic project photography.
+- Matched each selected image to its real subject, including design consulting,
+  system testing, rooftop plant, ductwork and basement ventilation work.
+- Verified every referenced asset path, ESLint, the Next.js production build
+  and the Vinext production build.

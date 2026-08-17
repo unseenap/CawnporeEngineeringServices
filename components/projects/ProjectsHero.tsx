@@ -80,16 +80,16 @@ export function ProjectsHero() {
           transition={{ duration: 1.05, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
         >
           <Image
-            src="/images/illustrations/ces-projects-engineering-network.png"
-            alt="Illustration of HVAC systems connecting healthcare, manufacturing, aviation, retail and residential environments"
+            src="/images/services/basement-ventilation/completed-ductwork-wide.jpeg"
+            alt="Completed basement ventilation ductwork by Cawnpore Engineering Services"
             fill
             priority
             unoptimized
             sizes="(max-width: 900px) 100vw, 58vw"
           />
           <figcaption>
-            <span>Cross-sector engineering</span>
-            <strong>One connected performance view</strong>
+            <span>Site execution</span>
+            <strong>Installed ventilation and ductwork</strong>
           </figcaption>
         </motion.figure>
       </div>
