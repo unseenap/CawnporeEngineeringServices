@@ -591,3 +591,13 @@ Services website.
 - Raised the complete drawer viewport above the overlay instead of only raising its child panel.
 - Limited viewport pointer handling to the drawer panel so menu links remain selectable while outside-tap closing remains available through the overlay.
 - Completed ESLint, TypeScript and Next.js production-build verification.
+
+## Checkpoint 48: Image-led Services overview redesign
+
+- Status: Complete
+- Rebuilt the Services overview to match the simplified Home, About and Contact page system.
+- Added an authentic CES ventilation-project hero and a concise service-selection introduction.
+- Replaced the dense icon-only directory with eight responsive, image-led service cards.
+- Each card now includes a relevant project image, service icon, short explanation, scoped sub-services and a direct link to its dedicated detail page.
+- Applied the corrected navy-and-blue theme with controlled green accents, mobile stacking and reduced-motion behavior.
+- Completed ESLint, TypeScript and Next.js production-build verification.
