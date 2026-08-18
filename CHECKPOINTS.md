@@ -662,3 +662,12 @@ Services website.
 - Reduced logo-card dimensions and slowed the marquee so it supports trust without competing with primary homepage content.
 - Preserved hover pause, mobile sizing and the static reduced-motion fallback.
 - Completed ESLint, TypeScript and Next.js production-build verification.
+
+## Checkpoint 56: Site-wide circular client-logo marquee
+
+- Status: Complete
+- Added a reusable logo-only client marquee between page content and the footer on every non-home route.
+- Presented supplied official client logos in circular frames with alternating blue and green borders and no visible names or supporting labels.
+- Preserved hover pause, compact mobile sizing and the static reduced-motion behavior.
+- Kept the existing homepage client marquee unchanged.
+- Completed ESLint, TypeScript and Next.js production-build verification.

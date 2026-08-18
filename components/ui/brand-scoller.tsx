@@ -12,12 +12,13 @@ type BrandScrollerProps = {
   brands: BrandScrollerItem[];
   reverse?: boolean;
   duration?: number;
+  logoOnly?: boolean;
 };
 
-export function BrandScroller({ brands, reverse = false, duration = 46 }: BrandScrollerProps) {
+export function BrandScroller({ brands, reverse = false, duration = 46, logoOnly = false }: BrandScrollerProps) {
   return (
     <div
-      className="ces-brand-scroller group"
+      className={`ces-brand-scroller group${logoOnly ? " is-logo-only" : ""}`}
       style={{ "--brand-duration": `${duration}s` } as React.CSSProperties}
       aria-label="CES project clients"
     >
@@ -27,7 +28,7 @@ export function BrandScroller({ brands, reverse = false, duration = 46 }: BrandS
             {brands.map((brand) => (
               <article className="ces-brand-item" key={`${group}-${brand.client}`}>
                 <div><Image src={brand.image} alt={group === 0 ? `${brand.client} official logo` : ""} fill unoptimized sizes="176px" /></div>
-                <span>{brand.client}</span>
+                {!logoOnly && <span>{brand.client}</span>}
               </article>
             ))}
           </div>
