@@ -577,3 +577,10 @@ Services website.
 - Preserved the form's service-prefill and prepared-email functionality while improving labels, focus states, consent presentation and submission feedback.
 - Added responsive single-column form fields, full-width mobile CTA, compact contact rows and consistent navy, blue and green theme treatment.
 - Completed ESLint, TypeScript and Next.js production-build verification.
+## Checkpoint 46: Crisp mobile navigation drawer
+
+- Status: Complete
+- Removed the backdrop blur that made the responsive page and navigation appear unfocused when the menu opened.
+- Retained a lighter transparent page dim so the open drawer remains visually separated without reducing clarity.
+- Forced the drawer panel and its content surface to remain fully opaque, unfiltered and solid white.
+- Completed ESLint, TypeScript and Next.js production-build verification.
