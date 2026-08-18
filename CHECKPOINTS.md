@@ -584,3 +584,10 @@ Services website.
 - Retained a lighter transparent page dim so the open drawer remains visually separated without reducing clarity.
 - Forced the drawer panel and its content surface to remain fully opaque, unfiltered and solid white.
 - Completed ESLint, TypeScript and Next.js production-build verification.
+## Checkpoint 47: Restore mobile drawer navigation interaction
+
+- Status: Complete
+- Identified that the drawer overlay was above the drawer viewport and intercepting all taps despite the menu remaining visible.
+- Raised the complete drawer viewport above the overlay instead of only raising its child panel.
+- Limited viewport pointer handling to the drawer panel so menu links remain selectable while outside-tap closing remains available through the overlay.
+- Completed ESLint, TypeScript and Next.js production-build verification.
