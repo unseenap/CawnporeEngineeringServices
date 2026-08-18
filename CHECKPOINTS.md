@@ -354,11 +354,11 @@ Services website.
 - Kept the official CES logo and project/client branding unchanged so marks
   remain accurate rather than AI-redrawn.
 
-## Checkpoint 28: MGCS-inspired corporate website rebuild
+## Checkpoint 28: Reference-inspired corporate website rebuild
 
 - Status: Complete
 - Rebuilt the public website around a simple HVAC corporate structure inspired
-  by MGCS while retaining original CES branding, copy, services and imagery.
+  by the approved reference site while retaining original CES branding, copy, services and imagery.
 - Added a compact contact bar, simplified navigation, image-led page heroes,
   service catalogue, project proof, work process and consistent enquiry bands.
 - Reworked Home, About, Services and Contact and added dedicated Gallery and
@@ -609,3 +609,11 @@ Services website.
 - Changed the desktop directory to three columns, with two columns on tablets and one column on mobile.
 - Added alternating blue and green card borders with matching hover states while preserving the established corporate palette.
 - Completed ESLint, TypeScript and Next.js production-build verification.
+
+## Checkpoint 50: CES terminology and stylesheet cleanup
+
+- Status: Complete
+- Removed the previous reference-company name from application source, project documentation and maintained filenames.
+- Renamed the shared corporate stylesheet to `ces-layout.css` and updated the root layout import.
+- Reworded the historical redesign checkpoint using neutral reference-site terminology.
+- Completed ESLint, TypeScript and Next.js production-build verification after the rename.
