@@ -601,3 +601,11 @@ Services website.
 - Each card now includes a relevant project image, service icon, short explanation, scoped sub-services and a direct link to its dedicated detail page.
 - Applied the corrected navy-and-blue theme with controlled green accents, mobile stacking and reduced-motion behavior.
 - Completed ESLint, TypeScript and Next.js production-build verification.
+
+## Checkpoint 49: Compact colourful service cards
+
+- Status: Complete
+- Reduced service-card image height, internal padding, typography and tag spacing for a more compact directory.
+- Changed the desktop directory to three columns, with two columns on tablets and one column on mobile.
+- Added alternating blue and green card borders with matching hover states while preserving the established corporate palette.
+- Completed ESLint, TypeScript and Next.js production-build verification.
