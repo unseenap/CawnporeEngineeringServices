@@ -625,3 +625,12 @@ Services website.
 - Removed only the generated `.vinext` and `node_modules/.vite` development caches that retained the previous stylesheet path.
 - Confirmed that a fresh Vinext development process initializes without the missing-stylesheet error.
 - Documented that an already-running development process must be restarted to clear its in-memory module graph.
+
+## Checkpoint 52: Formspree contact-enquiry integration
+
+- Status: Complete
+- Installed the official `@formspree/react` integration and connected the contact form to Formspree form `xrpzogob`.
+- Replaced the email-application redirect with direct in-page submission while preserving every CES project-detail field and service preselection.
+- Added Formspree validation feedback, a disabled sending state, submission-error handling and a styled success confirmation.
+- Updated the contact-page guidance and privacy note to accurately describe the new submission flow.
+- Completed ESLint, TypeScript and Next.js production-build verification.

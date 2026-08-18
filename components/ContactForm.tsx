@@ -1,45 +1,46 @@
 "use client";
 
-import { ArrowRight } from "@phosphor-icons/react";
+import { useForm, ValidationError } from "@formspree/react";
+import { ArrowRight, CheckCircle } from "@phosphor-icons/react";
 import { useSearchParams } from "next/navigation";
-import { FormEvent, useState } from "react";
 import services from "@/data/services.json";
-
-type Status = "idle" | "opening" | "ready";
 
 export function ContactForm() {
   const searchParams = useSearchParams();
   const requestedService = searchParams.get("service") ?? "";
-  const [status, setStatus] = useState<Status>("idle");
+  const [state, handleSubmit] = useForm("xrpzogob");
 
-  function submit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    const form = new FormData(event.currentTarget);
-    const subject = encodeURIComponent(`Website enquiry: ${form.get("service")}`);
-    const body = encodeURIComponent(
-      `Name: ${form.get("name")}\nPhone: ${form.get("phone")}\nEmail: ${form.get("email")}\nCompany: ${form.get("company")}\nCity / State: ${form.get("location")}\nBuilding / project type: ${form.get("projectType")}\nProject stage: ${form.get("stage")}\nPreferred timeline: ${form.get("timeline")}\nService: ${form.get("service")}\n\nRequirement:\n${form.get("message")}`
+  if (state.succeeded) {
+    return (
+      <div className="form-success" role="status" aria-live="polite">
+        <CheckCircle size={34} weight="fill" />
+        <div>
+          <strong>Thank you. Your enquiry has been sent.</strong>
+          <p>Our team will review the project information and contact you using the details provided.</p>
+        </div>
+      </div>
     );
-    setStatus("opening");
-    window.location.href = `mailto:aditya@ceservices.co.in?subject=${subject}&body=${body}`;
-    window.setTimeout(() => setStatus("ready"), 500);
   }
 
   return (
-    <form className="contact-form" onSubmit={submit}>
+    <form className="contact-form" onSubmit={handleSubmit}>
       <div className="field-row">
         <label>
           <span>Full name</span>
           <input name="name" minLength={2} maxLength={80} required autoComplete="name" />
+          <ValidationError prefix="Name" field="name" errors={state.errors} />
         </label>
         <label>
           <span>Phone</span>
           <input name="phone" required autoComplete="tel" inputMode="tel" />
+          <ValidationError prefix="Phone" field="phone" errors={state.errors} />
         </label>
       </div>
       <div className="field-row">
         <label>
           <span>Email</span>
           <input name="email" type="email" required autoComplete="email" />
+          <ValidationError prefix="Email" field="email" errors={state.errors} />
         </label>
         <label>
           <span>Company or organization</span>
@@ -89,18 +90,18 @@ export function ContactForm() {
       <label>
         <span>Tell us about the requirement</span>
         <textarea name="message" minLength={20} maxLength={2000} required rows={6} />
+        <ValidationError prefix="Requirement" field="message" errors={state.errors} />
       </label>
       <label className="consent">
         <input type="checkbox" required />
         <span>I agree that CES may use these details to respond to my enquiry.</span>
       </label>
-      <button className="button button-primary" type="submit" disabled={status === "opening"}>
-        {status === "opening" ? "Opening email" : "Prepare quote request"} <ArrowRight size={18} />
+      <ValidationError prefix="Submission" errors={state.errors} />
+      <button className="button button-primary" type="submit" disabled={state.submitting}>
+        {state.submitting ? "Sending enquiry" : "Send enquiry"} <ArrowRight size={18} />
       </button>
       <p className="form-note" aria-live="polite">
-        {status === "ready"
-          ? "Your email application should now contain the prepared enquiry. Review it and press Send."
-          : "Submitting prepares an email in your email application. No details are stored by this website."}
+        Your details are submitted securely through Formspree and used only to respond to this enquiry.
       </p>
     </form>
   );

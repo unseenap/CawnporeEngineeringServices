@@ -46,7 +46,7 @@ export default function ContactPage() {
         <Reveal className="contact-form-panel-v5" delay={0.08}>
           <span className="corp-kicker">Request a quote</span>
           <h2>Share your project details.</h2>
-          <p className="contact-form-intro-v5">Complete the form and your email application will open with a prepared enquiry for review before sending.</p>
+          <p className="contact-form-intro-v5">Share the project context below. Your enquiry will be sent directly to our team for review.</p>
           <Suspense fallback={<div className="contact-form" aria-label="Loading enquiry form" />}><ContactForm /></Suspense>
         </Reveal>
       </div></section>
