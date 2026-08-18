@@ -617,3 +617,11 @@ Services website.
 - Renamed the shared corporate stylesheet to `ces-layout.css` and updated the root layout import.
 - Reworded the historical redesign checkpoint using neutral reference-site terminology.
 - Completed ESLint, TypeScript and Next.js production-build verification after the rename.
+
+## Checkpoint 51: Vinext stylesheet-rename cache recovery
+
+- Status: Complete
+- Confirmed that `app/styles/ces-layout.css` exists and matches the import in the root layout.
+- Removed only the generated `.vinext` and `node_modules/.vite` development caches that retained the previous stylesheet path.
+- Confirmed that a fresh Vinext development process initializes without the missing-stylesheet error.
+- Documented that an already-running development process must be restarted to clear its in-memory module graph.
