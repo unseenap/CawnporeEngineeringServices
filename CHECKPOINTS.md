@@ -671,3 +671,11 @@ Services website.
 - Preserved hover pause, compact mobile sizing and the static reduced-motion behavior.
 - Kept the existing homepage client marquee unchanged.
 - Completed ESLint, TypeScript and Next.js production-build verification.
+
+## Checkpoint 57: Centralized quote-request form
+
+- Status: Complete
+- Removed the repeated full quote form from all non-contact pages.
+- Restored a compact request section with one clear `Request a quote` button.
+- Linked every reusable quote CTA directly to `/contact#request-a-quote`, where the complete Formspree project form remains available.
+- Completed ESLint, TypeScript and Next.js production-build verification.
