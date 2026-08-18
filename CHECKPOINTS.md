@@ -653,3 +653,12 @@ Services website.
 - Added three image-led environment panels using supplied HVAC installation and commissioning imagery.
 - Applied the corrected navy, blue and green theme with responsive layouts, restrained reveal motion and reduced-motion support.
 - Added the complete Formspree quote-request section and completed ESLint, TypeScript and Next.js production-build verification.
+
+## Checkpoint 55: Early homepage client highlight
+
+- Status: Complete
+- Moved client proof from below the Services section to immediately below the homepage delivery-strength strip.
+- Added a compact Selected Clients heading, official project-logo marquee and direct gallery link.
+- Reduced logo-card dimensions and slowed the marquee so it supports trust without competing with primary homepage content.
+- Preserved hover pause, mobile sizing and the static reduced-motion fallback.
+- Completed ESLint, TypeScript and Next.js production-build verification.

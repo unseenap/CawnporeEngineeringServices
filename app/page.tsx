@@ -34,6 +34,14 @@ export default function Home() {
         <span><strong>Pan-India</strong> project capability</span><span><strong>Turnkey</strong> HVAC delivery</span><span><strong>One team</strong> from design to support</span>
       </div></section>
 
+      <section className="home-clients-highlight-v5" aria-labelledby="home-client-heading"><div className="site-container">
+        <div className="home-client-highlight-head-v5">
+          <div><span className="corp-kicker">Selected clients</span><h2 id="home-client-heading">Organizations represented in our project portfolio.</h2></div>
+          <Link className="corp-text-link" href="/gallery">View all clients <ArrowRight size={16} /></Link>
+        </div>
+        <BrandScroller brands={projects} duration={52} />
+      </div></section>
+
       <section className="section home-intro-v5"><div className="site-container home-intro-grid-v5">
         <Reveal><span className="corp-kicker">Engineering with accountability</span><h2>One practical partner for the complete HVAC lifecycle.</h2></Reveal>
         <Reveal delay={0.08}><p>Cawnpore Engineering Services combines technical planning, coordinated execution and responsive support. Every system is shaped around building use, performance needs and maintainability—not a standard catalogue answer.</p>
@@ -49,11 +57,6 @@ export default function Home() {
           <div className="home-service-copy-v5"><span>{String(index + 1).padStart(2, "0")} / {service.eyebrow}</span><h3>{service.title}</h3><p>{service.body}</p><Link href={service.href}>View capability <ArrowRight size={17} /></Link></div>
         </Reveal>)}</div>
         <div className="corp-center"><Link className="button button-primary" href="/services">View all services</Link></div>
-      </div></section>
-
-      <section className="section home-clients-v5"><div className="site-container">
-        <div className="home-section-heading-v5 home-section-heading-compact-v5"><div><span className="corp-kicker">Project experience</span><h2>Trusted across diverse environments.</h2></div><Link className="corp-text-link" href="/gallery">View project gallery <ArrowRight size={16} /></Link></div>
-        <BrandScroller brands={projects} />
       </div></section>
 
       <section className="section home-process-v5"><div className="site-container">
