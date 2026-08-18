@@ -634,3 +634,12 @@ Services website.
 - Added Formspree validation feedback, a disabled sending state, submission-error handling and a styled success confirmation.
 - Updated the contact-page guidance and privacy note to accurately describe the new submission flow.
 - Completed ESLint, TypeScript and Next.js production-build verification.
+
+## Checkpoint 53: Reusable full quote-request form
+
+- Status: Complete
+- Replaced the simple bottom enquiry link with the complete project-information form used by the Contact page.
+- The reusable section now collects contact details, organization, location, building type, project stage, service, timeline, requirement details and consent.
+- Connected every instance to the existing Formspree submission flow with validation, sending, error and success states.
+- Added a responsive navy-and-white quote layout for Home, About, Services, service-detail, Gallery and Blogs pages.
+- Completed ESLint, TypeScript and Next.js production-build verification.
