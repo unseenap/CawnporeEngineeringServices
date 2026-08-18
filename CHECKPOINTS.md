@@ -689,3 +689,14 @@ Services website.
 - Applied the corrected navy, blue and green visual system with restrained reveal and image motion, responsive layouts and reduced-motion support.
 - Kept the site-wide circular client-logo marquee and centralized quote CTA intact.
 - Completed ESLint, TypeScript and Next.js production-build verification.
+
+## Checkpoint 59: Simplified Project Gallery redesign
+
+- Status: Complete
+- Rebuilt `/gallery` as a clean, evidence-led project page matching the current Home, About, Services, Industries, Contact and Insights presentation.
+- Replaced the old logo-card-only page with a focused project hero, concise introduction and responsive installation-photo gallery.
+- Used supplied basement ventilation, ducting, jet fan, commissioning and rooftop HVAC imagery with accurate, restrained descriptions.
+- Added a separate compact portfolio of all supplied official client logos without unnecessary sector labels or repeated copy.
+- Applied the corrected navy, blue and green theme with consistent card geometry, responsive layouts, restrained hover and reveal motion and reduced-motion support.
+- Preserved the site-wide circular client marquee and centralized quote CTA.
+- Completed ESLint, TypeScript and Next.js production-build verification.
