@@ -679,3 +679,13 @@ Services website.
 - Restored a compact request section with one clear `Request a quote` button.
 - Linked every reusable quote CTA directly to `/contact#request-a-quote`, where the complete Formspree project form remains available.
 - Completed ESLint, TypeScript and Next.js production-build verification.
+
+## Checkpoint 58: Simplified HVAC Insights page redesign
+
+- Status: Complete
+- Rebuilt `/blogs` as a clean, image-led HVAC knowledge page matching the new Home, About, Services, Industries and Contact presentation.
+- Replaced the old sticky topic sidebar and dense two-column list with a focused hero, concise topic overview, one featured insight and five compact article cards.
+- Used relevant supplied HVAC consultancy, maintenance and ventilation imagery throughout the page.
+- Applied the corrected navy, blue and green visual system with restrained reveal and image motion, responsive layouts and reduced-motion support.
+- Kept the site-wide circular client-logo marquee and centralized quote CTA intact.
+- Completed ESLint, TypeScript and Next.js production-build verification.
