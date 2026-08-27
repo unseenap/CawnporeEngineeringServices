@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   title: "HVAC Insights",
   description:
     "Practical HVAC guidance from Cawnpore Engineering Services for better planning, operation and system performance.",
+  alternates: { canonical: "/blogs" },
 };
 
 export default function BlogsPage() {

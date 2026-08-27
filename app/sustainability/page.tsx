@@ -7,7 +7,8 @@ import { Reveal } from "@/components/motion/Reveal";
 
 export const metadata: Metadata = {
   title: "Energy-Efficient HVAC",
-  description: "Energy-aware HVAC design, commissioning, optimization and modernization for better lifecycle performance."
+  description: "Energy-aware HVAC design, commissioning, optimization and modernization for better lifecycle performance.",
+  alternates: { canonical: "/sustainability" },
 };
 
 const principles = [

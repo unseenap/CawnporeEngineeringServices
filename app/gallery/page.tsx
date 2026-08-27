@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   title: "Project Gallery",
   description:
     "A visual record of HVAC installation, ventilation and project work completed by Cawnpore Engineering Services.",
+  alternates: { canonical: "/gallery" },
 };
 
 const siteWork = [

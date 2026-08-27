@@ -8,6 +8,7 @@ import industries from "@/data/industries.json";
 export const metadata: Metadata = {
   title: "Industries Served | Cawnpore Engineering Services",
   description: "HVAC, ventilation and cooling solutions for commercial, healthcare, manufacturing, residential and critical environments across India.",
+  alternates: { canonical: "/industries" },
 };
 
 const icons = [ShoppingBag, FirstAid, Factory, OfficeChair, HouseLine, GraduationCap, TestTube, Database, Buildings, ForkKnife];

@@ -9,6 +9,7 @@ import services from "@/data/services.json";
 export const metadata: Metadata = {
   title: "HVAC and Engineering Services | CES",
   description: "Explore HVAC consultancy, ventilation, air conditioning, chiller plants, clean rooms, cold rooms, VRV/VRF and interior coordination by CES.",
+  alternates: { canonical: "/services" },
 };
 
 const serviceIcons = [Blueprint, Fan, Snowflake, Wind, ThermometerCold, Warehouse, CirclesThreePlus, Buildings];

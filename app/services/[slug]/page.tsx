@@ -19,7 +19,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const service = services.find((item) => item.id === slug);
   if (!service) return {};
-  return { title: service.title, description: service.description };
+  return {
+    title: service.title,
+    description: service.description,
+    alternates: { canonical: `/services/${service.id}` },
+  };
 }
 
 export default async function ServiceDetailPage({ params }: Props) {

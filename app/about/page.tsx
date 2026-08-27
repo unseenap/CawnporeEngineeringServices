@@ -9,6 +9,7 @@ import company from "@/data/company.json";
 export const metadata: Metadata = {
   title: "About Cawnpore Engineering Services",
   description: "Meet Cawnpore Engineering Services and learn how we deliver dependable HVAC engineering across India.",
+  alternates: { canonical: "/about" },
 };
 
 const approach = [

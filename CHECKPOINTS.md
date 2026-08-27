@@ -708,3 +708,14 @@ Services website.
 - Positioned the marquee after the delivery process and immediately before the final quote section, matching the earlier homepage hierarchy.
 - Preserved the existing official logos, animation timing, gallery link and mobile behavior without changing any other homepage section.
 - Completed ESLint, TypeScript and Next.js production-build verification.
+
+## Checkpoint 61: Production domain and SEO discovery foundation
+
+- Status: Complete
+- Replaced the temporary `openai.site` metadata base with the canonical production domain `https://ceservices.co.in`.
+- Added canonical URLs for the homepage, every primary page and all eight generated service pages.
+- Added generated `/robots.txt` and `/sitemap.xml` routes containing all 18 indexable website URLs.
+- Added search-friendly Organization and WebSite JSON-LD using the verified CES name, logo, Kanpur location, email, phone, founding year and Pan-India coverage.
+- Added site identity, crawler directives, large image-preview permission and consistent Open Graph and Twitter sharing metadata.
+- Confirmed that the old temporary domain no longer appears in application source.
+- Completed ESLint, TypeScript and Next.js production-build verification.

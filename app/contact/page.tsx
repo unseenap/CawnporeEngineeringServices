@@ -9,6 +9,7 @@ import contact from "@/data/contact.json";
 export const metadata: Metadata = {
   title: "Contact Cawnpore Engineering Services",
   description: "Contact CES for an HVAC project, service requirement or technical consultation.",
+  alternates: { canonical: "/contact" },
 };
 
 const nextSteps = [

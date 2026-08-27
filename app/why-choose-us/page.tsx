@@ -7,7 +7,8 @@ import { WhyHeroVisual, WhyScrollImage } from "@/components/why/WhyMotion";
 
 export const metadata: Metadata = {
   title: "Why Choose Us",
-  description: "Why clients choose Cawnpore Engineering Services for accountable HVAC engineering, coordinated delivery and lifecycle support."
+  description: "Why clients choose Cawnpore Engineering Services for accountable HVAC engineering, coordinated delivery and lifecycle support.",
+  alternates: { canonical: "/why-choose-us" },
 };
 
 const reasons = [

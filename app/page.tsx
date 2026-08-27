@@ -8,7 +8,11 @@ import { Reveal } from "@/components/motion/Reveal";
 import { BrandScroller } from "@/components/ui/brand-scoller";
 import projects from "@/data/projects.json";
 
-export const metadata: Metadata = { title: "Cawnpore Engineering Services | HVAC Solutions", description: "Turnkey HVAC engineering, execution and lifecycle support across India." };
+export const metadata: Metadata = {
+  title: { absolute: "Cawnpore Engineering Services | HVAC Solutions" },
+  description: "Turnkey HVAC engineering, execution and lifecycle support across India.",
+  alternates: { canonical: "/" },
+};
 
 const featuredServices = [
   { eyebrow: "Plan", title: "HVAC consultancy & design", body: "Load assessment, airflow planning, coordinated layouts and equipment selection developed around the actual building requirement.", image: "/images/services/consultancy/hvac-design-consultation.png", href: "/services/hvac-consultancy-design" },

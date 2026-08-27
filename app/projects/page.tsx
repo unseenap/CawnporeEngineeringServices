@@ -6,7 +6,8 @@ import { ProjectsHero } from "@/components/projects/ProjectsHero";
 
 export const metadata: Metadata = {
   title: "Projects & Clients",
-  description: "Selected CES work across healthcare, retail, housing, manufacturing, aviation, beverage and entertainment environments."
+  description: "Selected CES work across healthcare, retail, housing, manufacturing, aviation, beverage and entertainment environments.",
+  alternates: { canonical: "/projects" },
 };
 
 export default function ProjectsPage() {
