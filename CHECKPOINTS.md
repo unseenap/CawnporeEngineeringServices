@@ -726,3 +726,11 @@ Services website.
 - Added Google’s supplied `google317aef5714124fc5.html` ownership-verification file to the public website root.
 - Configured the file to deploy at `https://ceservices.co.in/google317aef5714124fc5.html` without changing its verification token.
 - Completed ESLint, TypeScript and Next.js production-build verification.
+
+## Checkpoint 63: Google Analytics 4 integration
+
+- Status: Complete
+- Added the supplied GA4 Measurement ID `G-2HLPJFSB33` to the global Next.js layout.
+- Loaded the Google tag once across every route using Next.js script handling with the non-blocking `afterInteractive` strategy.
+- Centralized the public Measurement ID in the shared site configuration for maintainability.
+- Completed ESLint, TypeScript and Next.js production-build verification.
