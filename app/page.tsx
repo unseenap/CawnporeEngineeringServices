@@ -34,14 +34,6 @@ export default function Home() {
         <span><strong>Pan-India</strong> project capability</span><span><strong>Turnkey</strong> HVAC delivery</span><span><strong>One team</strong> from design to support</span>
       </div></section>
 
-      <section className="home-clients-highlight-v5" aria-labelledby="home-client-heading"><div className="site-container">
-        <div className="home-client-highlight-head-v5">
-          <div><span className="corp-kicker">Selected clients</span><h2 id="home-client-heading">Organizations represented in our project portfolio.</h2></div>
-          <Link className="corp-text-link" href="/gallery">View all clients <ArrowRight size={16} /></Link>
-        </div>
-        <BrandScroller brands={projects} duration={52} />
-      </div></section>
-
       <section className="section home-intro-v5"><div className="site-container home-intro-grid-v5">
         <Reveal><span className="corp-kicker">Engineering with accountability</span><h2>One practical partner for the complete HVAC lifecycle.</h2></Reveal>
         <Reveal delay={0.08}><p>Cawnpore Engineering Services combines technical planning, coordinated execution and responsive support. Every system is shaped around building use, performance needs and maintainability—not a standard catalogue answer.</p>
@@ -63,6 +55,15 @@ export default function Home() {
         <div className="home-section-heading-v5 home-section-heading-compact-v5"><div><span className="corp-kicker">Delivery process</span><h2>Clear steps. One accountable team.</h2></div></div>
         <div className="home-process-grid-v5">{steps.map(([Icon, title, body], index) => <Reveal className="home-process-step-v5" delay={index * 0.06} key={title}><span>0{index + 1}</span><Icon size={28} /><h3>{title}</h3><p>{body}</p></Reveal>)}</div>
       </div></section>
+
+      <section className="home-clients-highlight-v5" aria-labelledby="home-client-heading"><div className="site-container">
+        <div className="home-client-highlight-head-v5">
+          <div><span className="corp-kicker">Selected clients</span><h2 id="home-client-heading">Organizations represented in our project portfolio.</h2></div>
+          <Link className="corp-text-link" href="/gallery">View all clients <ArrowRight size={16} /></Link>
+        </div>
+        <BrandScroller brands={projects} duration={52} />
+      </div></section>
+
       <EnquiryBand />
     </main>
   );

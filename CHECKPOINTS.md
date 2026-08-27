@@ -700,3 +700,11 @@ Services website.
 - Applied the corrected navy, blue and green theme with consistent card geometry, responsive layouts, restrained hover and reveal motion and reduced-motion support.
 - Preserved the site-wide circular client marquee and centralized quote CTA.
 - Completed ESLint, TypeScript and Next.js production-build verification.
+
+## Checkpoint 60: Homepage project marquee restored to lower position
+
+- Status: Complete
+- Moved the selected-client project marquee from directly below the homepage proof strip to the lower part of the page.
+- Positioned the marquee after the delivery process and immediately before the final quote section, matching the earlier homepage hierarchy.
+- Preserved the existing official logos, animation timing, gallery link and mobile behavior without changing any other homepage section.
+- Completed ESLint, TypeScript and Next.js production-build verification.
