@@ -734,3 +734,10 @@ Services website.
 - Loaded the Google tag once across every route using Next.js script handling with the non-blocking `afterInteractive` strategy.
 - Centralized the public Measurement ID in the shared site configuration for maintainability.
 - Completed ESLint, TypeScript and Next.js production-build verification.
+
+## Checkpoint 64: Google Analytics runtime activation fix
+
+- Status: Complete
+- Diagnosed the deployed site and confirmed that the GA script elements were present while `window.dataLayer` and `window.gtag` were not being initialized.
+- Replaced the framework-managed analytics scripts with native global head scripts compatible with the current Vinext runtime.
+- Preserved the supplied GA4 Measurement ID `G-2HLPJFSB33` and global page coverage.
