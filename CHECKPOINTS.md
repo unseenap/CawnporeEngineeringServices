@@ -719,3 +719,10 @@ Services website.
 - Added site identity, crawler directives, large image-preview permission and consistent Open Graph and Twitter sharing metadata.
 - Confirmed that the old temporary domain no longer appears in application source.
 - Completed ESLint, TypeScript and Next.js production-build verification.
+
+## Checkpoint 62: Google Search Console HTML verification
+
+- Status: Complete
+- Added Google’s supplied `google317aef5714124fc5.html` ownership-verification file to the public website root.
+- Configured the file to deploy at `https://ceservices.co.in/google317aef5714124fc5.html` without changing its verification token.
+- Completed ESLint, TypeScript and Next.js production-build verification.
