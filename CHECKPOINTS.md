@@ -741,3 +741,11 @@ Services website.
 - Diagnosed the deployed site and confirmed that the GA script elements were present while `window.dataLayer` and `window.gtag` were not being initialized.
 - Replaced the framework-managed analytics scripts with native global head scripts compatible with the current Vinext runtime.
 - Preserved the supplied GA4 Measurement ID `G-2HLPJFSB33` and global page coverage.
+
+## Checkpoint 65: SEO maintenance and content-growth roadmap
+
+- Status: Complete
+- Added `SEO_MAINTAIN.md` as the maintained source of truth for search visibility work.
+- Documented keyword-to-page mapping, page standards, service-page requirements, blog topic clusters, React indexability rules, structured data, image SEO, local SEO, authority building and analytics conversion tracking.
+- Added a five-phase execution roadmap, publishing checklist, prohibited practices, KPI table and maintenance log.
+- Clarified that blogs can remain in React/Next.js when statically generated or server-rendered as semantic, crawlable HTML.
