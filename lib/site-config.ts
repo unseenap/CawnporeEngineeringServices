@@ -12,7 +12,9 @@ export const INDEXABLE_ROUTES = [
   "/gallery",
   "/industries",
   "/projects",
+  "/privacy-policy",
   "/services",
   "/sustainability",
+  "/terms-of-service",
   "/why-choose-us",
 ] as const;

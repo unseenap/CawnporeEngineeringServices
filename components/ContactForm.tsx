@@ -3,12 +3,22 @@
 import { useForm, ValidationError } from "@formspree/react";
 import { ArrowRight, CheckCircle } from "@phosphor-icons/react";
 import { useSearchParams } from "next/navigation";
+import Link from "next/link";
+import { useEffect, useRef } from "react";
 import services from "@/data/services.json";
+import { trackEvent } from "@/lib/analytics";
 
 export function ContactForm() {
   const searchParams = useSearchParams();
   const requestedService = searchParams.get("service") ?? "";
   const [state, handleSubmit] = useForm("xrpzogob");
+  const leadRecorded = useRef(false);
+
+  useEffect(() => {
+    if (!state.succeeded || leadRecorded.current) return;
+    leadRecorded.current = true;
+    trackEvent("generate_lead", { form_name: "request_a_quote" });
+  }, [state.succeeded]);
 
   if (state.succeeded) {
     return (
@@ -94,7 +104,7 @@ export function ContactForm() {
       </label>
       <label className="consent">
         <input type="checkbox" required />
-        <span>I agree that CES may use these details to respond to my enquiry.</span>
+        <span>I agree that CES may use these details to respond to my enquiry as described in the <Link href="/privacy-policy">privacy policy</Link>.</span>
       </label>
       <ValidationError prefix="Submission" errors={state.errors} />
       <button className="button button-primary" type="submit" disabled={state.submitting}>

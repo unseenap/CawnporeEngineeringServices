@@ -39,8 +39,9 @@ Update this document whenever an SEO task is completed, a target changes, a new 
 - [x] XML sitemap available at `https://ceservices.co.in/sitemap.xml`.
 - [x] Robots rules available at `https://ceservices.co.in/robots.txt`.
 - [x] Google Analytics 4 configured with Measurement ID `G-2HLPJFSB33`.
-- [ ] Track successful quote submissions as a GA4 key event.
-- [ ] Track phone, email and WhatsApp clicks as events.
+- [x] Track successful quote submissions as a GA4 event in website code.
+- [x] Track phone, email and WhatsApp clicks as events in website code.
+- [ ] Mark `generate_lead` as a GA4 key event after production data arrives.
 - [ ] Record monthly impressions, clicks, CTR, average position, leads and top landing pages.
 
 ---
@@ -404,10 +405,10 @@ Organic traffic is useful only when it produces meaningful opportunities.
 
 Configure GA4 events for:
 
-- [ ] `generate_lead` after a successful Formspree quote submission.
-- [ ] `click_phone` for `tel:` links.
-- [ ] `click_email` for `mailto:` links.
-- [ ] `click_whatsapp` for WhatsApp links.
+- [x] `generate_lead` after a successful Formspree quote submission.
+- [x] `click_phone` for `tel:` links.
+- [x] `click_email` for `mailto:` links.
+- [x] `click_whatsapp` for WhatsApp links.
 - [ ] `view_service` for individual service detail pages if useful.
 - [ ] `select_content` for blog-to-service navigation if useful.
 
@@ -455,7 +456,7 @@ Use query/page evidence to choose the next change. Do not rewrite pages every we
 - [x] Install Google Analytics 4.
 - [ ] Verify GA4 Realtime data after deployment.
 - [ ] Create/complete Google Business Profile.
-- [ ] Add privacy policy and terms pages.
+- [x] Add privacy policy and terms pages.
 - [ ] Verify that all current primary pages are indexed.
 
 ### Phase 2 — Commercial landing pages
@@ -490,7 +491,7 @@ Use query/page evidence to choose the next change. Do not rewrite pages every we
 
 ### Phase 5 — Measurement and improvement
 
-- [ ] Add GA4 conversion events without personal information.
+- [x] Add GA4 conversion events without personal information.
 - [ ] Establish the monthly KPI baseline.
 - [ ] Improve high-impression, low-CTR pages.
 - [ ] Expand articles that rank near the first page and genuinely need more value.
@@ -546,6 +547,7 @@ Add one row whenever a material SEO change is deployed.
 | 2026-08 | Site-wide | Added production canonicals, sitemap, robots and organization metadata | Domain launch | Production build and route verification | Index coverage |
 | 2026-08 | Site-wide | Added Search Console verification | Ownership setup | Google verification completed | Search performance data |
 | 2026-08 | Site-wide | Added GA4 tag `G-2HLPJFSB33` and corrected runtime initialization | Analytics setup | Production build passed | Realtime collection |
+| 2026-08 | Legal and measurement | Added crawlable privacy and terms pages plus privacy-safe lead and contact-click events | Phase 1 SEO foundation | ESLint and production build passed | Legal-page indexing and GA4 event collection |
 
 ---
 
@@ -557,4 +559,3 @@ Add one row whenever a material SEO change is deployed.
 - [Google image SEO best practices](https://developers.google.com/search/docs/appearance/google-images)
 - [Google link best practices](https://developers.google.com/search/docs/crawling-indexing/links-crawlable)
 - [Understanding page experience](https://developers.google.com/search/docs/appearance/page-experience)
-

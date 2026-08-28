@@ -756,3 +756,12 @@ Services website.
 - Extended `.gitignore` for generated test reports, editor metadata, local caches, temporary files, OS metadata and local database runtime files.
 - Preserved required source code, public assets, lockfiles, the Vercel configuration and `.openai/hosting.json`.
 - Removed previously committed local development log files from Git tracking while retaining the local copies through ignore rules.
+
+## Checkpoint 67: SEO Phase 1 legal and measurement foundation
+
+- Status: Complete
+- Added crawlable privacy policy and website terms pages with unique metadata, canonical URLs, semantic HTML and responsive CES styling.
+- Linked the legal pages from the global footer and quote-form consent text, then added both routes to the generated sitemap configuration.
+- Added privacy-safe GA4 events for successful quote submissions and phone, email and WhatsApp clicks without sending enquiry details.
+- Updated `SEO_MAINTAIN.md` to record the completed repository work and keep the remaining Google account actions visible.
+- Completed ESLint, TypeScript and Next.js production-build verification, including static generation of both new routes.
