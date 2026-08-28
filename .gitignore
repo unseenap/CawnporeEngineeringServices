@@ -12,6 +12,9 @@
 
 # testing
 /coverage
+/test-results/
+/playwright-report/
+/.nyc_output/
 
 # next.js
 /.next/
@@ -20,7 +23,24 @@
 
 # misc
 .DS_Store
+Thumbs.db
+Desktop.ini
 *.pem
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*~
+
+# editors and local tooling
+/.idea/
+/.vscode/
+/.fleet/
+/.eslintcache
+/.stylelintcache
+/.cache/
+/.turbo/
 
 # debug
 npm-debug.log*
@@ -29,6 +49,8 @@ yarn-error.log*
 .pnpm-debug.log*
 dev-server.*.log
 /.openai/*.log
+/.openai/local-*.log
+/.openai/mobile-*.log
 
 # env files (can opt-in for committing if needed)
 .env*
@@ -42,3 +64,10 @@ next-env.d.ts
 /.wrangler/
 /outputs/
 /work/
+
+# local databases and runtime state
+*.sqlite
+*.sqlite3
+*.db-journal
+*.db-shm
+*.db-wal

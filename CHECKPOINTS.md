@@ -749,3 +749,10 @@ Services website.
 - Documented keyword-to-page mapping, page standards, service-page requirements, blog topic clusters, React indexability rules, structured data, image SEO, local SEO, authority building and analytics conversion tracking.
 - Added a five-phase execution roadmap, publishing checklist, prohibited practices, KPI table and maintenance log.
 - Clarified that blogs can remain in React/Next.js when statically generated or server-rendered as semantic, crawlable HTML.
+
+## Checkpoint 66: Repository ignore-policy cleanup
+
+- Status: Complete
+- Extended `.gitignore` for generated test reports, editor metadata, local caches, temporary files, OS metadata and local database runtime files.
+- Preserved required source code, public assets, lockfiles, the Vercel configuration and `.openai/hosting.json`.
+- Removed previously committed local development log files from Git tracking while retaining the local copies through ignore rules.
