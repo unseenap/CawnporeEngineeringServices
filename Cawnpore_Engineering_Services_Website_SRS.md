@@ -46,7 +46,7 @@ The approved source folder is:
 
 It contains:
 
-- `logo.png`
+- `logo.svg`
 - `Company_profile.pdf`
 - `Cawnpore_Engineering_Services_Company_Profile.pptx`
 - `sourceimage1.png`
@@ -155,21 +155,21 @@ Seven routes will appear as top-level navbar items. Five service-detail routes
 will appear under the Services dropdown. One system route will handle invalid
 URLs.
 
-| No. | Route | Page | Navbar position |
-|---:|---|---|---|
-| 1 | `/` | Home | Home |
-| 2 | `/about` | About | About |
-| 3 | `/services` | Services Overview | Services |
-| 4 | `/services/design-engineering` | HVAC Design & Engineering | Services dropdown |
-| 5 | `/services/installation-commissioning` | Installation & Commissioning | Services dropdown |
-| 6 | `/services/maintenance-repair` | Maintenance & Repair | Services dropdown |
-| 7 | `/services/retrofitting-upgrades` | Retrofitting & Upgrades | Services dropdown |
-| 8 | `/services/specialized-hvac` | Specialized HVAC | Services dropdown |
-| 9 | `/industries` | Industries | Industries |
-| 10 | `/projects` | Projects and Clients | Projects |
-| 11 | `/sustainability` | Sustainability | Sustainability |
-| 12 | `/contact` | Contact | Contact |
-| 13 | `*` | Not Found / 404 | Not shown |
+| No. | Route                                  | Page                         | Navbar position   |
+| --: | -------------------------------------- | ---------------------------- | ----------------- |
+|   1 | `/`                                    | Home                         | Home              |
+|   2 | `/about`                               | About                        | About             |
+|   3 | `/services`                            | Services Overview            | Services          |
+|   4 | `/services/design-engineering`         | HVAC Design & Engineering    | Services dropdown |
+|   5 | `/services/installation-commissioning` | Installation & Commissioning | Services dropdown |
+|   6 | `/services/maintenance-repair`         | Maintenance & Repair         | Services dropdown |
+|   7 | `/services/retrofitting-upgrades`      | Retrofitting & Upgrades      | Services dropdown |
+|   8 | `/services/specialized-hvac`           | Specialized HVAC             | Services dropdown |
+|   9 | `/industries`                          | Industries                   | Industries        |
+|  10 | `/projects`                            | Projects and Clients         | Projects          |
+|  11 | `/sustainability`                      | Sustainability               | Sustainability    |
+|  12 | `/contact`                             | Contact                      | Contact           |
+|  13 | `*`                                    | Not Found / 404              | Not shown         |
 
 ### 6.1 Persistent Navbar
 
@@ -565,17 +565,17 @@ approves supporting evidence.
 
 ### Form Fields
 
-| Field | Rule |
-|---|---|
-| Full name | Required; 2–80 characters |
-| Phone | Required; plausible Indian or international format |
-| Email | Required; standard email validation |
-| Company or organization | Optional |
-| City and state | Required |
-| Service interest | Required |
-| Project segment | Optional |
-| Message | Required; 20–2,000 characters |
-| Consent | Required |
+| Field                   | Rule                                               |
+| ----------------------- | -------------------------------------------------- |
+| Full name               | Required; 2–80 characters                          |
+| Phone                   | Required; plausible Indian or international format |
+| Email                   | Required; standard email validation                |
+| Company or organization | Optional                                           |
+| City and state          | Required                                           |
+| Service interest        | Required                                           |
+| Project segment         | Optional                                           |
+| Message                 | Required; 20–2,000 characters                      |
+| Consent                 | Required                                           |
 
 ### Service Interest Options
 
@@ -783,12 +783,12 @@ derived from the supplied CES logo and approved by CES.
 
 ### Additional Style Files
 
-| File | Responsibility |
-|---|---|
-| `src/styles/theme.css` | All brand and semantic colour tokens |
-| `src/styles/motion.css` | Durations, easing, distances and reduced-motion rules |
-| `src/styles/typography.css` | Font families, sizes, line heights and text styles |
-| `src/styles/globals.css` | Reset, containers, focus states and global utilities |
+| File                        | Responsibility                                        |
+| --------------------------- | ----------------------------------------------------- |
+| `src/styles/theme.css`      | All brand and semantic colour tokens                  |
+| `src/styles/motion.css`     | Durations, easing, distances and reduced-motion rules |
+| `src/styles/typography.css` | Font families, sizes, line heights and text styles    |
+| `src/styles/globals.css`    | Reset, containers, focus states and global utilities  |
 
 If Tailwind CSS is used, its configuration must reference CSS variables instead
 of duplicating the colour palette.
@@ -1121,28 +1121,28 @@ identity.
 
 ## 17. Functional Requirements
 
-| ID | Requirement |
-|---|---|
-| FR-01 | All pages must use the shared header and footer. |
-| FR-02 | The navbar must indicate the active route. |
-| FR-03 | The Services menu must be accessible using keyboard and touch. |
-| FR-04 | Direct loading and browser refresh must work for every route. |
-| FR-05 | Invalid routes must show the branded 404 page. |
-| FR-06 | The contact form must validate required fields. |
-| FR-07 | The form must prevent accidental duplicate submissions. |
-| FR-08 | The form must show loading, success and failure states. |
-| FR-09 | Phone and email actions must use `tel:` and `mailto:` links. |
-| FR-10 | Project filtering must work without reloading the page. |
-| FR-11 | Filtered project items must remain accessible to keyboard and assistive technology. |
-| FR-12 | Images must use responsive sizes and explicit dimensions. |
-| FR-13 | Every route must have unique SEO metadata. |
+| ID    | Requirement                                                                               |
+| ----- | ----------------------------------------------------------------------------------------- |
+| FR-01 | All pages must use the shared header and footer.                                          |
+| FR-02 | The navbar must indicate the active route.                                                |
+| FR-03 | The Services menu must be accessible using keyboard and touch.                            |
+| FR-04 | Direct loading and browser refresh must work for every route.                             |
+| FR-05 | Invalid routes must show the branded 404 page.                                            |
+| FR-06 | The contact form must validate required fields.                                           |
+| FR-07 | The form must prevent accidental duplicate submissions.                                   |
+| FR-08 | The form must show loading, success and failure states.                                   |
+| FR-09 | Phone and email actions must use `tel:` and `mailto:` links.                              |
+| FR-10 | Project filtering must work without reloading the page.                                   |
+| FR-11 | Filtered project items must remain accessible to keyboard and assistive technology.       |
+| FR-12 | Images must use responsive sizes and explicit dimensions.                                 |
+| FR-13 | Every route must have unique SEO metadata.                                                |
 | FR-14 | The site must provide Organization and Service structured data using approved facts only. |
-| FR-15 | Analytics hooks must support CTA, phone, email, form and service-page events. |
-| FR-16 | The application must detect and respect reduced-motion preference. |
-| FR-17 | Components must read content from separate JSON files. |
-| FR-18 | Components must read colours from the centralized theme file. |
-| FR-19 | Network and form errors must provide a visible recovery path. |
-| FR-20 | Production must contain no unsupported placeholder claims. |
+| FR-15 | Analytics hooks must support CTA, phone, email, form and service-page events.             |
+| FR-16 | The application must detect and respect reduced-motion preference.                        |
+| FR-17 | Components must read content from separate JSON files.                                    |
+| FR-18 | Components must read colours from the centralized theme file.                             |
+| FR-19 | Network and form errors must provide a visible recovery path.                             |
+| FR-20 | Production must contain no unsupported placeholder claims.                                |
 
 ---
 
@@ -1245,7 +1245,7 @@ Also support current mainstream Android and iOS browsers.
 
 ### 19.1 Logo
 
-- Use `logo.png`.
+- Use `logo.svg`.
 - Preserve the original aspect ratio.
 - Do not stretch or distort.
 - Maintain clear space.
@@ -1391,27 +1391,27 @@ supports a specific design decision.
 
 ## 23. Acceptance Criteria
 
-| ID | Acceptance criterion |
-|---|---|
-| AC-01 | All 13 routes exist and work on direct load. |
-| AC-02 | The seven required top-level navbar items appear on every page. |
-| AC-03 | The Services menu links to all five service-detail pages. |
-| AC-04 | Every page contains unique and approved information. |
-| AC-05 | Every major page hero contains an HVAC-related illustration. |
-| AC-06 | Every long page contains an additional meaningful diagram or illustration. |
-| AC-07 | Scroll animations are smooth and do not block reading. |
-| AC-08 | Reduced-motion mode removes non-essential movement without losing content. |
-| AC-09 | Changing values in `src/styles/theme.css` updates the entire website colour system. |
-| AC-10 | Major content domains use separate JSON data files. |
-| AC-11 | React components do not duplicate long-form business content. |
-| AC-12 | React Bits and Magic UI components are adapted to CES styling and accessibility. |
-| AC-13 | No serious or critical accessibility defects remain. |
-| AC-14 | The site meets the agreed performance targets or has approved exceptions. |
-| AC-15 | The contact form reaches the approved recipient or system. |
-| AC-16 | All form states and errors are visible and understandable. |
-| AC-17 | Supplied logos and images are optimized and not distorted. |
-| AC-18 | All client names, claims, contact details and availability statements are approved. |
-| AC-19 | Every route contains complete SEO metadata. |
+| ID    | Acceptance criterion                                                                 |
+| ----- | ------------------------------------------------------------------------------------ |
+| AC-01 | All 13 routes exist and work on direct load.                                         |
+| AC-02 | The seven required top-level navbar items appear on every page.                      |
+| AC-03 | The Services menu links to all five service-detail pages.                            |
+| AC-04 | Every page contains unique and approved information.                                 |
+| AC-05 | Every major page hero contains an HVAC-related illustration.                         |
+| AC-06 | Every long page contains an additional meaningful diagram or illustration.           |
+| AC-07 | Scroll animations are smooth and do not block reading.                               |
+| AC-08 | Reduced-motion mode removes non-essential movement without losing content.           |
+| AC-09 | Changing values in `src/styles/theme.css` updates the entire website colour system.  |
+| AC-10 | Major content domains use separate JSON data files.                                  |
+| AC-11 | React components do not duplicate long-form business content.                        |
+| AC-12 | React Bits and Magic UI components are adapted to CES styling and accessibility.     |
+| AC-13 | No serious or critical accessibility defects remain.                                 |
+| AC-14 | The site meets the agreed performance targets or has approved exceptions.            |
+| AC-15 | The contact form reaches the approved recipient or system.                           |
+| AC-16 | All form states and errors are visible and understandable.                           |
+| AC-17 | Supplied logos and images are optimized and not distorted.                           |
+| AC-18 | All client names, claims, contact details and availability statements are approved.  |
+| AC-19 | Every route contains complete SEO metadata.                                          |
 | AC-20 | The production build contains no placeholder text, invented metrics or private keys. |
 
 ---
@@ -1485,16 +1485,16 @@ supports a specific design decision.
 
 ## 26. Risks
 
-| Risk | Impact | Mitigation |
-|---|---|---|
-| Unverified claims | Legal and reputation risk | Formal content approval before launch |
-| Unapproved client images | Legal and relationship risk | Asset-permission checklist |
-| Excessive motion | Poor accessibility and performance | Motion budget and reduced-motion testing |
-| Generic component appearance | Weak differentiation | CES-specific layouts, illustrations and theme adaptation |
-| Large source images | Slow mobile experience | Responsive conversion and compression |
-| Missing form-backend decision | Enquiries may fail | Select recipient or CRM during discovery |
-| Hard-coded colours | Difficult rebranding | Mandatory centralized theme file |
-| Content embedded in components | Difficult updates | Mandatory separate JSON data files |
+| Risk                           | Impact                             | Mitigation                                               |
+| ------------------------------ | ---------------------------------- | -------------------------------------------------------- |
+| Unverified claims              | Legal and reputation risk          | Formal content approval before launch                    |
+| Unapproved client images       | Legal and relationship risk        | Asset-permission checklist                               |
+| Excessive motion               | Poor accessibility and performance | Motion budget and reduced-motion testing                 |
+| Generic component appearance   | Weak differentiation               | CES-specific layouts, illustrations and theme adaptation |
+| Large source images            | Slow mobile experience             | Responsive conversion and compression                    |
+| Missing form-backend decision  | Enquiries may fail                 | Select recipient or CRM during discovery                 |
+| Hard-coded colours             | Difficult rebranding               | Mandatory centralized theme file                         |
+| Content embedded in components | Difficult updates                  | Mandatory separate JSON data files                       |
 
 ---
 
